@@ -1,0 +1,13 @@
+.sidebar {
+  background-color: #e3e6e2;
+  width: 200px;
+  padding: 10px;
+}
+
+.sidebar p {
+  color: #303030
+}
+
+.sidebar ul {
+    list-style-type: none;
+}

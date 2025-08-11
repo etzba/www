@@ -1,0 +1,12 @@
+import React from 'react';
+import '../styles/layout.css';
+
+function Run() {
+  return (
+    <div className='run'>
+      <h1>Run</h1>
+    </div>
+  );
+}
+
+export default Run;
