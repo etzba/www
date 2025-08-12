@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 function Run() {
   return (
-    <div className='run'>
+    <div className='home'>
       <h1>Run</h1>
     </div>
   );

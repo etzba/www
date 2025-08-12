@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 function Install() {
   return (
-    <div className='install'>
+    <div className='home'>
       <h1>Install</h1>
     </div>
   );

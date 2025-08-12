@@ -1,7 +1,8 @@
 .sidebar {
   background-color: #e3e6e2;
-  width: 200px;
+  width: 250px;
   padding: 10px;
+  padding-top: 30px;
 }
 
 .sidebar p {
@@ -9,5 +10,12 @@
 }
 
 .sidebar ul {
-    list-style-type: none;
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.sidebar li {
+  padding-top: 10px;
 }

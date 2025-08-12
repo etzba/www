@@ -1,12 +1,12 @@
 import React from 'react';
 import '../styles/layout.css';
 
-function Commands() {
+function Usage() {
   return (
-    <div className='commands'>
+    <div className='home'>
       <h1>Commands</h1>
     </div>
   );
 }
 
-export default Commands;
+export default Usage;
