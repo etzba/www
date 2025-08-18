@@ -1,6 +1,6 @@
 .header {
   background-color: #303030;
-  padding: 10px;
+  padding: 20px;
   display: flex;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .logo {
-  padding-left: 30px;
+  padding-left: 50px;
   align-items: left;
   width: 100px;
 }

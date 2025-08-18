@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData';
 import '../styles/sidebar.css'
 
-function Sidebar() {
+const Sidebar = () => {
   return (
     <nav className="sidebar">
       <ul>

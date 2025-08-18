@@ -40,19 +40,19 @@ export const SidebarData = [
             path: '/config/general',            
         },
         {
-            title: 'Execution configurations',
+            title: 'With execution files',
             path: '/config/executions',
                 subPaths: [
                     {
-                        title: 'api execution',
+                        title: 'api',
                         path: '/config/executions/api',
                     },
                     {
-                        title: 'sql execution',
+                        title: 'sql',
                         path: '/config/executions/sql',
                     },
                     {
-                        title: 'file execution',
+                        title: 'file',
                         path: '/config/executions/file',
                     },
                 ]            
@@ -91,7 +91,7 @@ export const SidebarData = [
         },
         {
             title: 'Using Go Templates',
-            path: '/advanced/go',            
+            path: '/advanced/gofunc',            
         }
     ],
   },
