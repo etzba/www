@@ -1,0 +1,32 @@
+.container {
+  padding: '2rem';
+  max-width: '800px';
+  margin: 'auto';
+}
+
+.heading {
+  font-size: '2rem';
+  margin-bottom: '1.5rem';
+}
+
+.section {
+  margin-bottom: '2rem';
+}
+
+.subheading {
+  font-size: '1.5rem';
+  cursor: 'pointer';
+  color: '#0070f3';
+}
+
+.content {
+  margin-top: '1rem';
+}
+
+.code {
+  background-color: '#f4f4f4';
+  padding: '1rem';
+  border-radius: '6px';
+  overflow-x: 'auto';
+  white-space: 'pre-wrap';
+}

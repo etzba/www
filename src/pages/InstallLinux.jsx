@@ -21,11 +21,10 @@ const InstallLinux = () => {
                         </ul>
                         <h4>Steps</h4>
                         <div>
-                        {codeBlocks.map((item) =>
-                            <CodeBlock props={item} />
+                        {codeBlocks.map((item, index) =>
+                            <CodeBlock key={index} text={item.text} code={item.code} />
                         )}
                         </div>
-                        <p>✅ Tip: You may need to run <code>chmod +x install.sh</code> before execution.</p>
                     </div>
                 </section>
             </div>
@@ -40,7 +39,7 @@ const codeBlocks = [
     },
     {
         text: "Move to bin directory",
-        code: "mv",
+        code: "mv etz /usr/local/bin",
     },
     {
         text: "Show version",
