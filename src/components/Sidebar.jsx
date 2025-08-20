@@ -13,24 +13,24 @@ const Sidebar = () => {
               <Link to={item.path}>
                 <span>{item.title}</span>
               </Link>
-              {item?.subPaths?.map((subItem, subIndex) =>
-                <ul>
+              <ul>
+                {item?.subPaths?.map((subItem, subIndex) =>
                   <li key={subIndex} className="subpath">
                     <Link to={subItem.path}>
                       <span>{subItem.title}</span>
                     </Link>
-                  </li>
-                  {subItem?.subPaths?.map((subChildItem, subChildIndex) =>
                     <ul>
-                      <li key={subChildIndex} className="subpath">
-                        <Link to={subChildItem.path}>
-                          <span>{subChildItem.title}</span>
-                        </Link>
-                      </li>
+                      {subItem?.subPaths?.map((subChildItem, subChildIndex) =>
+                        <li key={subChildIndex} className="subpath">
+                          <Link to={subChildItem.path}>
+                            <span>{subChildItem.title}</span>
+                          </Link>
+                        </li>
+                      )}
                     </ul>
-                  )}
-                </ul>
-              )}
+                  </li>
+                )}
+              </ul>
             </li>
           );
         })}

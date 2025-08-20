@@ -4,7 +4,7 @@ import '../styles/header.css';
 function Header() {
   return (
     <header className="header">
-      <img src={require("../assets/etzba.png")} alt="Logo" class="logo"/>
+      <img src={require("../assets/etzba.png")} alt="Logo" className="logo"/>
       <h1 className='title'>etz - load testing cli tool</h1>
     </header>
   );

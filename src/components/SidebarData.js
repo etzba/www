@@ -98,48 +98,26 @@ export const SidebarData = [
 ]
 
 /*
+Home
 Installation
-    Linux
-    macOS
-
-Getting Started
-    Running ETZ
-    Using the Simple Execution File
-
+-Linux
+-macOS
+Getting started
+-Run etz
+-Using simple execution file
 Configuring Test Cases
-    General Configuration
-    Execution Types
-        API Executions
-        SQL Executions
-        File Executions
-
+-General configuration
+-Execution configurations
+ -api execution
+ -sql execution
+ -file execution
 Usage
-    Running ETZ with General Configuration
-    Running ETZ with Executions File
-    CLI Arguments
-    Usage Examples
-
+-Running etz with General Configuration
+-Running etz with Executions File
+-CLI Arguments
+-Usage examples
 Advanced Configuration
-    Using an Authentication File
-    Using Go Templates
+-Using an Authentication File
+-Using Go Templates
 
-1. Setup
-    - Installation (Linux, macOS)
-    - Authentication File
-
-2. Configuration
-    - General Config
-    - Execution Files
-    - Using Go Templates
-
-3. Execution Types
-    - API
-    - SQL
-    - File
-
-4. Running ETZ
-    - With General Config
-    - With Executions File
-    - CLI Arguments
-    - Examples
 */
