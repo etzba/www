@@ -1,32 +1,24 @@
-.container {
-  padding: '2rem';
-  max-width: '800px';
-  margin: 'auto';
+/* Basic style for the code snippet */
+.code-snippet {
+    background-color: #2e2e2e; /* Dark background for contrast */
+    color: #f8f8f2; /* Light text for readability */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Courier New', monospace; /* Monospace font */
+    font-size: 16px; /* Slightly larger font size for readability */
+    overflow-x: auto; /* Enable horizontal scrolling for long lines */
+    white-space: pre-wrap; /* Allow wrapping for long lines */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
-.heading {
-  font-size: '2rem';
-  margin-bottom: '1.5rem';
+/* Optional: Highlight keywords for extra flair */
+.code-snippet .keyword {
+    color: #ff79c6; /* Highlight color for keywords */
+    font-weight: bold;
 }
 
-.section {
-  margin-bottom: '2rem';
-}
-
-.subheading {
-  font-size: '1.5rem';
-  cursor: 'pointer';
-  color: '#0070f3';
-}
-
-.content {
-  margin-top: '1rem';
-}
-
-.code {
-  background-color: '#f4f4f4';
-  padding: '1rem';
-  border-radius: '6px';
-  overflow-x: 'auto';
-  white-space: 'pre-wrap';
+/* Optional: Highlight strings */
+.code-snippet .string {
+    color: #f1fa8c; /* Highlight color for strings */
 }

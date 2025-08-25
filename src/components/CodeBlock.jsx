@@ -3,11 +3,11 @@ import '../styles/code.css';
 
 const CodeBlock = ({text, code}) => {
     return (
-        <div className="container">
+        <div>
             <p>{text}</p>
-            <div className="code">
-                <pre>
-                    {code}
+            <div className="code-container">
+                <pre className="code-snippet">
+                    <code>{code}</code>
                 </pre>
             </div>
         </div>
