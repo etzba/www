@@ -1,7 +1,7 @@
 {
   "name": "etz",
   "version": "0.1.0",
-  "homepage": "https://etzba.github.io/www/",
+  "homepage": "https://etzba.com/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -11,6 +11,7 @@
     "gh-pages": "^6.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.0",
     "react-scripts": "5.0.1",
     "save-dev": "^0.0.1-security",
     "web-vitals": "^2.1.4"

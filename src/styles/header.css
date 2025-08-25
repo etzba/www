@@ -1,0 +1,21 @@
+.header {
+  background-color: #303030;
+  padding: 20px;
+  display: flex;
+}
+
+.header h1 {
+  color: white;
+}
+
+.logo {
+  padding-left: 50px;
+  align-items: left;
+  width: 100px;
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+  width: 1000px;
+}
