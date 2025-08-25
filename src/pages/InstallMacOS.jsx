@@ -8,14 +8,13 @@ const InstallMacOS = () => {
       {/* macOS Section */}
       <section className='section'>
         <h2>
-          🐧 Linux
+          Install <code>etz</code> on OSX
         </h2>
         <div>
           <h4>Requirements</h4>
           <ul>
-            <li key={1}>Ubuntu 20.04+ or compatible distro</li>
-            <li key={2}><code>curl</code> or <code>wget</code></li>
-            <li key={3}><code>bash</code> or compatible shell</li>
+            <li key={1}><code>curl</code> or <code>wget</code></li>
+            <li key={2}><code>bash</code> or compatible shell</li>
           </ul>
           <h4>Steps</h4>
           <div>
@@ -32,7 +31,7 @@ const InstallMacOS = () => {
 const codeBlocks = [
     {
         text: "Use wget to download etz",
-        code: "wget https://raw.githubusercontent.com/etzba/etz/master/etzba_linux_amd64_v1/etz",
+        code: "wget https://raw.githubusercontent.com/etzba/etz/master/etzba_darwin_amd64_v1/etz",
     },
     {
         text: "Move to bin directory",

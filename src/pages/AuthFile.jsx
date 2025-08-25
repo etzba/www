@@ -5,6 +5,7 @@ const AuthFile = () => {
   return (
     <div className='home'>
       <h1>AuthFile</h1>
+      <p>Content is in progress</p>
     </div>
   );
 }

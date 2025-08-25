@@ -5,6 +5,7 @@ function Run() {
   return (
     <div className='home'>
       <h1>Run</h1>
+      <p>Content is in progress</p>
     </div>
   );
 }

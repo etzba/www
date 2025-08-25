@@ -5,6 +5,7 @@ const RunWithGeneral = () => {
   return (
     <div className='home'>
       <h1>RunWithGeneral</h1>
+      <p>Content is in progress</p>
     </div>
   );
 }

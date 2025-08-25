@@ -5,6 +5,7 @@ const GoTemplatesFunctions = () => {
   return (
     <div className='home'>
       <h1>GoTemplatesFunctions</h1>
+      <p>Content is in progress</p>
     </div>
   );
 }

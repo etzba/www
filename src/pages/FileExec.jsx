@@ -5,6 +5,7 @@ const FileExec = () => {
   return (
     <div className='home'>
       <h1>FileExec</h1>
+      <p>Content is in progress</p>
     </div>
   );
 }

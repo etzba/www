@@ -5,12 +5,9 @@ const InstallLinux = () => {
     return (
         <div className='home'>
             <div className='container'>
-                <h1 className='heading'>🛠️ Installation</h1>
-
-                {/* Linux Section */}
                 <section className='section'>
                     <h2>
-                        🐧 Linux
+                        Install <code>etz</code> on Linux
                     </h2>
                     <div>
                         <h4>Requirements</h4>

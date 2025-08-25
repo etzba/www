@@ -5,6 +5,7 @@ const GeneralConfig = () => {
   return (
     <div className='home'>
       <h1>GeneralConfig</h1>
+      <p>Content is in progress</p>
     </div>
   );
 }
