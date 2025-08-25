@@ -1,7 +1,7 @@
 {
   "name": "etz",
   "version": "0.1.0",
-  "homepage": "https://etzba.github.io/www/",
+  "homepage": "https://etzba.com/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
