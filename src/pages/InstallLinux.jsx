@@ -1,4 +1,5 @@
 import React from 'react';
+import etz from '../files/etzba_linux_amd64_v1/etz'
 import CodeBlock from '../components/CodeBlock'
 
 const InstallLinux = () => {
@@ -17,31 +18,17 @@ const InstallLinux = () => {
                             <li key={3}><code>bash</code> or compatible shell</li>
                         </ul>
                         <h4>Steps</h4>
-                        <div>
-                        {codeBlocks.map((item, index) =>
-                            <CodeBlock key={index} code={item.code} />
-                        )}
-                        </div>
+                        <p>Download linux distribution from <a href={etz}>here</a> or use <code>wget</code> to download from github:</p>
+                        <CodeBlock code={"wget https://raw.githubusercontent.com/etzba/etz/master/etzba_linux_amd64_v1/etz"} />
+                        <p>Move to bin directory:</p>
+                        <CodeBlock code={"mv etz /usr/local/bin"} />
+                        <p>Check from terminal that you can see the version:</p>
+                        <CodeBlock code={"etz version"}/>
                     </div>
                 </section>
             </div>
         </div>
     );
 };
-
-const codeBlocks = [
-    {
-        text: "Use wget to download etz",
-        code: "wget https://raw.githubusercontent.com/etzba/etz/master/etzba_linux_amd64_v1/etz",
-    },
-    {
-        text: "Move to bin directory",
-        code: "mv etz /usr/local/bin",
-    },
-    {
-        text: "Show version",
-        code: "etz version",
-    },
-]
 
 export default InstallLinux;
