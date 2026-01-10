@@ -4,7 +4,7 @@
     color: #f8f8f2; /* Light text for readability */
     padding: 10px;
     border-radius: 5px; /* Rounded corners */
-    font-family: 'Courier New', monospace; /* Monospace font */
+    font-family: 'Monospace', monospace; /* Monospace font */
     font-size: 16px; /* Slightly larger font size for readability */
     overflow-x: auto; /* Enable horizontal scrolling for long lines */
     white-space: pre-wrap; /* Allow wrapping for long lines */

@@ -1,10 +1,9 @@
 import React from 'react';
 import '../styles/code.css';
 
-const CodeBlock = ({text, code}) => {
+const CodeBlock = ({code}) => {
     return (
         <div>
-            <p>{text}</p>
             <div className="code-container">
                 <pre className="code-snippet">
                     <code>{code}</code>
