@@ -19,7 +19,7 @@ const InstallMacOS = () => {
           <h4>Steps</h4>
           <div>
             {codeBlocks.map((item, index) =>
-              <CodeBlock key={index} text={item.text} code={item.code} />
+              <CodeBlock key={index} code={item.code} />
             )}
           </div>
         </div>
