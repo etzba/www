@@ -1,19 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import '../styles/layout.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/layout.css";
 
 function Install() {
   return (
-    <div className='home'>
+    <div className="home">
       <h1>Install</h1>
-      <p><code>etz</code> installation is available on both Linux and OSX</p>
-      <h3>Quick links</h3>
-      <Link to="/install/linux">
-        <p>Install <code>etz</code> on Linux</p>
-      </Link>
-      <Link to="/install/osx">
-          <p>Install <code>etz</code> on OSX</p>
-      </Link>
+      <p>
+        <code>etz</code> is available on both Linux and OSX, so let's see in the
+        next sections how to install it:
+      </p>
+      <ul>
+        <li>
+          <Link to="/install/linux">
+            Install <code>etz</code> on a Linux machine
+          </Link>
+        </li>
+        <li>
+          <Link to="/install/linux">
+            Install <code>etz</code> on OSX
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }

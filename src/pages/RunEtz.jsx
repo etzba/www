@@ -1,46 +1,66 @@
-import React from 'react';
-import CodeBlock from '../components/CodeBlock'
-import '../styles/layout.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import CodeBlock from "../components/CodeBlock";
+import "../styles/layout.css";
 
 const RunEtz = () => {
   return (
-    <div className='home'>
-      <div className='container'>
-        <section className='section'>
+    <div className="home">
+      <div className="container">
+        <section className="section">
           <h2>
             Run <code>etz</code> from terminal
           </h2>
           <p>
-            etz uses several sub commands: <code>api</code>, <code>pg</code> and <code>file</code>
+            <code>etz</code> uses several sub commands: <code>api</code>,
+            <code>pg</code> and <code>file</code> each of these sub commands,
+            uses different configuration to run different tests. So for example,{" "}
+            <code>api</code> will use http protocol under the scene to run a
+            load test on a remote server url:
           </p>
-            <div>
-              {codeBlocks.map((item, index) =>
-                <CodeBlock key={index} text={item.text} code={item.code} />
-              )}
-            </div>
+          <CodeBlock code={"etz api --url=https://etzba.com --method=GET"} />
+          <p>
+            Here is how to add payload to your request, run in duration of 3
+            seconds, with 100 request per second using 50 workers (routines):
+          </p>
+          <CodeBlock
+            code={`etz api --url=https://etzba.com \\ 
+              --method=POST -d 3s -r 100 -w 50 \\
+              -j '{"name":"Etz Ba","address":"Etzba etz 32"}'`}
+          />
+          <p>
+            <code>file</code> sub command will help you upload a file and
+            measure how long did it take:
+          </p>
+          <CodeBlock
+            code={
+              "etz file --url=https://etzba.com --method=POST --path=relative/path/to/files/"
+            }
+          />
+          Note that you just need to give the path with the files to upload and
+          <code>etz</code> will pick random files to upload to your service.
+          <p>
+            Assuming you'd like to store the results in a json format, use{" "}
+            <code>--output=directory/filename.json</code> arg and the file will
+            be save locally on your machine:
+          </p>
+          <CodeBlock
+            code={
+              "etz api --url=https://etzba.com --method=GET --output=files/result.json"
+            }
+          />
+          <p>
+            In the next section,{" "}
+            <Link to="/start/exec">
+              run <code>etz</code> with additional execution file
+            </Link>
+            , we will run more complex stuff with general configuration or
+            execution file
+          </p>
         </section>
       </div>
     </div>
   );
-}
-
-const codeBlocks = [
-    {
-        text: "To use etz without additional load test configuration for api (change --url to your http service):",
-        code: "etz api --url=http://localhost:8080/ --method=GET",
-    },
-    {
-        text: "And you can do much more directly from terminal. Here is how to add payload, run in duration of 3 seconds with 3 workers and limit of 9 request per second:",
-        code: `etz api --url=http://localhost:8080/ --method=POST -j '{"name":"Etz Ba","address":"Etzba etz 32"}' -d 3s -w 3 -r 9`,
-    },
-    {
-        text: "There is also a possiblity to export the results to a json file:",
-        code: "etz api --url=http://localhost:8080/ --method=GET --output=files/result.json",
-    },
-    {
-        text: "The file sub-commnad can run a load test that upload files from a specific directory (on your file system) and test on your http service:",
-        code: "etz file --url=http://localhost:8080/ --method=POST --path=relative/path/to/files/",
-    },
-]
+};
 
 export default RunEtz;

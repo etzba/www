@@ -1,48 +1,47 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import CodeBlock from '../components/CodeBlock'
-import '../styles/layout.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import CodeBlock from "../components/CodeBlock";
+import "../styles/layout.css";
 
 const SimpleExec = () => {
   return (
-    <div className='home'>
-      <div className='container'>
-        <section className='section'>
+    <div className="home">
+      <div className="container">
+        <section className="section">
           <h2>
             Simple <code>etz</code> run with an exectuion file
           </h2>
           <p>
-            In this section we will create a simple execution file for <code>api</code> sub-command. The same can be done with <code>pg</code> and <code>file</code> executions as well.
-            To use more advanced execution files go to:
+            If running <code>etz</code> with one command from your terminal is
+            not enough, we can create an execution file to list all of our tasks
+            in one configuration. So let's open an editom (vi\vim whatever you
+            prefer...) and create an execution file:
           </p>
-          <Link to="/config/executions">
-            <p>Confgire executions file for <code>etz</code></p>
-          </Link>
-          <div>
-            {codeBlocks.map((item, index) =>
-              <CodeBlock key={index} text={item.text} code={item.code} />
-            )}
-          </div>
+          <CodeBlock
+            code={`api:
+- url: https://etzba.com
+  method: POST
+  payload:
+    name: "etz"
+    address: "etzba etz street 123"`}
+          />
+          <p>
+            The <code>url</code>, <code>method</code> and <code>payload</code>{" "}
+            will help set the http request to whatever required. After you saved
+            the file, simply use again your terminal and run:
+          </p>
+          <CodeBlock code={`etz api --exec=path/to/executions.yaml`} />
+          <p>
+            When you feel like a pro, use our{" "}
+            <Link to="/config/executions">api advanced configuration</Link>{" "}
+            documentation to create more load test scenarios. In the following
+            sections we will discover more ways to create your
+            <code>.yaml</code> file for test configurations.
+          </p>
         </section>
       </div>
     </div>
   );
-}
-
-const codeBlocks = [
-  {
-    text: "etz can use execution or config file to build extended test cases. An example of a simple yaml execution file:",
-    code: `api:
-- url: http://localhost:8080/
-  method: POST
-  payload:
-    prop1: "etz"
-    prop2: "etzba etz"`,
-  },
-  {
-    text: "And run it from terminal:",
-    code: `etz api --exec=path/to/executions.yaml`,
-  },
-]
+};
 
 export default SimpleExec;
