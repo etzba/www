@@ -119,5 +119,4 @@ Usage
 Advanced Configuration
 -Using an Authentication File
 -Using Go Templates
-
 */
