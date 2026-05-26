@@ -1,5 +1,7 @@
 .home {
     padding: 30px;
+    position: sticky;
+    width: 75%;
 }
 
 .home li {
