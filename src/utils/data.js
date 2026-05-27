@@ -27,8 +27,8 @@ export const NavItems = [
         icon: "⚒️",
         content: <Install />,
         children: [
-            { id: "linux", label: "Linux", path: '/install/linux', content: <InstallLinux title="Linux installation" text="Install on a Linux machine" /> },
-            { id: "macOS", label: "Mac", path: '/install/osx', content: <InstallMacOS title="MacOS installation" text="Install on a macbook" /> },
+            { id: "linux", title: "Install on Linux", label: "Linux", path: '/install/linux', content: <InstallLinux title="Linux installation" text="Install on a Linux machine" /> },
+            { id: "macos", title: "Install on MacOS", label: "Mac", path: '/install/osx', content: <InstallMacOS title="MacOS installation" text="Install on a macbook" /> },
         ],
     },
     {
@@ -39,8 +39,8 @@ export const NavItems = [
         icon: "⚒️",
         content: <Install />,
         children: [
-            { id: "run", label: "Run", path: '/start/run', content: <RunEtz title="Run etz" text="Running etz" /> },
-            { id: "simple", label: "Simple Execution", path: '/start/exec', content: <SimpleExec title="Using simple execution file" text="Using simple execution file" /> },
+            { id: "run", title: "Running etz from terminal", label: "Run", path: '/start/run', content: <RunEtz title="Run etz" text="Running etz" /> },
+            { id: "simple", title: "Run etz with execution file", label: "Simple Execution", path: '/start/exec', content: <SimpleExec title="Using simple execution file" text="Using simple execution file" /> },
         ],
     },
     {

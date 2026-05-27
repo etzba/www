@@ -1,17 +1,17 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --sidebar-w: 30%;
-    --border: #2a3050;
-    --radius: 8px;
-    --font: 'Segoe UI', system-ui, sans-serif;
-    --transition: 240ms cubic-bezier(.4, 0, .2, 1);
+  --sidebar-w: 35%;
+  --border: #2a3050;
+  --radius: 8px;
+  --font: 'Segoe UI', system-ui, sans-serif;
+  --transition: 240ms cubic-bezier(.4, 0, .2, 1);
 }
 
 .sidebar {
@@ -39,7 +39,10 @@
 }
 
 .sidebar p {
-  color: #303030
+  color: #303030;
+  white-space: 'pre-line'; 
+  word-break: 'break-word';
+  overflow-wrap: 'break-word';
 }
 
 .sidebar ul {
@@ -51,6 +54,12 @@
 
 .sidebar li {
   padding-top: 10px;
+}
+
+.sidebar span {
+  white-space: 'pre-line'; 
+  word-break: 'break-word';
+  overflow-wrap: 'break-word';
 }
 
 .nav-item {
