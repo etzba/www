@@ -4,14 +4,14 @@ import CodeBlock from "../components/CodeBlock";
 
 const InstallLinux = () => {
   return (
-    <div className="home">
+    <div className='page'>
       <div className="container">
         <section className="section">
-          <h2>
+          <h1>
             Install <code>etz</code> on a Linux machine
-          </h2>
+          </h1>
           <div>
-            <h4>Requirements</h4>
+            <h3>Requirements</h3>
             <p>
               Not a long list of requirements... (It can be that you will be
               able to run it on older versions):
@@ -25,7 +25,7 @@ const InstallLinux = () => {
                 <code>wget</code>(optional)
               </li>
             </ul>
-            <h4>Steps</h4>
+            <h3>Steps</h3>
             <p>
               Download linux distribution from <a href={etz}>here</a> or use{" "}
               <code>wget</code> to download from github:

@@ -1,9 +1,40 @@
-.home {
-    padding: 30px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font: 'Optimistic Display - 700';
+  --transition: 240ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.page {
+    padding: 30px 40px 30px 20px;
     position: sticky;
     width: 65%;
 }
 
-.home li {
-    padding: 10px;
+.page h1 {
+   padding: 20px 40px 30px 20px; 
+}
+
+.page h3 {
+   padding: 20px 20px 20px 20px; 
+}
+
+.page p {
+    padding: 10px 30px 10px 20px; 
+}
+
+.page ul {
+  position: relative;
+  margin: 0;
+  padding-left: 40px;
+}
+
+.page li {
+  padding-top: 10px;
 }

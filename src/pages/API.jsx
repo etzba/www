@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 const ApiExec = () => {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>ApiExec</h1>
       <p>Content is in progress</p>
     </div>

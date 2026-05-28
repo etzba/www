@@ -1,24 +1,30 @@
+.code-container {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding-left: 15px;
+}
 /* Basic style for the code snippet */
 .code-snippet {
-    background-color: #2e2e2e; /* Dark background for contrast */
-    color: #f8f8f2; /* Light text for readability */
-    padding: 10px;
-    border-radius: 5px; /* Rounded corners */
-    font-family: 'Monospace', monospace; /* Monospace font */
-    font-size: 16px; /* Slightly larger font size for readability */
-    overflow-x: auto; /* Enable horizontal scrolling for long lines */
-    white-space: pre-wrap; /* Allow wrapping for long lines */
-    word-wrap: break-word; /* Break long words to prevent overflow */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  background-color: #2e2e2e; /* Dark background for contrast */
+  color: #f8f8f2; /* Light text for readability */
+  padding: 15px 10px 15px 10px;
+  border-radius: 5px; /* Rounded corners */
+  font-family: "Monospace", monospace; /* Monospace font */
+  font-size: 16px; /* Slightly larger font size for readability */
+  overflow-x: auto; /* Enable horizontal scrolling for long lines */
+  white-space: pre-wrap; /* Allow wrapping for long lines */
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
 /* Optional: Highlight keywords for extra flair */
 .code-snippet .keyword {
-    color: #ff79c6; /* Highlight color for keywords */
-    font-weight: bold;
+  color: #ff79c6; /* Highlight color for keywords */
+  font-weight: bold;
 }
 
 /* Optional: Highlight strings */
 .code-snippet .string {
-    color: #f1fa8c; /* Highlight color for strings */
+  color: #f1fa8c; /* Highlight color for strings */
 }

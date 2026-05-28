@@ -5,12 +5,12 @@ import "../styles/layout.css";
 
 const SimpleExec = () => {
   return (
-    <div className="home">
+    <div className='page'>
       <div className="container">
         <section className="section">
-          <h2>
+          <h1>
             Simple <code>etz</code> run with an exectuion file
-          </h2>
+          </h1>
           <p>
             If running <code>etz</code> with one command from your terminal is
             not enough, we can create an execution file to list all of our tasks

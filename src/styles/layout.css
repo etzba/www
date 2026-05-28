@@ -7,7 +7,7 @@
 .content {
   display: flex;
   flex: 1;
-  font-family: 'Monospace', monospace; /* Monospace font */
+  font: "Optimistic Display - 700";
 }
 
 .main {

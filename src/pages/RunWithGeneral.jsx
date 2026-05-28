@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 const RunWithGeneral = () => {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>RunWithGeneral</h1>
       <p>Content is in progress</p>
     </div>

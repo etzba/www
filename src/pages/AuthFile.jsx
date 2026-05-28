@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 const AuthFile = () => {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>AuthFile</h1>
       <p>Content is in progress</p>
     </div>

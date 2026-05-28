@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 function Usage() {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>Commands</h1>
       <p>Content is in progress</p>
     </div>

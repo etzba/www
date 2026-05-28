@@ -1,6 +1,6 @@
 .header {
   background-color: #303030;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   background-size:80px 140px;
@@ -9,11 +9,12 @@
 
 .header h1 {
   color: white;
+  padding-top: 40px;
 }
 
 .logo {
   padding-left: 15px;
-  align-items: left;
+  align-items: center;
   width: 10%;
 }
 

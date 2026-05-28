@@ -5,7 +5,7 @@ import "../styles/layout.css";
 
 const GettingStarted = () => {
   return (
-    <div className="home">
+    <div className='page'>
       <h1>Getting started</h1>
       <p>
         So... now after you installed <code>etz</code> and it can run in your
