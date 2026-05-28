@@ -40,9 +40,6 @@
 
 .sidebar p {
   color: #303030;
-  white-space: 'pre-line'; 
-  word-break: 'break-word';
-  overflow-wrap: 'break-word';
 }
 
 .sidebar ul {
@@ -54,12 +51,6 @@
 
 .sidebar li {
   padding-top: 10px;
-}
-
-.sidebar span {
-  white-space: 'pre-line'; 
-  word-break: 'break-word';
-  overflow-wrap: 'break-word';
 }
 
 .nav-item {

@@ -7,7 +7,7 @@ import routes from './routes/routes'
 import './App.css';
 
 function App() {
-  const [activeId, setActiveId] = useState("dashboard");
+  const [activeId, setActiveId] = useState("home");
   const [collapsed, setCollapsed] = useState(false);
 
   return (
