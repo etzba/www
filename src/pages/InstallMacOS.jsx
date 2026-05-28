@@ -25,7 +25,7 @@ const InstallMacOS = () => {
         <div>
           <h3>Steps</h3>
             <p>
-              Download linux distribution from <a href={etz}>here</a> or use{" "}
+              Download linux distribution from <a className={"page-link"} href={etz}>here</a> or use{" "}
               <code>wget</code> to download from github:
             </p>
             <CodeBlock
