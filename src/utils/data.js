@@ -51,8 +51,8 @@ export const NavItems = [
         icon: "⚒️",
         content: <TestCases />,
         children: [
-            { id: "general", label: "General", path: '/config/general', content: <GeneralConfig title="General configuration" text="General configuration" /> },
-            { id: "exec", label: "Execution", path: '/config/executions', content: <RunWithExecutionFile title="Using simple execution file" text="Using simple execution file" /> },
+            { id: "general", title: "Run etz with general configuration", label: "General", path: '/config/general', content: <GeneralConfig title="General configuration" text="General configuration" /> },
+            { id: "exec", title: "Run etz with execution file", label: "Execution", path: '/config/executions', content: <RunWithExecutionFile title="Using simple execution file" text="Using simple execution file" /> },
         ],
     },
 ];

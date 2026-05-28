@@ -9,8 +9,9 @@
 :root {
   --sidebar-w: 35%;
   --border: #2a3050;
-  --radius: 8px;
-  --font: 'Segoe UI', system-ui, sans-serif;
+  --radius: 10px;
+  --font: 'Optimistic Display - 700';
+  --surface: #fefeff;
   --transition: 240ms cubic-bezier(.4, 0, .2, 1);
 }
 
@@ -65,4 +66,9 @@
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
+}
+
+.arrow {
+  position: relative;
+  float: right;
 }

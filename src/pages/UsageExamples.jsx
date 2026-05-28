@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 function UsageExamples() {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>UsageExamples</h1>
       <p>Content is in progress</p>
     </div>

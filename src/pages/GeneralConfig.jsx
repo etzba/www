@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 const GeneralConfig = () => {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>GeneralConfig</h1>
       <p>Content is in progress</p>
     </div>

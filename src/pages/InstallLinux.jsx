@@ -4,7 +4,7 @@ import CodeBlock from "../components/CodeBlock";
 
 const InstallLinux = () => {
   return (
-    <div className="home">
+    <div className='page'>
       <div className="container">
         <section className="section">
           <h2>

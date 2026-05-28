@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 const ExecutionFile = () => {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>ExecutionFile</h1>
       <p>Content is in progress</p>
     </div>

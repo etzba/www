@@ -5,7 +5,7 @@ import "../styles/layout.css";
 
 const InstallMacOS = () => {
   return (
-    <div className="home">
+    <div className='page'>
       {/* macOS Section */}
       <section className="section">
         <h2>

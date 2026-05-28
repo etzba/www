@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 function NotFound() {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>NotFound</h1>
     </div>
   );

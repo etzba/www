@@ -4,7 +4,7 @@ import "../styles/layout.css";
 
 function Install() {
   return (
-    <div className="home">
+    <div className='page'>
       <h1>Install</h1>
       <p>
         <code>etz</code> is available on both Linux and OSX, so let's see in the

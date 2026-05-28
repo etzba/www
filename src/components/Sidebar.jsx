@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { RightArrow, DownArrow } from "./Arrows"
 import { NavItems } from "../utils/data";
+import { Title } from "./Title";
 import "../styles/sidebar.css";
 
 const Sidebar = ({ activeId, onNavigate, collapsed, onToggleCollapse }) => {
@@ -20,14 +22,12 @@ const Sidebar = ({ activeId, onNavigate, collapsed, onToggleCollapse }) => {
                 to={item.path}
                 key={item.id}
               >
-                <span
-                  style={{
-                    whiteSpace: 'pre-line',
-                    wordBreak: 'break-word',
-                    overflowWrap: 'break-word'
-                  }}>
-                  {item.title}
-                </span>
+                <Title text={item.title} />
+                {openMenus[item.id] && !collapsed ? (
+                  <RightArrow />
+                ) : (
+                  <DownArrow />
+                )}
               </Link>
               {openMenus[item.id] && !collapsed && (
                 <div className="sub-menu">
@@ -40,14 +40,7 @@ const Sidebar = ({ activeId, onNavigate, collapsed, onToggleCollapse }) => {
                           className={`nav-item child ${activeId === child.id ? "active" : ""}`}
                           onClick={() => onNavigate(child.id)}
                         >
-                          <span className="nav-label"
-                            style={{
-                              whiteSpace: 'pre-line',
-                              wordBreak: 'break-word',
-                              overflowWrap: 'break-word'
-                            }}>
-                            {child.title}
-                          </span>
+                          <Title text={child.title} />
                         </Link>
                       </li>
                     ))}
@@ -59,11 +52,14 @@ const Sidebar = ({ activeId, onNavigate, collapsed, onToggleCollapse }) => {
             <Link
               key={item.id}
               to={item.path}
-              className={`nav-item leaf ${activeId === item.id ? "active-parent" : ""}`} onClick={() => onNavigate(item.id)}
+              className={`nav-item leaf ${activeId === item.id ? "active-parent" : ""}`}
+              onClick={() => onNavigate(item.id)}
             >
-              {!collapsed && <span className="nav-label" >{item.title}</span>}
+              {!collapsed && (
+                <Title text={item.title} />
+              )}
             </Link>
-          )
+          ),
         )}
       </ul>
     </nav>

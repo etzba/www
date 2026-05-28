@@ -3,7 +3,7 @@ import '../styles/layout.css';
 
 const CliArgs = () => {
   return (
-    <div className='home'>
+    <div className='page'>
       <h1>CliArgs</h1>
       <p>Content is in progress</p>
     </div>

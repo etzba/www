@@ -1,3 +1,11 @@
+# Github pages
+
+To deploy changes, merge PR to master and run from master branch:
+
+```
+npm run deploy
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
