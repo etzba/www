@@ -54,29 +54,5 @@ export const NavItems = [
             { id: "general", label: "General", path: '/config/general', content: <GeneralConfig title="General configuration" text="General configuration" /> },
             { id: "exec", label: "Execution", path: '/config/executions', content: <RunWithExecutionFile title="Using simple execution file" text="Using simple execution file" /> },
         ],
-        subPaths: [
-            {
-                title: 'General configuration',
-                path: '/config/general',
-            },
-            {
-                title: 'With execution files',
-                path: '/config/executions',
-                subPaths: [
-                    {
-                        title: 'api',
-                        path: '/config/executions/api',
-                    },
-                    {
-                        title: 'sql',
-                        path: '/config/executions/sql',
-                    },
-                    {
-                        title: 'file',
-                        path: '/config/executions/file',
-                    },
-                ]
-            }
-        ],
     },
 ];

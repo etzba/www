@@ -20,7 +20,14 @@ const Sidebar = ({ activeId, onNavigate, collapsed, onToggleCollapse }) => {
                 to={item.path}
                 key={item.id}
               >
-                <span>{item.title}</span>
+                <span
+                  style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'break-word',
+                    overflowWrap: 'break-word'
+                  }}>
+                  {item.title}
+                </span>
               </Link>
               {openMenus[item.id] && !collapsed && (
                 <div className="sub-menu">
