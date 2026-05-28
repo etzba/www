@@ -9,7 +9,7 @@ function Home() {
       <h1>Welcome to etzba</h1>
       <h3>Load and performance testing tool</h3>
       <p>
-        Welcome to etz docs! In this website we will learn about <code>etz</code> load and performance tests tool to measure the performance of of your api service. 
+        Welcome to etz docs! Here you'll learn about <code>etz</code>, the load and performance tests tool to measure the performance of of your api service. 
       </p>
       <InfoBlock 
         preText={"The word etzba in Hebrew, used as a measurement unit in biblical times and also means a pointing finger. This tool will measure the duration of http requests to your service and point the finger on potential issues and bottlenecks."}

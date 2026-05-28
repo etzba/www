@@ -6,13 +6,12 @@ import "../styles/layout.css";
 const InstallMacOS = () => {
   return (
     <div className='page'>
-      {/* macOS Section */}
       <section className="section">
-        <h2>
+        <h1>
           Install <code>etz</code> on OSX
-        </h2>
+        </h1>
         <div>
-          <h4>Requirements</h4>
+          <h3>Requirements</h3>
           <p>Again... Not a long list of requirements:</p>
           <ul>
             <li key={1}>
@@ -22,8 +21,9 @@ const InstallMacOS = () => {
               <code>wget</code>(optional)
             </li>
           </ul>
-          <h4>Steps</h4>
-          <div>
+        </div>
+        <div>
+          <h3>Steps</h3>
             <p>
               Download linux distribution from <a href={etz}>here</a> or use{" "}
               <code>wget</code> to download from github:
@@ -37,7 +37,6 @@ const InstallMacOS = () => {
             <CodeBlock code={"mv etz /usr/local/bin"} />
             <p>Check from terminal that you can see the version:</p>
             <CodeBlock code={"etz version"} />
-          </div>
         </div>
       </section>
     </div>

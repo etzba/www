@@ -8,12 +8,12 @@ const RunEtz = () => {
     <div className='page'>
       <div className="container">
         <section className="section">
-          <h2>
+          <h1>
             Run <code>etz</code> from terminal
-          </h2>
+          </h1>
           <p>
-            <code>etz</code> uses several sub commands: <code>api</code>,
-            <code>pg</code> and <code>file</code> each of these sub commands,
+            <code>etz</code> uses several sub commands: <code>api</code>,{" "}
+            <code>pg</code> and <code>file</code> each of these sub commands,{" "}
             uses different configuration to run different tests. So for example,{" "}
             <code>api</code> will use http protocol under the scene to run a
             load test on a remote server url:
