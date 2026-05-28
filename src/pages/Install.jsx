@@ -12,12 +12,12 @@ function Install() {
       </p>
       <ul>
         <li>
-          <Link to="/install/linux">
+          <Link className={"page-link"} to="/install/linux">
             Install <code>etz</code> on a Linux machine
           </Link>
         </li>
         <li>
-          <Link to="/install/linux">
+          <Link className={"page-link"} to="/install/linux">
             Install <code>etz</code> on OSX
           </Link>
         </li>

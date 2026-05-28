@@ -21,12 +21,12 @@ const GettingStarted = () => {
         It's ok if <code>--help</code> was not that helpful at the moment. Soon
         you'll understand better what to do with the commands from the help
         output. Let's go further to next sections and simply{" "}
-        <Link to="/start/run">run it from terminal</Link>
+        <Link className={"page-link"} to="/start/run">run it from terminal</Link>
       </p>
       <p>
         And later when you'll start to feel more comfortable, let's add some
         configs and run more complex tasks
-        <Link to="/start/exec"> with additional execution file</Link>
+        <Link className={"page-link"} to="/start/exec"> with additional execution file</Link>
       </p>
     </div>
   );

@@ -33,7 +33,7 @@ const SimpleExec = () => {
           <CodeBlock code={`etz api --exec=path/to/executions.yaml`} />
           <p>
             When you feel like a pro, use our{" "}
-            <Link to="/config/executions">api advanced configuration</Link>{" "}
+            <Link className={"page-link"} to="/config/executions">api advanced configuration</Link>{" "}
             documentation to create more load test scenarios. In the following
             sections we will discover more ways to create your
             <code>.yaml</code> file for test configurations.

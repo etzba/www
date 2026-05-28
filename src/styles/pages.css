@@ -1,14 +1,14 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-  --font: 'Optimistic Display - 700';
-  --transition: 240ms cubic-bezier(.4, 0, .2, 1);
+    --font: 'Optimistic Display - 700';
+    --transition: 240ms cubic-bezier(.4, 0, .2, 1);
 }
 
 .page {
@@ -18,23 +18,28 @@
 }
 
 .page h1 {
-   padding: 20px 40px 30px 20px; 
+    padding: 20px 40px 30px 20px;
 }
 
 .page h3 {
-   padding: 20px 20px 20px 20px; 
+    padding: 20px 20px 20px 20px;
 }
 
 .page p {
-    padding: 10px 30px 10px 20px; 
+    padding: 10px 30px 10px 20px;
 }
 
 .page ul {
-  position: relative;
-  margin: 0;
-  padding-left: 40px;
+    position: relative;
+    margin: 0;
+    padding-left: 40px;
 }
 
 .page li {
-  padding-top: 10px;
+    padding-top: 10px;
+}
+
+.page-link {
+    color: #7f7c7c;
+    text-decoration: none;
 }

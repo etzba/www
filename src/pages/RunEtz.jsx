@@ -51,7 +51,7 @@ const RunEtz = () => {
           />
           <p>
             In the next section,{" "}
-            <Link to="/start/exec">
+            <Link className={"page-link"} to="/start/exec">
               run <code>etz</code> with additional execution file
             </Link>
             , we will run more complex stuff with general configuration or
