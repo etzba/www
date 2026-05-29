@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { RightArrow, DownArrow } from "./Arrows"
-import { NavItems } from "../utils/data";
+import { NavItems } from "../utils/navItems";
 import { Title } from "./Title";
 import "../styles/sidebar.css";
 
