@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef254c73.css",
-    "main.js": "/static/js/main.f47c1497.js",
+    "main.css": "/static/css/main.d1bdc3ff.css",
+    "main.js": "/static/js/main.96c41fb9.js",
     "static/media/etz": "/static/media/etz.526b7ddfebdb73ee2a5c",
     "index.html": "/index.html",
-    "main.ef254c73.css.map": "/static/css/main.ef254c73.css.map",
-    "main.f47c1497.js.map": "/static/js/main.f47c1497.js.map"
+    "main.d1bdc3ff.css.map": "/static/css/main.d1bdc3ff.css.map",
+    "main.96c41fb9.js.map": "/static/js/main.96c41fb9.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef254c73.css",
-    "static/js/main.f47c1497.js"
+    "static/css/main.d1bdc3ff.css",
+    "static/js/main.96c41fb9.js"
   ]
 }
