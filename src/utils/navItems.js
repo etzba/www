@@ -1,4 +1,4 @@
-import Home from "../pages/Home";
+import Welcome from "../pages/Welcome";
 import Install from "../pages/Install";
 import AdvancedConfig from "../pages/AdvancedConfig";
 import Usage from "../pages/Usage";
@@ -22,12 +22,12 @@ import GoTemplatesFunctions from "../pages/GoTemplatesFunctions";
 // https://coolsymbol.com/
 export const NavItems = [
   {
-    id: "home",
-    title: "Home",
+    id: "Welcome",
+    title: "Welcome",
     path: "/",
-    label: "Home",
+    label: "Welcome",
     icon: "⚒️",
-    content: <Home />,
+    content: <Welcome />,
     exact: true,
   },
   {
