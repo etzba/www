@@ -4,12 +4,12 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { NavItems } from "./utils/navItems";
+import { HeaderItems } from "./utils/headerItem";
 import "./App.css";
 
 function App() {
   const [activeId, setActiveId] = useState("home");
   const [collapsed, setCollapsed] = useState(false);
-
   const routes = NavItems.flatMap(({ children, ...parent }) => [
     { ...parent },
     ...(children?.map((child) => ({ ...child, children: undefined })) ?? []),
@@ -27,6 +27,12 @@ function App() {
               onToggleCollapse={() => setCollapsed((p) => !p)}
             />
             <Routes>
+              {HeaderItems.map(
+                (item) =>
+                  item.id !== "docs" && (
+                    <Route path={item.path} element={item.content} />
+                  ),
+              )}
               {routes.map((item) => (
                 <Route path={item.path} element={item.content} />
               ))}

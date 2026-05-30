@@ -3,7 +3,7 @@ import "../styles/layout.css";
 import "../styles/pages.css";
 import InfoBlock from "../components/InfoBlock";
 
-function Home() {
+function Documentation() {
   return (
     <div className="page">
       <h1>Welcome to etzba</h1>
@@ -40,4 +40,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Documentation;
