@@ -1,7 +1,6 @@
 import Home from "../pages/Home";
 import Install from "../pages/Install";
 import AdvancedConfig from "../pages/AdvancedConfig";
-import NotFound from "../pages/NotFound";
 import Usage from "../pages/Usage";
 import InstallLinux from "../pages/InstallLinux";
 import InstallMacOS from "../pages/InstallMacOS";
@@ -45,10 +44,7 @@ export const NavItems = [
         path: "/install/linux",
         label: "Linux",
         content: (
-          <InstallLinux
-            title="Linux installation"
-            text="Install on a Linux machine"
-          />
+          <InstallLinux />
         ),
       },
       {
@@ -57,10 +53,7 @@ export const NavItems = [
         path: "/install/osx",
         label: "Mac",
         content: (
-          <InstallMacOS
-            title="MacOS installation"
-            text="Install on a macbook"
-          />
+          <InstallMacOS />
         ),
       },
     ],
@@ -71,14 +64,14 @@ export const NavItems = [
     path: "/start",
     label: "Started",
     icon: "⚒️",
-    content: <Install />,
+    content: <GettingStarted />,
     children: [
       {
         id: "run",
         title: "Running etz from terminal",
         label: "Run",
         path: "/start/run",
-        content: <RunEtz title="Run etz" text="Running etz" />,
+        content: <RunEtz />,
       },
       {
         id: "simple",
@@ -86,10 +79,7 @@ export const NavItems = [
         label: "Simple Execution",
         path: "/start/exec",
         content: (
-          <SimpleExec
-            title="Using simple execution file"
-            text="Using simple execution file"
-          />
+          <SimpleExec />
         ),
       },
     ],
@@ -108,10 +98,7 @@ export const NavItems = [
         label: "General",
         path: "/config/general",
         content: (
-          <GeneralConfig
-            title="General configuration"
-            text="General configuration"
-          />
+          <GeneralConfig />
         ),
       },
       {
@@ -120,10 +107,7 @@ export const NavItems = [
         label: "Execution",
         path: "/config/executions",
         content: (
-          <RunWithExecutionFile
-            title="Using simple execution file"
-            text="Using simple execution file"
-          />
+          <RunWithExecutionFile />
         ),
       },
     ],

@@ -11,9 +11,9 @@ function App() {
   const [collapsed, setCollapsed] = useState(false);
 
   const routes = NavItems.flatMap(({ children, ...parent }) => [
-  { ...parent },
-  ...(children?.map(child => ({ ...child, children: undefined })) ?? []),
-]);
+    { ...parent },
+    ...(children?.map((child) => ({ ...child, children: undefined })) ?? []),
+  ]);
   return (
     <>
       <Router>
