@@ -43,18 +43,14 @@ export const NavItems = [
         title: "Install on Linux",
         path: "/install/linux",
         label: "Linux",
-        content: (
-          <InstallLinux />
-        ),
+        content: <InstallLinux />,
       },
       {
         id: "macos",
         title: "Install on MacOS",
         path: "/install/osx",
         label: "Mac",
-        content: (
-          <InstallMacOS />
-        ),
+        content: <InstallMacOS />,
       },
     ],
   },
@@ -78,9 +74,7 @@ export const NavItems = [
         title: "Run etz with execution file",
         label: "Simple Execution",
         path: "/start/exec",
-        content: (
-          <SimpleExec />
-        ),
+        content: <SimpleExec />,
       },
     ],
   },
@@ -97,18 +91,14 @@ export const NavItems = [
         title: "Run etz with general configuration",
         label: "General",
         path: "/config/general",
-        content: (
-          <GeneralConfig />
-        ),
+        content: <GeneralConfig />,
       },
       {
         id: "exec",
         title: "Run etz with execution file",
         label: "Execution",
         path: "/config/executions",
-        content: (
-          <RunWithExecutionFile />
-        ),
+        content: <RunWithExecutionFile />,
       },
     ],
   },
