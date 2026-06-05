@@ -3,8 +3,7 @@ import { HeaderItems } from "../utils/headerItem";
 import "../styles/header.css";
 import { Link } from "react-router-dom";
 
-function Header({ withSidebar, setSidebar }) {
-  console.log("with", withSidebar)
+function Header() {
   return (
     <header className="header">
       <img src={require("../assets/etzba.png")} alt="Logo" className="logo" />
