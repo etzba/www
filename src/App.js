@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { NavItems } from "./utils/navItems";
 import "./App.css";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   const [activeId, setActiveId] = useState("home");
@@ -16,25 +17,29 @@ function App() {
   ]);
   return (
     <>
-      <Router>
-        <div className="layout">
-          <Header />
-          <div className="content">
+      <div className="layout">
+        <Header />
+        <div className="content">
+          <Routes>
+            <Route path="/about" element={<AboutPage collapsed={collapsed} setCollapsed={() => setCollapsed((p) => !p)} />}></Route>
+          </Routes>
+          {collapsed ? (
+            <></>
+          ) : (
             <Sidebar
               activeId={activeId}
               onNavigate={setActiveId}
-              collapsed={collapsed}
               onToggleCollapse={() => setCollapsed((p) => !p)}
             />
-            <Routes>
-              {routes.map((item) => (
-                <Route path={item.path} element={item.content} />
-              ))}
-            </Routes>
-          </div>
-          <Footer />
+          )}
+          <Routes>
+            {routes.map((item) => (
+              <Route path={item.path} element={item.content} />
+            ))}
+          </Routes>
         </div>
-      </Router>
+        <Footer />
+      </div>
     </>
   );
 }
