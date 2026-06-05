@@ -10,17 +10,16 @@
   --sidebar-w: 35%;
   --border: #2a3050;
   --radius: 10px;
-  --font: 'Optimistic Display - 700';
+  --font: "Optimistic Display - 700";
   --surface: #fefeff;
   --letters: #02020a;
-  --transition: 240ms cubic-bezier(.4, 0, .2, 1);
+  --transition: 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sidebar {
   background-color: #e3e6e2;
   width: 25%;
-  padding: 10px;
-  padding-top: 30px;
+  padding: 120px 30px 30px 20px;
   height: 100%;
   position: sticky;
   background: var(--surface);
