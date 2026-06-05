@@ -1,4 +1,4 @@
-import Welcome from "../pages/Welcome";
+import Home from "../pages/Home";
 import About from "../pages/About";
 import Tools from "../pages/Tools";
 
@@ -8,7 +8,7 @@ export const HeaderItems = [
     title: "Docs",
     path: "/",
     label: "Docs",
-    content: <Welcome setSidebar={true} />,
+    content: <Home setSidebar={true} />,
     sidebar: true,
     exact: true,
   },
