@@ -7,7 +7,6 @@
 }
 
 :root {
-  --sidebar-w: 35%;
   --border: #2a3050;
   --radius: 10px;
   --font: "Optimistic Display - 700";
@@ -18,12 +17,13 @@
 
 .sidebar {
   background-color: #e3e6e2;
-  width: 25%;
-  padding: 120px 30px 30px 20px;
+  width: 30%;
+  padding: 60px 10px 10px 20px;
   height: 100%;
   position: sticky;
   background: var(--surface);
-  border-right: 1px solid var(--border);
+  border-right: 2px solid var(--border);
+  margin-left: -60px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
