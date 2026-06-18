@@ -13,13 +13,14 @@
 }
 
 .info {
-  background-color: #f4f5f3;
-  padding: 15px 10px 15px 10px;
-  margin-left: 40px;
+  background-color: #ced2d4;
+  padding: 10px 8px 10px 5px;
+  margin-left: 30px;
   position: sticky;
-  width: 90%;
+  width: 85%;
   text-align: left;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
+  border-left: 3px solid #031256;
   transition: width var(--transition);
 }
 
