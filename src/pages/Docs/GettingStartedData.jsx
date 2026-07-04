@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import CodeBlock from "../../components/CodeBlock";
+import { DownloadLink, SmallLinkBox } from "../../components/LinkBox";
+import linuxBinaryFile from "../../assets/etz_linux_amd64_v1?url";
+import darwinBinaryFile from "../../assets/etz_darwin_amd64_v1?url";
 import "../../styles/layout.css";
+import "../../styles/table.css";
 
 const GettingStarted = () => {
   return (
@@ -8,31 +12,122 @@ const GettingStarted = () => {
       <section className="section">
         <h1>Getting started</h1>
         <p>
-          So... now after you installed <code>etz</code> and it can run in your
-          terminal, let's run few commands for a short warm-up.
+          Let's start with a short explanation about this docs website and how
+          to use this program while following the pages sections.
         </p>
+        <ul>
+          <li>
+            We use our terminal to run <code>etz</code>, so make sure that your
+            terminal is available
+          </li>
+          <li>
+            In some of the pages you'll see a block of code, marked as "term"
+            (to use in linux or mac terminal), you can copy and run it in your
+            terminal
+          </li>
+          <li>
+            Although this CLI tool is planned to run as a fast execution from
+            command line, we can also use <code>yaml</code> files in addition to
+            the command and set more complex scenarios for our test cases. Code
+            block for <code>yaml</code> will be marked as "yaml" and you can
+            simply copy and paste to any editor
+          </li>
+        </ul>
         <p>
-          Let's start by checking <code>etz</code> version and run:
+          So to set it up jump over to{" "}
+          <Link className={"page-link"} to="/docs/start/install">
+            Install section{" "}
+          </Link>
+          or if you know your way around, simply use the download links:
         </p>
+        <div className="boxes">
+          <DownloadLink
+            title="Download (Linux)"
+            file={linuxBinaryFile}
+            className="small-box-link"
+          />
+          <DownloadLink
+            title="Download (OSX)"
+            file={darwinBinaryFile}
+            className="small-box-link"
+          />
+        </div>
+        <p>
+          If you already downloaded <code>etz</code> you can go directly to the fun sections and start load testing your environment:
+        </p>
+        <div className="boxes">
+          <SmallLinkBox
+            title="Run etz from terminal"
+            path="/docs/start/run"
+            className="small-box-link"
+          />
+          <SmallLinkBox
+            title="Create execution files"
+            path="/docs/start/exec"
+            className="small-box-link"
+          />
+        </div>
+      </section>
+    </div>
+  );
+};
+
+const InstallEtz = () => {
+  return (
+    <div className="container">
+      <section className="section">
+        <h1>
+          Install <code>etz</code>
+        </h1>
+        <p>
+          Since <code>etz</code> is a go binary file, no requirements needed
+          other than simply download it.
+        </p>
+        <p>Below you can find download links per operating system:</p>
+        <DownloadTable />
+        <p>
+          Move to bin directory (The default downloads directory might set to a
+          different location)
+        </p>
+        <CodeBlock
+          type="term"
+          code={"sudo mv ~/Downloads/etz /usr/local/bin/"}
+        />
+        <p>Check the version of <code>etz</code></p>
         <CodeBlock type="term" code={"etz version"} />
-        <p>And before we are getting to the juicy part, let's ask for help:</p>
-        <CodeBlock type="term" code={"etz --help"} />
-        <p>
-          It's ok if <code>--help</code> was not that helpful at the moment.
-          Soon you'll understand better what to do with the commands from the
-          help output. Let's go further to next sections and simply{" "}
-          <Link className={"page-link"} to="/docs/start/run">
-            run it from terminal
-          </Link>
-        </p>
-        <p>
-          And later when you'll start to feel more comfortable, let's add some
-          configs and run more complex tasks
-          <Link className={"page-link"} to="/docs/start/exec">
-            {" "}
-            with additional execution file
-          </Link>
-        </p>
+
+        <h2>
+          Install <code>etz</code> on a Linux machine from terminal
+        </h2>
+        <div>
+          <h3>Requirements</h3>
+          <p>
+            Make sure that you have the following:
+          </p>
+          <ul>
+            <li key={1}>Ubuntu 20.04+ or compatible distro</li>
+            <li key={2}>
+              <code>bash</code> or compatible shell
+            </li>
+            <li key={3}>
+              <code>wget</code> or <code>curl</code>
+            </li>
+          </ul>
+          <h3>Steps</h3>
+          <p>
+            Use <code>wget</code> to download from github:
+          </p>
+          <CodeBlock
+            type="term"
+            code={
+              "wget https://raw.githubusercontent.com/etzba/etz/master/etzba_linux_amd64_v1/etz"
+            }
+          />
+          <p>Move to bin directory:</p>
+          <CodeBlock type="term" code={"sudo mv etz /usr/local/bin/"} />
+          <p>Check from terminal that you can see the version:</p>
+          <CodeBlock type="term" code={"etz version"} />
+        </div>
       </section>
     </div>
   );
@@ -150,4 +245,35 @@ const SimpleExec = () => {
   );
 };
 
-export { GettingStarted, RunEtz, SimpleExec };
+const DownloadTable = () => {
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <p className="column">Linux (amd64)</p>
+          </th>
+          <th>
+            <p className="column">Darwin (amd64)</p>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a className="td-link" href={linuxBinaryFile} download="etz">
+              Download
+            </a>
+          </td>
+          <td>
+            <a className="td-link" href={darwinBinaryFile} download="etz">
+              Download
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  );
+};
+
+export { GettingStarted, InstallEtz, RunEtz, SimpleExec };
