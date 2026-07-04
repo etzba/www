@@ -10,8 +10,8 @@
 }
 
 .code-title {
-  background-color: #e9eeee;
-  color: #71716e;
+  background-color: #6c6e6e;
+  color: #ecece3;
   padding: 2px 2px 2px 2px;
   border-radius: 5px;
   font-family:
@@ -71,8 +71,9 @@
 }
 
 .code-snippet {
-  background-color: #ede9e9;
-  color: #aeaea3;
+  transition: width var(--transition);
+  background-color: rgb(7, 10, 36);
+  color: aliceblue;
   padding: 15px 10px 15px 10px;
   border-radius: 5px;
   border: #3b3d25;
@@ -82,5 +83,4 @@
   white-space: pre-wrap; /* Allow wrapping for long lines */
   word-wrap: break-word;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  color:#252f38;
 }

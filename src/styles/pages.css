@@ -1,22 +1,36 @@
 .page {
-  padding: 80px 20px 30px 20px;
+  padding: 80px 20px 0px 10px;
   position: sticky;
   width: 100%;
   display: inline;
-  font-family: Optimistic Display, -apple-system, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 22px;
+  font-family:
+    Optimistic Display,
+    -apple-system,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+  font-size: 20px;
 }
 
 .page h1 {
   padding: 20px 40px 30px 20px;
 }
 
+.page h2 {
+  padding: 40px 30px 10px 20px;
+}
+
 .page h3 {
-  padding: 20px 20px 20px 20px;
+  padding: 20px 5px 5px 20px;
 }
 
 .page p {
-  padding: 10px 30px 10px 20px;
+  width: 90%;
+  padding: 20px 20px 20px 20px;
 }
 
 .page ul {
@@ -30,6 +44,6 @@
 }
 
 .page-link {
-  color: #7f7c7c;
+  padding-top: 10px;
   text-decoration: none;
 }
