@@ -2,9 +2,21 @@ import InfoBlock from "../../components/InfoBlock";
 import { DownloadLink, SmallLinkBox } from "../../components/LinkBox";
 import linuxBinaryFile from "../../assets/etz_linux_amd64_v1?url";
 import darwinBinaryFile from "../../assets/etz_darwin_amd64_v1?url";
+import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 
 const Welcome = () => {
+  const forward = { title: "Getting started", path: "/docs/start/" };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
   return (
     <div>
       <section className="section">
@@ -30,45 +42,23 @@ const Welcome = () => {
         <p>Go to the next sections to set it up: </p>
         <div className="boxes">
           <SmallLinkBox
-            title="Getting started"
+            title="Getting Started"
             path="/docs/start"
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Install"
+            title="How To Install etz"
             path="/docs/start/install"
             className="small-box-link"
           />
-          <DownloadLink
-            title="Download (Linux)"
-            file={linuxBinaryFile}
-            className="small-box-link"
-          />
-          <DownloadLink
-            title="Download (OSX)"
-            file={darwinBinaryFile}
-            className="small-box-link"
-          />
-        </div>
-        <p>
-          <code>etz</code> is capable of running advanced load test scenarios
-          by using additional <code>.yaml</code> files - you can create a
-          complex test scenarios and automate test executions while defining
-          requests per second, test duration and many more options.
-        </p>
-        <p>
-          To find more about using <code>.yaml</code> files for complex
-          load test configurations:{" "}
-        </p>
-        <div className="boxes">
           <SmallLinkBox
-            title="Simple exectuion with yaml"
-            path="/docs/start/exec"
+            title="Setup Config Files"
+            path="/docs/config/executions"
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Advanced configuration"
-            path="/docs/config/general"
+            title="Continues Integration"
+            path="/docs/config/executions"
             className="small-box-link"
           />
         </div>
@@ -81,6 +71,17 @@ const Welcome = () => {
             "Real-time metrics: Get instant feedback on throughput, latency, and errors",
             "YAML configuration: Define your test cases with a yaml file and extend it with functions",
           ]}
+        />
+        <p>
+          <code>etz</code> is capable of running advanced load test scenarios by
+          using additional <code>.yaml</code> files - you can create a complex
+          test scenarios and automate test executions while defining requests
+          per second, test duration and many more options.
+        </p>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
         />
       </section>
     </div>

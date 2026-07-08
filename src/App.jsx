@@ -6,12 +6,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { DocsItems } from "./routes/docsItems";
 import { HeaderItems } from "./routes/headerItems";
+import UseMediaQuery from "./utils/media";
 
 const App = () => {
+  const isMobile = UseMediaQuery("(max-width: 768px)");
   return (
     <>
       <div className="layout">
-        <Header items={HeaderItems} />
+        <Header items={HeaderItems} isMobile={isMobile} />
         <div className="content">
           <Routes>
             <Route path="/">
@@ -19,7 +21,10 @@ const App = () => {
                 path=""
                 element={<Navigate to="/docs/welcome" replace />}
               />
-              <Route path="docs" element={<DocsPage items={DocsItems} />}>
+              <Route
+                path="docs"
+                element={<DocsPage items={DocsItems} isMobile={isMobile} />}
+              >
                 <Route
                   index
                   element={<Navigate to="/docs/welcome" replace />}
@@ -29,7 +34,11 @@ const App = () => {
                     <Route key={idx} path={item.path}>
                       <Route index element={item.element} />
                       {item.children.map((childIten, ChildIdx) => (
-                        <Route key={ChildIdx} path={childIten.path} element={childIten.element} />
+                        <Route
+                          key={ChildIdx}
+                          path={childIten.path}
+                          element={childIten.element}
+                        />
                       ))}
                     </Route>
                   ) : (
