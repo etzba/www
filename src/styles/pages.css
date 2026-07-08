@@ -44,6 +44,20 @@
 }
 
 @media (max-width: 768px) {
+  .page p {
+    width: 90%;
+    padding: 20px 20px 20px 20px;
+    font-size: var(--charsize5);
+  }
+
+  .page li {
+    padding-top: 2px;
+    font-size: var(--charsize5);
+  }
+  .page-link {
+    padding-top: 2px;
+    font-size: var(--charsize5);
+  }
   .guide {
     font-size: var(--charsize6);
   }

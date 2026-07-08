@@ -25,6 +25,11 @@ const GettingStarted = () => {
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/start">
+            Getting started
+          </Link>
+        </span>
         <h1>Getting started</h1>
         <p>
           Let's start with a short explanation about this docs website and how
