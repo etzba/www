@@ -5,7 +5,7 @@ import { SmallLinkBox } from "../../components/LinkBox";
 
 const TestCases = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>Configuring test cases</h1>
         <p>
@@ -41,7 +41,7 @@ const TestCases = () => {
 
 const Commands = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>
           Getting familiar with <code>etz</code> commands
@@ -53,7 +53,7 @@ const Commands = () => {
 
 const GeneralConfig = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>
           Run <code>etz</code> with general config file
@@ -156,7 +156,7 @@ const GeneralConfig = () => {
 
 const RunWithExecutionFile = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>RunWithExecutionFile</h1>
         <p>Content is in progress</p>

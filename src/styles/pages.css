@@ -3,16 +3,7 @@
   position: sticky;
   width: 100%;
   display: inline;
-  font-family:
-    Optimistic Display,
-    -apple-system,
-    ui-sans-serif,
-    system-ui,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji,
-    Segoe UI Symbol,
-    Noto Color Emoji;
+  font-family: var(--font);
   font-size: 20px;
 }
 

@@ -7,12 +7,31 @@
 }
 
 :root {
-  --sidebar-w: 35%;
-  --border: #2a3050;
   --radius: 10px;
-  --font: Optimistic Display, -apple-system, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  --surface: #fefeff;
-  --letters: #02020a;
+  --cli-font: "Monospace", monospace;
+  --font:
+    Optimistic Display, -apple-system, ui-sans-serif, system-ui, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --surface1: #fefeff;
+  --surface2: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  --surface3: #92929880;
+  --surface4: rgb(7, 10, 36);
+  --surface5: #6c6e6e;
+  --border1: #2a3050;
+  --border2: #aeaed080;
+  --border3: #aeaed080;
+  --border4: rgb(72, 87, 216);
+  --border5: #3b3d25;
+  --border6: #031256;
+  --letters1: #02020a;
+  --letters2: #303030;
+  --letters3: white;
+  --charsize1: clamp(1.5rem, 4vw, 3rem);
+  --charsize2: clamp(1.2rem, 3vw, 2rem);
+  --charsize3: clamp(1rem, 2vw, 1.5rem);
+  --charsize4: clamp(0.9rem, 2vw, 1.4rem);
+  --charsize5: clamp(0.8rem, 1.2vw, 1.2rem);
+  --charsize6: clamp(0.7rem, 1vw, 1rem);
   --transition: 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -20,30 +39,13 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  font-family:
-    Optimistic Display,
-    -apple-system,
-    ui-sans-serif,
-    system-ui,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji,
-    Segoe UI Symbol,
-    Noto Color Emoji;
+  font-family: var(--font);
 }
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   flex: 1;
   overflow: auto;
-  font-family:
-    Optimistic Display,
-    -apple-system,
-    ui-sans-serif,
-    system-ui,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji,
-    Segoe UI Symbol,
-    Noto Color Emoji;
+  font-family: var(--font);
 }

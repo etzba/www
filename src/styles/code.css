@@ -4,27 +4,18 @@
   border-radius: 8px;
   border: 1px solid var(--border);
   transition: width var(--transition);
-  background-color: rgb(240, 244, 242);
+  background-color: var(--surface3);
   position: relative;
   margin-left: 20px;
 }
 
 .code-title {
-  background-color: #6c6e6e;
-  color: #ecece3;
+  background-color: var(--surface5);
+  color: var(--letters3);
   padding: 2px 2px 2px 2px;
   border-radius: 5px;
-  font-family:
-    Optimistic Display,
-    -apple-system,
-    ui-sans-serif,
-    system-ui,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji,
-    Segoe UI Symbol,
-    Noto Color Emoji;
-  font-size: 14px;
+  font-family: var(--font);
+  font-size: var(--charsize6);
   overflow-x: auto;
   border-radius: 0%;
 }
@@ -33,17 +24,13 @@
   display: inline-block;
   outline: none;
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--surface1);
   border-radius: 0.5rem;
-  border: 2px solid #68737c;
-  color: #52708a;
-  font-size: 14px;
+  border: 2px solid var(--border5);
+  color: var(--letters2);
   line-height: 14px;
   font-weight: 600;
   text-align: center;
-  :hover {
-    background-color: #bfcde3;
-  }
 }
 
 .code-icon {
@@ -55,8 +42,8 @@
 .code-title-text {
   float: left;
   padding-left: 5px;
-  font-size: 12px;
-  font-family: "Monospace", monospace;
+  font-size: var(--charsize6);
+  font-family: var(--cli-font);
   font-weight: 600;
   width: 1em;
   height: 1.2em;
@@ -64,23 +51,22 @@
 
 .code-copy {
   float: right;
-  width: 5%;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 12px;
+  width: 6%;
+  font-family: var(--font);
   height: auto;
 }
 
 .code-snippet {
   transition: width var(--transition);
-  background-color: rgb(7, 10, 36);
-  color: aliceblue;
+  background-color: var(--surface4);
+  color: var(--letters3);
   padding: 15px 10px 15px 10px;
   border-radius: 5px;
-  border: #3b3d25;
-  font-family: "Monospace", monospace;
-  font-size: 16px; /* Slightly larger font size for readability */
-  overflow-x: auto; /* Enable horizontal scrolling for long lines */
-  white-space: pre-wrap; /* Allow wrapping for long lines */
+  border: var(--border5);
+  font-family: var(--cli-font);
+  font-size: var(--charsize5);
+  overflow-x: auto;
+  white-space: pre-wrap;
   word-wrap: break-word;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }

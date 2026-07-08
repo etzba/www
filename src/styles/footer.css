@@ -1,23 +1,14 @@
 .footer {
-  border-top: 3px solid #aeaed080;
+  border-top: 3px solid var(--border2);
   width: 100%;
   position: sticky;
   z-index: 1;
   bottom: 0px;
   display: grid;
-  background-color: #92929880;
+  background-color: var(--surface3);
   text-align: center;
   white-space: pre;
-  font-family:
-    Optimistic Display,
-    -apple-system,
-    ui-sans-serif,
-    system-ui,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji,
-    Segoe UI Symbol,
-    Noto Color Emoji;
+  font-family: var(--font);
 }
 
 .footer a {

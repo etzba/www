@@ -6,7 +6,7 @@ import "../../styles/layout.css";
 
 const Welcome = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>Welcome to etz docs!</h1>
         <h3>A simple load testing CLI tool</h3>
