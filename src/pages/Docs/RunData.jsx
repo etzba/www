@@ -2,7 +2,7 @@ import "../../styles/layout.css";
 
 const RunLoadTests = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>RunLoadTests</h1>
         <p>Content is in progress</p>
@@ -13,7 +13,7 @@ const RunLoadTests = () => {
 
 const RunWithDocker = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>RunWithDocker</h1>
         <p>Content is in progress</p>

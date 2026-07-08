@@ -8,7 +8,7 @@ import "../../styles/table.css";
 
 const GettingStarted = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>Getting started</h1>
         <p>
@@ -74,7 +74,7 @@ const GettingStarted = () => {
 
 const InstallEtz = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>
           Install <code>etz</code>
@@ -135,7 +135,7 @@ const InstallEtz = () => {
 
 const RunEtz = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>
           Run <code>etz</code> from terminal
@@ -202,7 +202,7 @@ const RunEtz = () => {
 
 const SimpleExec = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>
           Simple <code>etz</code> run with an exectuion file

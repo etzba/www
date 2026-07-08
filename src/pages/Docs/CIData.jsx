@@ -2,7 +2,7 @@ import "../../styles/layout.css";
 
 const CIIntegration = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>CIIntegration</h1>
         <p>Content is in progress</p>
@@ -13,7 +13,7 @@ const CIIntegration = () => {
 
 const CreateArgoWorkflowTemplate = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>CreateArgoWorkflowTemplate</h1>
         <p>Content is in progress</p>
@@ -24,7 +24,7 @@ const CreateArgoWorkflowTemplate = () => {
 
 const IntegrateInGitLabCI = () => {
   return (
-    <div className="container">
+    <div>
       <section className="section">
         <h1>IntegrateInGitLabCI</h1>
         <p>Content is in progress</p>

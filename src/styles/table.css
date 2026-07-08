@@ -9,16 +9,16 @@ table {
   color: gray;
   margin: 25px 5px;
   display: inline-block;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 1px solid var(--border2);
 }
 
 .td-link {
   padding: 10px 60px 10px 60px;
   text-decoration: none;
   border-radius: 8px;
-  border: 3px solid rgb(72, 87, 216);;
+  border: 3px solid var(--border4);
   transition: width var(--transition);
-  background-color: rgb(7, 10, 36);
+  background-color: var(--surface4);
   color: aliceblue;
   border-radius: 3px;
   margin: 40px 40px;
