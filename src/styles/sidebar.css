@@ -52,3 +52,7 @@
   position: relative;
   float: right;
 }
+
+@media (min-width: 1024px) {
+  .sidebar { width: 33.33%; }
+}

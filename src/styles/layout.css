@@ -49,3 +49,47 @@
   overflow: auto;
   font-family: var(--font);
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-bottom-arrow {
+  padding-top: 4px;
+  float: left;
+  position: relative;
+}
+
+.right-bottom-arrow {
+  padding-top: 4px;
+  float: right;
+  position: relative;
+}
+
+.left-bottom-link {
+  float: left;
+  text-decoration: none;
+}
+
+.right-bottom-link {
+  float: right;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .left-bottom-arrow {
+    padding-bottom: 12px;
+    font-size: var(--charsize3);
+  }
+  .right-bottom-arrow {
+    padding-bottom: 12px;
+    font-size: var(--charsize3);
+  }
+  .left-bottom-link {
+    font-size: var(--charsize4);
+  }
+  .right-bottom-link {
+    font-size: var(--charsize4);
+  }
+}

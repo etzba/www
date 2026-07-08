@@ -17,3 +17,10 @@
   list-style-type: none;
   padding: 10px 10px 10px 10px;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+    font-size: xx-small;
+  }
+}

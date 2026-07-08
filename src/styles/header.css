@@ -60,3 +60,23 @@
   justify-content: left;
   height: 6em;
 }
+
+@media (max-width: 768px) {
+  .header ul {
+    width: 30%;
+    padding-left: 280px;
+    justify-content: right;
+    margin: 0 2px;
+    padding-bottom: 4px;
+  }
+  .logo {
+    width: 5em;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header ul {
+    width: 100%;
+  }
+}

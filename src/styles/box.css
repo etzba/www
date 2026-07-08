@@ -21,3 +21,11 @@
   text-decoration: none;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .small-box-link {
+    width: 40%;
+    margin-top: 10px;
+    font-size: x-small;
+  }
+}

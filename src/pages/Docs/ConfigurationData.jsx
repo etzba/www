@@ -1,18 +1,39 @@
 import { Link } from "react-router-dom";
+import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 import CodeBlock from "../../components/CodeBlock";
 import { SmallLinkBox } from "../../components/LinkBox";
 
 const TestCases = () => {
+  const back = { title: "Simple execution", path: "/docs/start/exec" };
+  const forward = { title: "etz commands", path: "/docs/config/commands" };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/config">
+            Configuring Test Cases {" > "}
+          </Link>
+        </span>
         <h1>Configuring test cases</h1>
         <p>
-          Let's explore a litte more how to set up some complex test
-          scenarions and execution with <code>etz</code>. In this section you'll learn the following:
+          Let's explore a litte more how to set up some complex test scenarions
+          and execution with <code>etz</code>. In this section you'll learn the
+          following:
           <ul>
-            <li>Get to know all available <code>etz</code> commands</li>
+            <li>
+              Get to know all available <code>etz</code> commands
+            </li>
             <li>Run a load test with execution file</li>
             <li>Use a general config file to run multiple test scenarios</li>
           </ul>
@@ -34,27 +55,81 @@ const TestCases = () => {
             className="small-box-link"
           />
         </div>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
       </section>
     </div>
   );
 };
 
 const Commands = () => {
+  const back = { title: "Setup test cases", path: "/docs/config/" };
+  const forward = { title: "Execution file", path: "/docs/config/executions/" };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/config">
+            Configuring Test Cases {" > "}
+          </Link>
+          <Link className={"page-link"} to="/docs/config/commands">
+            Commands
+          </Link>
+        </span>
         <h1>
           Getting familiar with <code>etz</code> commands
         </h1>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
       </section>
     </div>
   );
 };
 
 const GeneralConfig = () => {
+  const back = { title: "etz commands", path: "/docs/config/commands" };
+  const forward = { title: "Advanced configuration", path: "/docs/advanced" };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Use built-in go template functions",
+      path: "/docs/advanced/gotmpl",
+    },
+  ];
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/config">
+            Configuring Test Cases {" > "}
+          </Link>
+          <Link className={"page-link"} to="/docs/config/general">
+            General Config
+          </Link>
+        </span>
         <h1>
           Run <code>etz</code> with general config file
         </h1>
@@ -149,17 +224,51 @@ const GeneralConfig = () => {
         latitude: 56.23124123123
           `}
         />
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
       </section>
     </div>
   );
 };
 
 const RunWithExecutionFile = () => {
+  const back = { title: "etz commands", path: "/docs/config/commands/" };
+  const forward = { title: "General config", path: "/docs/config/general/" };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/config">
+            Configuring Test Cases {" > "}
+          </Link>
+          <Link className={"page-link"} to="/docs/config/executions">
+            General Config
+          </Link>
+        </span>
         <h1>RunWithExecutionFile</h1>
         <p>Content is in progress</p>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
       </section>
     </div>
   );

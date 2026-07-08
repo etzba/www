@@ -15,5 +15,8 @@ export default defineConfig({
   },
   build: {
     commonjsOptions: { transformMixedEsModules: true } // Change
+  },
+  server: {
+    host: true, // to allow testing with other devices in LAN
   }
 });

@@ -3,13 +3,33 @@ import CodeBlock from "../../components/CodeBlock";
 import { DownloadLink, SmallLinkBox } from "../../components/LinkBox";
 import linuxBinaryFile from "../../assets/etz_linux_amd64_v1?url";
 import darwinBinaryFile from "../../assets/etz_darwin_amd64_v1?url";
+import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 import "../../styles/table.css";
 
 const GettingStarted = () => {
+  const forward = {
+    title: "Download and install etz",
+    path: "/docs/start/install/",
+  };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/start">
+            Getting started
+          </Link>
+        </span>
         <h1>Getting started</h1>
         <p>
           Let's start with a short explanation about this docs website and how
@@ -53,7 +73,8 @@ const GettingStarted = () => {
           />
         </div>
         <p>
-          If you already downloaded <code>etz</code> you can go directly to the fun sections and start load testing your environment:
+          If you already downloaded <code>etz</code> you can go directly to the
+          fun sections and start load testing your environment:
         </p>
         <div className="boxes">
           <SmallLinkBox
@@ -67,23 +88,47 @@ const GettingStarted = () => {
             className="small-box-link"
           />
         </div>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
       </section>
     </div>
   );
 };
 
 const InstallEtz = () => {
+  const back = { title: "Getting started", path: "/docs/start/" };
+  const forward = { title: "Run from terminal", path: "/docs/start/run/" };
+  const interestLinks = [
+    {
+      title: "Exploring etz commands",
+      path: "/docs/config/commands",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/start">
+            Getting started {" > "}
+          </Link>
+          <Link className={"page-link"} to="/docs/start/install">
+            Installation
+          </Link>
+        </span>
         <h1>
           Install <code>etz</code>
         </h1>
         <p>
           Since <code>etz</code> is a go binary file, no requirements needed
           other than simply download it.
-        </p>
-        <p>Below you can find download links per operating system:</p>
+        <br></br>Below you can find download links per operating system:</p>
         <DownloadTable />
         <p>
           Move to bin directory (The default downloads directory might set to a
@@ -93,7 +138,9 @@ const InstallEtz = () => {
           type="term"
           code={"sudo mv ~/Downloads/etz /usr/local/bin/"}
         />
-        <p>Check the version of <code>etz</code></p>
+        <p>
+          Check the version of <code>etz</code>
+        </p>
         <CodeBlock type="term" code={"etz version"} />
 
         <h2>
@@ -101,9 +148,7 @@ const InstallEtz = () => {
         </h2>
         <div>
           <h3>Requirements</h3>
-          <p>
-            Make sure that you have the following:
-          </p>
+          <p>Make sure that you have the following:</p>
           <ul>
             <li key={1}>Ubuntu 20.04+ or compatible distro</li>
             <li key={2}>
@@ -128,15 +173,45 @@ const InstallEtz = () => {
           <p>Check from terminal that you can see the version:</p>
           <CodeBlock type="term" code={"etz version"} />
         </div>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
       </section>
     </div>
   );
 };
 
 const RunEtz = () => {
+  const back = { title: "Install etz", path: "/docs/start/install/" };
+  const forward = {
+    title: "Run with execution file",
+    path: "/docs/start/exec/",
+  };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/start">
+            Getting started {" > "}
+          </Link>
+          <Link className={"page-link"} to="/docs/start/run">
+            Run etz from terminal
+          </Link>
+        </span>
         <h1>
           Run <code>etz</code> from terminal
         </h1>
@@ -195,15 +270,42 @@ const RunEtz = () => {
           , we will run more complex stuff with general configuration or
           execution file
         </p>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
       </section>
     </div>
   );
 };
 
 const SimpleExec = () => {
+  const back = { title: "Run etz", path: "/docs/start/run/" };
+  const forward = { title: "Create test cases", path: "/docs/config/" };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
   return (
     <div>
       <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/start">
+            Getting started {" > "}
+          </Link>
+          <Link className={"page-link"} to="/docs/start/excution">
+            Simple execution
+          </Link>
+        </span>
         <h1>
           Simple <code>etz</code> run with an exectuion file
         </h1>
@@ -240,6 +342,13 @@ const SimpleExec = () => {
           sections we will discover more ways to create your
           <code>.yaml</code> file for test configurations.
         </p>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
       </section>
     </div>
   );
