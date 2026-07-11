@@ -116,7 +116,7 @@ const InstallEtz = () => {
       <section className="section">
         <span className="guide">
           <Link className={"page-link"} to="/docs/start">
-            Getting started {" > "}
+            Getting started {"  >  "}
           </Link>
           <Link className={"page-link"} to="/docs/start/install">
             Installation
@@ -206,7 +206,7 @@ const RunEtz = () => {
       <section className="section">
         <span className="guide">
           <Link className={"page-link"} to="/docs/start">
-            Getting started {" > "}
+            Getting started {"  >  "}
           </Link>
           <Link className={"page-link"} to="/docs/start/run">
             Run etz from terminal
@@ -300,7 +300,7 @@ const SimpleExec = () => {
       <section className="section">
         <span className="guide">
           <Link className={"page-link"} to="/docs/start">
-            Getting started {" > "}
+            Getting started {"  >  "}
           </Link>
           <Link className={"page-link"} to="/docs/start/excution">
             Simple execution
