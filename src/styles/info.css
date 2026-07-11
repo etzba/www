@@ -20,3 +20,11 @@
 .info li {
   padding-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .info {
+    width: 90%;
+    margin-left: 4px;
+    padding: 10px 5px 10px 5px;
+  }
+}

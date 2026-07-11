@@ -33,7 +33,7 @@ const AdvancedConfiguration = () => {
 
 const UseGoTemplates = () => {
   const back = { title: "Advanced configuration", path: "/docs/config" };
-  const forward = { title: "Using go templates", path: "/docs/advanced/gotmpl" };
+  const forward = { title: "CI integration", path: "/docs/advanced/gotmpl" };
   const interestLinks = [
     {
       title: "Run etz from terminal",

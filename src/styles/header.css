@@ -62,16 +62,28 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    background-size: 40px 70px;
+  }
   .header ul {
-    width: 30%;
-    padding-left: 280px;
+    width: 10%;
     justify-content: right;
-    margin: 0 2px;
+    margin: 0 0 0 180px;
     padding-bottom: 4px;
+    padding-top: 3px;
+    padding-right: 10px;
+    font-size: var(--charsize4);
+  }
+  .header li {
+    justify-content: right;
+    margin: 0 0px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    font-size: var(--charsize4);
   }
   .logo {
-    width: 5em;
-    padding-left: 10px;
+    width: 8em;
+    padding-left: 40px;
   }
 }
 
