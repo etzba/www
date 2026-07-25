@@ -1,16 +1,18 @@
 import { AdvancedConfiguration, UseGoTemplates } from "../pages/Docs/AdvancedData";
 import { CIIntegration, CreateArgoWorkflowTemplate, IntegrateInGitLabCI } from "../pages/Docs/CIData";
 import {
+  Setup,
+  ApiTestCases,
+  PostgresTestCases,
+  FileTestCases,
   GeneralConfig,
-  Commands,
-  RunWithExecutionFile,
-  TestCases,
-} from "../pages/Docs/ConfigurationData";
+} from "../pages/Docs/SetupData";
 import {
   GettingStarted,
-  InstallEtz,
-  RunEtz,
-  SimpleExec,
+  Install,
+  Run,
+  Commands,
+  Yaml,
 } from "../pages/Docs/GettingStartedData";
 import { RunLoadTests, RunWithDocker } from "../pages/Docs/RunData";
 import Welcome from "../pages/Docs/WelcomeData";
@@ -36,31 +38,15 @@ export const DocsItems = [
         title: "Install etz",
         path: "install",
         label: "Install",
-        element: <InstallEtz />,
+        element: <Install />,
       },
       {
         id: "run",
         title: "Running etz from terminal",
         label: "Run",
         path: "run",
-        element: <RunEtz />,
+        element: <Run />,
       },
-      {
-        id: "simple",
-        title: "Run etz with execution file",
-        label: "Simple Execution",
-        path: "exec",
-        element: <SimpleExec />,
-      },
-    ],
-  },
-  {
-    id: "config",
-    title: "Configuring Test Cases",
-    path: "config",
-    label: "Config",
-    element: <TestCases />,
-    children: [
       {
         id: "commands",
         title: "Available commands",
@@ -69,15 +55,45 @@ export const DocsItems = [
         element: <Commands />,
       },
       {
-        id: "exec",
-        title: "Configuring execution file",
-        label: "Execution",
-        path: "executions",
-        element: <RunWithExecutionFile />,
+        id: "yaml",
+        title: "Execute load tests with a yaml file",
+        label: "Yaml",
+        path: "yaml",
+        element: <Yaml />,
+      },
+    ],
+  },
+  {
+    id: "setup",
+    title: "Setup Test Cases",
+    path: "setup",
+    label: "Setup",
+    element: <Setup />,
+    children: [
+      {
+        id: "api",
+        title: "Create api test cases",
+        label: "Api",
+        path: "api",
+        element: <ApiTestCases />,
+      },
+      {
+        id: "postgres",
+        title: "Measure postgres queries time",
+        label: "Postgres",
+        path: "postgres",
+        element: <PostgresTestCases />,
+      },
+      {
+        id: "file",
+        title: "Test http file upload speed",
+        label: "File",
+        path: "file",
+        element: <FileTestCases />,
       },
       {
         id: "general",
-        title: "Run etz with general configuration",
+        title: "Use general configuration with multiple scenarios",
         label: "General",
         path: "general",
         element: <GeneralConfig />,
@@ -86,7 +102,7 @@ export const DocsItems = [
   },
   {
     id: "advanced",
-    title: "Advanced Test Cases Configuration",
+    title: "Advanced Configuration",
     path: "advanced",
     label: "Advanced",
     element: <AdvancedConfiguration />,
@@ -102,7 +118,7 @@ export const DocsItems = [
   },
   {
     id: "run",
-    title: "Run etz Load Tests",
+    title: "Running Load Tests",
     path: "run",
     label: "Run",
     element: <RunLoadTests />,

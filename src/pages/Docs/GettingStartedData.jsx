@@ -14,12 +14,12 @@ const GettingStarted = () => {
   };
   const interestLinks = [
     {
-      title: "Run etz from terminal",
+      title: "Run etz From Linux terminal",
       path: "/docs/start/run",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz With General Config File",
+      path: "/docs/setup/general",
     },
   ];
   return (
@@ -83,8 +83,8 @@ const GettingStarted = () => {
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Create execution files"
-            path="/docs/start/exec"
+            title="Explore etz commands"
+            path="/docs/start/commands"
             className="small-box-link"
           />
         </div>
@@ -98,17 +98,17 @@ const GettingStarted = () => {
   );
 };
 
-const InstallEtz = () => {
+const Install = () => {
   const back = { title: "Getting started", path: "/docs/start/" };
   const forward = { title: "Run from terminal", path: "/docs/start/run/" };
   const interestLinks = [
     {
-      title: "Exploring etz commands",
-      path: "/docs/config/commands",
+      title: "Explore etz commands",
+      path: "/docs/start/commands",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz with api execution file",
+      path: "/docs/setup/api",
     },
   ];
   return (
@@ -185,20 +185,20 @@ const InstallEtz = () => {
   );
 };
 
-const RunEtz = () => {
+const Run = () => {
   const back = { title: "Install etz", path: "/docs/start/install/" };
   const forward = {
-    title: "Run with execution file",
-    path: "/docs/start/exec/",
+    title: "Run with additional yaml file",
+    path: "/docs/start/yaml",
   };
   const interestLinks = [
     {
-      title: "Run etz from terminal",
-      path: "/docs/start/run",
+      title: "Run etz With General Config File",
+      path: "/docs/setup/general",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz with api execution file",
+      path: "/docs/setup/api",
     },
   ];
   return (
@@ -282,17 +282,56 @@ const RunEtz = () => {
   );
 };
 
-const SimpleExec = () => {
+const Commands = () => {
+  const back = { title: "Run from terminal", path: "/docs/start/run" };
+  const forward = { title: "Run with yaml file", path: "/docs/start/yaml" };
+  const interestLinks = [
+    {
+      title: "Setup test cases",
+      path: "/docs/setup/",
+    },
+    {
+      title: "Run etz With General Config File",
+      path: "/docs/setup/general",
+    },
+  ];
+  return (
+    <div>
+      <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/start">
+            Setup Test Cases {"  >  "}
+          </Link>
+          <Link className={"page-link"} to="/docs/start/commands">
+            Create API test cases 
+          </Link>
+        </span>
+        <h1>
+          Getting familiar with <code>etz</code> commands
+        </h1>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
+      </section>
+    </div>
+  );
+};
+
+const Yaml = () => {
   const back = { title: "Run etz", path: "/docs/start/run/" };
-  const forward = { title: "Create test cases", path: "/docs/config/" };
+  const forward = { title: "Create test cases", path: "/docs/setup/" };
   const interestLinks = [
     {
       title: "Run etz from terminal",
       path: "/docs/start/run",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz with api execution file",
+      path: "/docs/setup/api",
     },
   ];
   return (
@@ -385,4 +424,4 @@ const DownloadTable = () => {
   );
 };
 
-export { GettingStarted, InstallEtz, RunEtz, SimpleExec };
+export { GettingStarted, Install, Run, Commands, Yaml };
