@@ -1,6 +1,6 @@
 .sidebar {
   background-color: var(--surface1);
-  width: 30%;
+  width: 25%;
   padding: 60px 10px 10px 20px;
   height: 100%;
   position: sticky;
@@ -11,6 +11,7 @@
   flex-direction: column;
   overflow: hidden;
   transition: width var(--transition);
+  overflow-y: scroll;
 }
 
 .sidebar-nav {
@@ -51,8 +52,4 @@
 .arrow {
   position: relative;
   float: right;
-}
-
-@media (min-width: 1024px) {
-  .sidebar { width: 33.33%; }
 }

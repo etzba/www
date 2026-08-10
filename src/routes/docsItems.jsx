@@ -49,7 +49,7 @@ export const DocsItems = [
       },
       {
         id: "commands",
-        title: "Available commands",
+        title: "Commands and Arguments",
         label: "Commands",
         path: "commands",
         element: <Commands />,

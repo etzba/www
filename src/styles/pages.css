@@ -19,6 +19,10 @@
   padding: 20px 5px 5px 20px;
 }
 
+.page h4 {
+  padding: 20px 5px 5px 20px;
+}
+
 .page p {
   width: 90%;
   padding: 20px 20px 20px 20px;
@@ -42,6 +46,29 @@
 .guide {
   padding: 20px 20px 20px 20px;
 }
+
+.cmd-table {
+  width: 90%;
+  margin-left: 20px;
+  border: 2px solid var(--border2);
+}
+
+.tr-cmd {
+  margin: auto;
+  padding: 3px 10px 3px 0px;
+  font-size: var(--charsize5);
+}
+
+.td-cmd {
+  width: 25%;
+  border: 3px solid var(--border2);
+}
+
+.td-description {
+  width: 75%;
+  border: 3px solid var(--border2);
+}
+
 
 @media (max-width: 768px) {
   .page h1 {
