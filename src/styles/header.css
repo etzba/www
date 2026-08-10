@@ -6,7 +6,8 @@
   z-index: 999;
   gap: 10px;
   display: flex;
-  background: var(--surface2);
+  border-bottom: 2px solid var(--border3);
+  background: var(--surface1);
   background-size: 80px 140px;
   background-position:
     0 0,
@@ -31,6 +32,7 @@
   color: var(--letters3);
   text-align: right;
   align-items: center;
+    color: black;
 }
 
 .header ul {
@@ -51,7 +53,7 @@
 .logo {
   align-items: center;
   padding-left: 100px;
-  width: 20em;
+  width: 12em;
   height: 5em;
 }
 

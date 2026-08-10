@@ -14,12 +14,12 @@ const GettingStarted = () => {
   };
   const interestLinks = [
     {
-      title: "Run etz from terminal",
+      title: "Run etz From Linux terminal",
       path: "/docs/start/run",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz With General Config File",
+      path: "/docs/setup/general",
     },
   ];
   return (
@@ -33,28 +33,26 @@ const GettingStarted = () => {
         <h1>Getting started</h1>
         <p>
           Let's start with a short explanation about this docs website and how
-          to use this program while following the pages sections.
+          to use this program while reading the docs.
         </p>
         <ul>
           <li>
-            We use our terminal to run <code>etz</code>, so make sure that your
-            terminal is available
+            We use Linux terminal to run <code>etz</code>, so make sure that
+            your terminal is available
           </li>
           <li>
-            In some of the pages you'll see a block of code, marked as "term"
-            (to use in linux or mac terminal), you can copy and run it in your
-            terminal
+            In some of the pages you'll see a block of code, marked as "term",
+            code can be copied and run it in the terminal
           </li>
           <li>
-            Although this CLI tool is planned to run as a fast execution from
-            command line, we can also use <code>yaml</code> files in addition to
-            the command and set more complex scenarios for our test cases. Code
-            block for <code>yaml</code> will be marked as "yaml" and you can
-            simply copy and paste to any editor
+            Although this CLI tool can run simply from terminal, for more
+            complex testing scenarios <code>yaml</code> files can be added to
+            the command. Code block for <code>yaml</code> will be marked as
+            "yaml".
           </li>
         </ul>
         <p>
-          So to set it up jump over to{" "}
+          To set it up jump over to{" "}
           <Link className={"page-link"} to="/docs/start/install">
             Install section{" "}
           </Link>
@@ -83,8 +81,8 @@ const GettingStarted = () => {
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Create execution files"
-            path="/docs/start/exec"
+            title="Explore etz commands"
+            path="/docs/start/commands"
             className="small-box-link"
           />
         </div>
@@ -98,17 +96,17 @@ const GettingStarted = () => {
   );
 };
 
-const InstallEtz = () => {
+const Install = () => {
   const back = { title: "Getting started", path: "/docs/start/" };
   const forward = { title: "Run from terminal", path: "/docs/start/run/" };
   const interestLinks = [
     {
-      title: "Exploring etz commands",
-      path: "/docs/config/commands",
+      title: "Explore etz commands",
+      path: "/docs/start/commands",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz with api execution file",
+      path: "/docs/setup/api",
     },
   ];
   return (
@@ -126,13 +124,14 @@ const InstallEtz = () => {
           Install <code>etz</code>
         </h1>
         <p>
-          Since <code>etz</code> is a go binary file, no requirements needed
-          other than simply download it.
-        <br></br>Below you can find download links per operating system:</p>
+          Since <code>etz</code> is a binary file, no requirements needed other
+          than download it.
+          <br></br>Below you can find download links per operating system:
+        </p>
         <DownloadTable />
         <p>
-          Move to bin directory (The default downloads directory might set to a
-          different location)
+          Move the file to bin directory (If your download directory is
+          different than <code>/~Downloads</code>, edit the code accordingly)
         </p>
         <CodeBlock
           type="term"
@@ -185,20 +184,20 @@ const InstallEtz = () => {
   );
 };
 
-const RunEtz = () => {
+const Run = () => {
   const back = { title: "Install etz", path: "/docs/start/install/" };
   const forward = {
-    title: "Run with execution file",
-    path: "/docs/start/exec/",
+    title: "Run with additional yaml file",
+    path: "/docs/start/yaml",
   };
   const interestLinks = [
     {
-      title: "Run etz from terminal",
-      path: "/docs/start/run",
+      title: "Run etz With General Config File",
+      path: "/docs/setup/general",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz with api execution file",
+      path: "/docs/setup/api",
     },
   ];
   return (
@@ -227,8 +226,8 @@ const RunEtz = () => {
           code={"etz api --url=https://etzba.com --method=GET"}
         />
         <p>
-          Here is how to add payload to your request, run in duration of 3
-          seconds, with 100 request per second using 50 workers (routines):
+          To add a payload to the http request, run in duration of 3 seconds,
+          with 100 request per second using 50 workers (routines):
         </p>
         <CodeBlock
           type="term"
@@ -264,8 +263,8 @@ const RunEtz = () => {
         />
         <p>
           In the next section,{" "}
-          <Link className={"page-link"} to="/docs/start/exec">
-            run <code>etz</code> with additional execution file
+          <Link className={"page-link"} to="/docs/start/yaml">
+            run <code>etz</code> with additional yaml files
           </Link>
           , we will run more complex stuff with general configuration or
           execution file
@@ -282,17 +281,142 @@ const RunEtz = () => {
   );
 };
 
-const SimpleExec = () => {
+const Commands = () => {
+  const back = { title: "Run from terminal", path: "/docs/start/run" };
+  const forward = { title: "Run with yaml file", path: "/docs/start/yaml" };
+  const interestLinks = [
+    {
+      title: "Setup test cases",
+      path: "/docs/setup/",
+    },
+    {
+      title: "Run etz With General Config File",
+      path: "/docs/setup/general",
+    },
+  ];
+  return (
+    <div>
+      <section className="section">
+        <span className="guide">
+          <Link className={"page-link"} to="/docs/start">
+            Getting Started {"  >  "}
+          </Link>
+          <Link className={"page-link"} to="/docs/start/commands">
+            Commands and Arguments
+          </Link>
+        </span>
+        <h1>
+          Explore <code>etz</code> commands and arguments
+        </h1>
+        <p>
+          Here you can find a table of the sub-commands available with{" "}
+          <code>etz</code> followed by command arguments table:
+        </p>
+        <h4>Sub-Commands</h4>
+        <br></br>
+        <table className="cmd-table">
+          <tr className="tr-cmd-head">
+            <td className="td-cmd-head">
+              <b>Sub-Command</b>
+            </td>
+            <td className="td-description-head">
+              <b>Description</b>
+            </td>
+          </tr>
+          <tr className="tr-cmd">
+            <td className="td-cmd">
+              <code>api</code>
+            </td>
+            <td className="td-description">
+              Run a load test against http REST API service. This command
+              requires several arguments in addition and execute http requests
+              to a certain url and method. Additionally, you can add headers and
+              payload to the request
+            </td>
+          </tr>
+          <tr className="tr-cmd">
+            <td className="td-cmd">
+              <code>pg</code>
+            </td>
+            <td className="td-description">
+              This command is dedicated for measuring sql queries to postgres
+              service. Additional arguments and execution file is required for
+              this command to work.
+            </td>
+          </tr>
+          <tr className="tr-cmd">
+            <td className="td-cmd">
+              <code>file</code>
+            </td>
+            <td className="td-description">
+              Use <code>etz</code> to upload files to an http service using
+              multipart http requests.
+            </td>
+          </tr>
+        </table>
+        <h4>Arguments</h4>
+        <br></br>
+        <table className="cmd-table">
+          <tr className="tr-cmd-head">
+            <td className="td-cmd-head">
+              <b>Argument</b>
+            </td>
+            <td className="td-description-head">
+              <b>Description</b>
+            </td>
+          </tr>
+          <tr className="tr-cmd">
+            <td className="td-cmd">
+              <code>--duration</code> , <code>-d</code>
+            </td>
+            <td className="td-description">
+              Set the load test job duration. This argument will define for how
+              long the load test should run
+            </td>
+          </tr>
+          <tr className="tr-cmd">
+            <td className="td-cmd">
+              <code>--rps</code> , <code>-r</code>
+            </td>
+           <td className="td-description">
+              Request per second set the frequency of requests during the load
+              test.
+            </td>
+          </tr>
+          <tr className="tr-cmd">
+            <td className="td-cmd">
+              <code>--workers</code> , <code>-w</code>
+            </td>
+            <td className="td-description">
+              <code>etz</code> uses go routines to send requests or run queries.{" "}
+              <code>workers</code> argument defines the amount of go routines
+              used to send requests to the server.
+            </td>
+          </tr>
+        </table>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
+      </section>
+    </div>
+  );
+};
+
+const Yaml = () => {
   const back = { title: "Run etz", path: "/docs/start/run/" };
-  const forward = { title: "Create test cases", path: "/docs/config/" };
+  const forward = { title: "Create test cases", path: "/docs/setup/" };
   const interestLinks = [
     {
       title: "Run etz from terminal",
       path: "/docs/start/run",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz with api execution file",
+      path: "/docs/setup/api",
     },
   ];
   return (
@@ -385,4 +509,4 @@ const DownloadTable = () => {
   );
 };
 
-export { GettingStarted, InstallEtz, RunEtz, SimpleExec };
+export { GettingStarted, Install, Run, Commands, Yaml };
