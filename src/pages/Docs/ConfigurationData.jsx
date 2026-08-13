@@ -21,7 +21,7 @@ const TestCases = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/config">
+          <Link className={"docs-link"} to="/docs/config">
             Configuring Test Cases
           </Link>
         </span>
@@ -84,10 +84,10 @@ const Commands = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/config">
+          <Link className={"docs-link"} to="/docs/config">
             Configuring Test Cases {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/config/commands">
+          <Link className={"docs-link"} to="/docs/config/commands">
             Commands
           </Link>
         </span>
@@ -123,10 +123,10 @@ const GeneralConfig = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/config">
+          <Link className={"docs-link"} to="/docs/config">
             Configuring Test Cases {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/config/general">
+          <Link className={"docs-link"} to="/docs/config/general">
             General Config
           </Link>
         </span>
@@ -253,10 +253,10 @@ const RunWithExecutionFile = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/config">
+          <Link className={"docs-link"} to="/docs/config">
             Configuring Test Cases {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/config/executions">
+          <Link className={"docs-link"} to="/docs/config/executions">
             General Config
           </Link>
         </span>

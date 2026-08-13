@@ -26,7 +26,7 @@ const GettingStarted = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/start">
+          <Link className={"docs-link"} to="/docs/start">
             Getting started
           </Link>
         </span>
@@ -53,7 +53,7 @@ const GettingStarted = () => {
         </ul>
         <p>
           To set it up jump over to{" "}
-          <Link className={"page-link"} to="/docs/start/install">
+          <Link className={"docs-link"} to="/docs/start/install">
             Install section{" "}
           </Link>
           or if you know your way around, simply use the download links:
@@ -113,10 +113,10 @@ const Install = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/start">
+          <Link className={"docs-link"} to="/docs/start">
             Getting started {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/start/install">
+          <Link className={"docs-link"} to="/docs/start/install">
             Installation
           </Link>
         </span>
@@ -204,10 +204,10 @@ const Run = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/start">
+          <Link className={"docs-link"} to="/docs/start">
             Getting started {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/start/run">
+          <Link className={"docs-link"} to="/docs/start/run">
             Run etz from terminal
           </Link>
         </span>
@@ -263,7 +263,7 @@ const Run = () => {
         />
         <p>
           In the next section,{" "}
-          <Link className={"page-link"} to="/docs/start/yaml">
+          <Link className={"docs-link"} to="/docs/start/yaml">
             run <code>etz</code> with additional yaml files
           </Link>
           , we will run more complex stuff with general configuration or
@@ -298,10 +298,10 @@ const Commands = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/start">
+          <Link className={"docs-link"} to="/docs/start">
             Getting Started {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/start/commands">
+          <Link className={"docs-link"} to="/docs/start/commands">
             Commands and Arguments
           </Link>
         </span>
@@ -423,10 +423,10 @@ const Yaml = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/start">
+          <Link className={"docs-link"} to="/docs/start">
             Getting started {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/start/excution">
+          <Link className={"docs-link"} to="/docs/start/excution">
             Simple execution
           </Link>
         </span>
@@ -459,7 +459,7 @@ const Yaml = () => {
         />
         <p>
           When you feel like a pro, use our{" "}
-          <Link className={"page-link"} to="/config/executions">
+          <Link className={"docs-link"} to="/config/executions">
             api advanced configuration
           </Link>{" "}
           documentation to create more load test scenarios. In the following

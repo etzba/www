@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { LeftBottomArrow, RightBottomArrow } from "./Arrows";
-import "../styles/pages.css";
+import "../styles/docs.css";
 
 const GuideLinks = ({
   intrestsLinks,
@@ -19,7 +19,7 @@ const GuideLinks = ({
       <ul>
         {intrestsLinks.map((item, index) => (
           <li key={index}>
-            <Link to={item.path} key={item.id} className={"page-link"}>
+            <Link to={item.path} key={item.id} className={"docs-link"}>
               <span>{item.title}</span>
             </Link>
           </li>

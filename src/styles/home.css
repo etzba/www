@@ -1,0 +1,92 @@
+.home {
+  padding: 120px 20px 0px 10px;
+  position: sticky;
+  width: 100%;
+  display: inline;
+  font-family: var(--font);
+  font-size: 20px;
+}
+
+.hero {
+  padding: 100px 100px 100px 120px;
+  height: 450px;
+}
+
+.hero h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(4rem, 8vw, 6rem);
+}
+
+.hero p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--surface5);
+  font-size: var(--charsize1);
+}
+
+.hero-button {
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 25px 10px 25px;
+  align-content: center;
+  padding: 50px 50px;
+}
+
+.slide {
+  padding: 3px 30px 30px 30px;
+  height: 450px;
+  background-color: #dedee780;
+}
+
+.slide h3 {
+  padding: 30px 30px 5px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--surface2);
+  text-align: center;
+}
+
+.slide p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--surface4);
+  font-size: var(--charsize4);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    width: 100%;
+    height: 300px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .hero-button {
+    padding: 2px 2px;
+  }
+
+  .slide {
+    height: 350px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .slide h3 {
+    margin-top: 3px;
+    padding: 4px 0px 0px 0px;
+    font-size: var(--charsize5);
+  }
+
+  .slide p {
+    padding: 2px 0px 0px 3px;
+    font-size: var(--charsize6);
+  }
+}

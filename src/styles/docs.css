@@ -1,4 +1,4 @@
-.page {
+.docs {
   padding: 80px 20px 0px 10px;
   position: sticky;
   width: 100%;
@@ -7,38 +7,38 @@
   font-size: 20px;
 }
 
-.page h1 {
+.docs h1 {
   padding: 30px 40px 10px 20px;
 }
 
-.page h2 {
+.docs h2 {
   padding: 40px 30px 10px 20px;
 }
 
-.page h3 {
+.docs h3 {
   padding: 20px 5px 5px 20px;
 }
 
-.page h4 {
+.docs h4 {
   padding: 20px 5px 5px 20px;
 }
 
-.page p {
+.docs p {
   width: 90%;
   padding: 20px 20px 20px 20px;
 }
 
-.page ul {
+.docs ul {
   position: relative;
   margin: 0;
   padding-left: 40px;
 }
 
-.page li {
+.docs li {
   padding-top: 10px;
 }
 
-.page-link {
+.docs-link {
   padding-top: 10px;
   text-decoration: none;
 }
@@ -71,35 +71,35 @@
 
 
 @media (max-width: 768px) {
-  .page h1 {
+  .docs h1 {
     width: 100%;
     padding: 10px 0px 10px 0px;
     font-size: var(--charsize1);
   }
 
-  .page h2 {
+  .docs h2 {
     width: 100%;
     padding: 10px 0px 10px 0px;
     font-size: var(--charsize2);
   }
 
-  .page h3 {
+  .docs h3 {
     width: 100%;
     padding: 10px 0px 10px 0px;
     font-size: var(--charsize3);
   }
 
-  .page p {
+  .docs p {
     width: 100%;
     padding: 10px 0px 10px 0px;
     font-size: var(--charsize4);
   }
 
-  .page li {
+  .docs li {
     padding-top: 2px;
     font-size: var(--charsize5);
   }
-  .page-link {
+  .docs-link {
     padding-top: 2px;
     font-size: var(--charsize5);
   }

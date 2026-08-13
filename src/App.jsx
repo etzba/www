@@ -4,9 +4,10 @@ import AboutPage from "./pages/About/AboutPage";
 import ToolsPage from "./pages/Tools/ToolsPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { DocsItems } from "./routes/docsItems";
+import { EtzDocsItems } from "./routes/etzDocsItems";
 import { HeaderItems } from "./routes/headerItems";
 import UseMediaQuery from "./utils/media";
+import HomePage from "./pages/Home/HomePage";
 
 const App = () => {
   const isMobile = UseMediaQuery("(max-width: 768px)");
@@ -17,19 +18,17 @@ const App = () => {
         <div className="content">
           <Routes>
             <Route path="/">
-              <Route
-                path=""
-                element={<Navigate to="/docs/welcome" replace />}
-              />
+              <Route path="" element={<Navigate to="/home" replace />} />
+              <Route path="home" element={<HomePage />} />
               <Route
                 path="docs"
-                element={<DocsPage items={DocsItems} isMobile={isMobile} />}
+                element={<DocsPage items={EtzDocsItems} isMobile={isMobile} />}
               >
                 <Route
                   index
                   element={<Navigate to="/docs/welcome" replace />}
                 />
-                {DocsItems.map((item, idx) =>
+                {EtzDocsItems.map((item, idx) =>
                   item.children ? (
                     <Route key={idx} path={item.path}>
                       <Route index element={item.element} />

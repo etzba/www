@@ -24,7 +24,7 @@ const Setup = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/config">
+          <Link className={"docs-link"} to="/docs/config">
             Setup Test Cases
           </Link>
         </span>
@@ -122,10 +122,10 @@ const ApiTestCases = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/setup">
+          <Link className={"docs-link"} to="/docs/setup">
             Setup Test Cases {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/setup/file">
+          <Link className={"docs-link"} to="/docs/setup/file">
             API
           </Link>
         </span>
@@ -189,10 +189,10 @@ const PostgresTestCases = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/setup">
+          <Link className={"docs-link"} to="/docs/setup">
             Setup Test Cases {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/setup/file">
+          <Link className={"docs-link"} to="/docs/setup/file">
             Postgres
           </Link>
         </span>
@@ -232,10 +232,10 @@ const FileTestCases = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/setup">
+          <Link className={"docs-link"} to="/docs/setup">
             Setup Test Cases {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/setup/file">
+          <Link className={"docs-link"} to="/docs/setup/file">
             File Upload
           </Link>
         </span>
@@ -269,10 +269,10 @@ const GeneralConfig = () => {
     <div>
       <section className="section">
         <span className="guide">
-          <Link className={"page-link"} to="/docs/setup">
+          <Link className={"docs-link"} to="/docs/setup">
             Setup Test Cases {"  >  "}
           </Link>
-          <Link className={"page-link"} to="/docs/setup/file">
+          <Link className={"docs-link"} to="/docs/setup/file">
             General Config
           </Link>
         </span>
@@ -331,7 +331,7 @@ const GeneralConfig = () => {
           test. It contains mainly command arguments as <code>-d=30s</code> to
           set the job duration to 30 seconds. The <code>config</code> section
           can have multiple arguments that explained in{" "}
-          <Link className={"page-link"} to="/docs/started/commands">
+          <Link className={"docs-link"} to="/docs/started/commands">
             Commands and arguments
           </Link>
           .
@@ -409,7 +409,7 @@ const GeneralConfig = () => {
           <br></br>
           The settings for each scenario can be also programmed for faster and
           easy creation of load, spike or stress tests{" "}
-          <Link className={"page-link"} to="/docs/advanced/program">
+          <Link className={"docs-link"} to="/docs/advanced/program">
             Program inside yaml files
           </Link>
         </p>
