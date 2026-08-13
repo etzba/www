@@ -45,6 +45,14 @@
   background-color: #dedee780;
 }
 
+.slide h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(4rem, 8vw, 6rem);
+}
+
 .slide h3 {
   padding: 30px 30px 5px 30px;
   display: flex;
