@@ -243,11 +243,11 @@ const Run = () => {
           type="term"
           code={`etz file --url=https://etzba.com \\ 
             --method=POST \\ 
-            --path=relative/path/to/files/"
+            --path=relative/path/to/files/
           `}
         />
         <p>
-          Note that you just need to give the path with the files to upload and
+          Note that you just need to give the path with the files to upload and{" "}
           <code>etz</code> will pick random files to upload to your service.
         </p>
         <p>
@@ -378,7 +378,7 @@ const Commands = () => {
             <td className="td-cmd">
               <code>--rps</code> , <code>-r</code>
             </td>
-           <td className="td-description">
+            <td className="td-description">
               Request per second set the frequency of requests during the load
               test.
             </td>
