@@ -27,11 +27,6 @@ const Welcome = () => {
           CLI tool that measure the performance of restful api services,
           postgres databases and file uploads to an http server.
         </p>
-        <InfoBlock
-          preText={
-            "The word etzba in Hebrew, used as a measurement unit in biblical times and also means a pointing finger."
-          }
-        />
         <p>
           This CLI tool will measure the duration of http requests or sql
           queries and point the finger on potential issues and bottlenecks.

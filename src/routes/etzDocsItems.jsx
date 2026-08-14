@@ -17,7 +17,7 @@ import {
 import { RunLoadTests, RunWithDocker } from "../pages/Docs/RunData";
 import Welcome from "../pages/Docs/WelcomeData";
 
-export const DocsItems = [
+export const EtzDocsItems = [
   {
     id: "Welcome",
     title: "Welcome",
