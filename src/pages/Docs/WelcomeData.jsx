@@ -21,20 +21,20 @@ const Welcome = () => {
     <div>
       <section className="section">
         <h1>Welcome to etz docs!</h1>
-        <h3>A simple load testing CLI tool</h3>
+        <h3>The strongest load testing CLI tool in the forest</h3>
         <p>
           Welcome to etz docs! <code>etz</code> is a load and performance tests
           CLI tool that measure the performance of restful api services,
           postgres databases and file uploads to an http server.
         </p>
         <p>
-          This CLI tool will measure the duration of http requests or sql
-          queries and point the finger on potential issues and bottlenecks.
-          <br></br>Built and compiled with golang, named <code>etz</code> for
-          faster executions in command line - You can run it in your terminal,
-          shell scripts or in CI pipelines.
+          With <code>etz</code> you can measure the duration of http requests or
+          sql queries to point the finger on potential issues and bottlenecks.
+          <br></br>It is named <code>etz</code> for faster executions in command
+          line: You can run it in your terminal, shell scripts, docker,
+          kubernetes or in CI pipelines.
         </p>
-        <p>Go to the next sections to set it up: </p>
+        <p>To learn more about it and install the latest version: </p>
         <div className="boxes">
           <SmallLinkBox
             title="Getting Started"
@@ -63,15 +63,17 @@ const Welcome = () => {
           bulletPoints={[
             "Terminal-native: Run and analyze tests with simple CLI commands",
             "Scriptable & automatable: Perfect for CI/CD pipelines and custom workflow",
-            "Real-time metrics: Get instant feedback on throughput, latency, and errors",
             "YAML configuration: Define your test cases with a yaml file and extend it with functions",
+            "Setup in CI: Add another step to your development cycle and test your app under stress",
+            "Production ready: Prepare your product for larger request volume",
           ]}
         />
         <p>
-          <code>etz</code> is capable of running advanced load test scenarios by
-          using additional <code>.yaml</code> files - you can create a complex
-          test scenarios and automate test executions while defining requests
-          per second, test duration and many more options.
+          <code>etz</code> is a versatile CLI tool that is capable of running
+          advanced load test scenarios by using additional <code>.yaml</code>{" "}
+          files for complex, long and thorough load testing scenarios. you can
+          create a complex test scenarios and automate test executions while
+          defining requests per second, test duration and many more options.
         </p>
         <GuideLinks
           intrestsLinks={interestLinks}

@@ -1,27 +1,59 @@
-table {
+.download table {
   width: 30%;
   text-decoration: none;
-  margin: -20px 20px 30px 2px;
+  padding-bottom: 20px;
 }
 
-.column {
+.download-head {
   width: 75%;
   color: gray;
-  margin: 25px 15px;
+  margin: -10px 15px 10px 10px;
   display: inline-block;
   border-bottom: 1px solid var(--border2);
 }
 
-.td-link {
-  padding: 10px 60px 10px 60px;
+.download-link {
+  padding: 10px 50px 10px 50px;
   text-decoration: none;
   border-radius: 8px;
   border: 3px solid var(--border4);
   transition: width var(--transition);
-  background-color: var(--surface4);
+  background-color: var(--surface5);
   color: aliceblue;
-  border-radius: 3px;
-  margin: 25px 15px;
+  margin: 15px 10px 10px 10px;
+  font-size: x-large;
+}
+
+.options table {
+  width: 90%;
+  text-decoration: none;
+  margin: -20px 20px 30px 20px;
+  border-collapse: collapse;
+  margin: -20px 20px 30px 20px;
+}
+
+.options td {
+  border: 3px solid var(--border2);
+  padding: 5px 5px 5px 5px;
+}
+
+.options-head {
+  background-color: rgb(234, 199, 148);
+}
+
+.options-name {
+  width: 25%;
+  padding: 5px 5px 5px 5px;
+}
+
+.options-description {
+  width: 70%;
+  padding: 5px 5px 5px 5px;
+}
+
+.options-type {
+  width: 4%;
+  padding: 5px 5px 5px 5px;
 }
 
 @media (max-width: 768px) {

@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CodeBlock from "../../components/CodeBlock";
 import { DownloadLink, SmallLinkBox } from "../../components/LinkBox";
@@ -6,6 +7,8 @@ import darwinBinaryFile from "../../assets/etz_darwin_amd64_v1?url";
 import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 import "../../styles/table.css";
+import OptionsTable from "../../components/Table";
+import { ArgumentsTableData, SubCommandsTableData } from "./gettingStartedData";
 
 const GettingStarted = () => {
   const forward = {
@@ -32,31 +35,31 @@ const GettingStarted = () => {
         </span>
         <h1>Getting started</h1>
         <p>
-          Let's start with a short explanation about this docs website and how
-          to use this program while reading the docs.
+          Let's start first with a short introduction of this docs website and
+          how to use it while reading the docs.
         </p>
         <ul>
           <li>
             We use Linux terminal to run <code>etz</code>, so make sure that
-            your terminal is available
+            your terminal is available to run <code>etz</code>
           </li>
           <li>
-            In some of the pages you'll see a block of code, marked as "term",
-            code can be copied and run it in the terminal
+            In some of the pages you'll find a block of code, marked as "term" -
+            this code can be copied and run in terminal
           </li>
           <li>
-            Although this CLI tool can run simply from terminal, for more
-            complex testing scenarios <code>yaml</code> files can be added to
-            the command. Code block for <code>yaml</code> will be marked as
-            "yaml".
+            For more complex testing scenarios, <code>yaml</code> files can be
+            added to the command. Code block for <code>yaml</code> will be
+            marked as "yaml".
           </li>
         </ul>
         <p>
-          To set it up jump over to{" "}
+          Let's setup <code>etz</code> in the{" "}
           <Link className={"docs-link"} to="/docs/start/install">
             Install section{" "}
           </Link>
-          or if you know your way around, simply use the download links:
+          and run it for the first time, or if you know your way around - simply
+          use the download links:
         </p>
         <div className="boxes">
           <DownloadLink
@@ -125,8 +128,8 @@ const Install = () => {
         </h1>
         <p>
           Since <code>etz</code> is a binary file, no requirements needed other
-          than download it.
-          <br></br>Below you can find download links per operating system:
+          than download it. Below you can find download links per operating
+          system:
         </p>
         <DownloadTable />
         <p>
@@ -147,7 +150,10 @@ const Install = () => {
         </h2>
         <div>
           <h3>Requirements</h3>
-          <p>Make sure that you have the following:</p>
+          <p>
+            Before installing <code>etz</code> from terminal, check the
+            following prerequisities:
+          </p>
           <ul>
             <li key={1}>Ubuntu 20.04+ or compatible distro</li>
             <li key={2}>
@@ -187,8 +193,8 @@ const Install = () => {
 const Run = () => {
   const back = { title: "Install etz", path: "/docs/start/install/" };
   const forward = {
-    title: "Run with additional yaml file",
-    path: "/docs/start/yaml",
+    title: "Explore etz commands",
+    path: "/docs/start/commands",
   };
   const interestLinks = [
     {
@@ -217,7 +223,7 @@ const Run = () => {
         <p>
           <code>etz</code> uses several sub commands: <code>api</code>,{" "}
           <code>pg</code> and <code>file</code> each of these sub commands, uses
-          different configuration to run different tests. So for example,{" "}
+          different configurations to run different load tests. For example,{" "}
           <code>api</code> will use http protocol under the scene to run a load
           test on a remote server url:
         </p>
@@ -227,7 +233,7 @@ const Run = () => {
         />
         <p>
           To add a payload to the http request, run in duration of 3 seconds,
-          with 100 request per second using 50 workers (routines):
+          with 100 request per second using 50 workers (golang routines):
         </p>
         <CodeBlock
           type="term"
@@ -247,13 +253,14 @@ const Run = () => {
           `}
         />
         <p>
-          Note that you just need to give the path with the files to upload and{" "}
-          <code>etz</code> will pick random files to upload to your service.
+          Note that you just need to give the path of the files directory to
+          upload and <code>etz</code> will pick random files to upload to your
+          service.
         </p>
         <p>
           Assuming you'd like to store the results in a json format, use{" "}
-          <code>--output=directory/filename.json</code> arg and the file will be
-          save locally on your machine:
+          <code>--output=directory/filename.json</code> argument and a results
+          file of your load test will be save locally on your machine:
         </p>
         <CodeBlock
           type="term"
@@ -309,91 +316,26 @@ const Commands = () => {
           Explore <code>etz</code> commands and arguments
         </h1>
         <p>
-          Here you can find a table of the sub-commands available with{" "}
-          <code>etz</code> followed by command arguments table:
+          To run load tests <code>etz</code> has several sub-commands and each
+          of these sub-commands require an argument.
         </p>
         <h4>Sub-Commands</h4>
+        <p>
+          When using <code>etz</code> sub-commands it is required to set the
+          argument <code>--exec</code> and provide an execution yaml file. In
+          the table below, you can find all the available sub-commands:
+        </p>
         <br></br>
-        <table className="cmd-table">
-          <tr className="tr-cmd-head">
-            <td className="td-cmd-head">
-              <b>Sub-Command</b>
-            </td>
-            <td className="td-description-head">
-              <b>Description</b>
-            </td>
-          </tr>
-          <tr className="tr-cmd">
-            <td className="td-cmd">
-              <code>api</code>
-            </td>
-            <td className="td-description">
-              Run a load test against http REST API service. This command
-              requires several arguments in addition and execute http requests
-              to a certain url and method. Additionally, you can add headers and
-              payload to the request
-            </td>
-          </tr>
-          <tr className="tr-cmd">
-            <td className="td-cmd">
-              <code>pg</code>
-            </td>
-            <td className="td-description">
-              This command is dedicated for measuring sql queries to postgres
-              service. Additional arguments and execution file is required for
-              this command to work.
-            </td>
-          </tr>
-          <tr className="tr-cmd">
-            <td className="td-cmd">
-              <code>file</code>
-            </td>
-            <td className="td-description">
-              Use <code>etz</code> to upload files to an http service using
-              multipart http requests.
-            </td>
-          </tr>
-        </table>
+        <OptionsTable data={SubCommandsTableData} />
         <h4>Arguments</h4>
+        <p>
+          <code>etz</code> arguments allow you to tune the load tests further.
+          Only the arguments <code>--exec</code> and <code>--config</code> (when
+          running <code>etz</code> without sub-command) are required. These are
+          all the available command arguments:
+        </p>
         <br></br>
-        <table className="cmd-table">
-          <tr className="tr-cmd-head">
-            <td className="td-cmd-head">
-              <b>Argument</b>
-            </td>
-            <td className="td-description-head">
-              <b>Description</b>
-            </td>
-          </tr>
-          <tr className="tr-cmd">
-            <td className="td-cmd">
-              <code>--duration</code> , <code>-d</code>
-            </td>
-            <td className="td-description">
-              Set the load test job duration. This argument will define for how
-              long the load test should run
-            </td>
-          </tr>
-          <tr className="tr-cmd">
-            <td className="td-cmd">
-              <code>--rps</code> , <code>-r</code>
-            </td>
-            <td className="td-description">
-              Request per second set the frequency of requests during the load
-              test.
-            </td>
-          </tr>
-          <tr className="tr-cmd">
-            <td className="td-cmd">
-              <code>--workers</code> , <code>-w</code>
-            </td>
-            <td className="td-description">
-              <code>etz</code> uses go routines to send requests or run queries.{" "}
-              <code>workers</code> argument defines the amount of go routines
-              used to send requests to the server.
-            </td>
-          </tr>
-        </table>
+        <OptionsTable data={ArgumentsTableData} />
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
@@ -407,7 +349,7 @@ const Commands = () => {
 };
 
 const Yaml = () => {
-  const back = { title: "Run etz", path: "/docs/start/run/" };
+  const back = { title: "Explore etz commands", path: "/docs/start/commands" };
   const forward = { title: "Create test cases", path: "/docs/setup/" };
   const interestLinks = [
     {
@@ -427,17 +369,22 @@ const Yaml = () => {
             Getting started {"  >  "}
           </Link>
           <Link className={"docs-link"} to="/docs/start/excution">
-            Simple execution
+            Run with execution file
           </Link>
         </span>
         <h1>
-          Simple <code>etz</code> run with an exectuion file
+          Run <code>etz</code> with exectuion file
         </h1>
         <p>
-          If running <code>etz</code> with one command from your terminal is not
-          enough, we can create an execution file to list all of our tasks in
-          one configuration. So let's open an editom (vi\vim whatever you
-          prefer...) and create an execution file:
+          So far we could run <code>etz</code> by one command from terminal.
+          Using only command line arguments is the simplest way to run{" "}
+          <code>etz</code>, but what if you want to create more complex testing
+          scenarios to your api and postgres service? <br></br>For this case,
+          adding additional execution file in <code>.yaml</code>, can extend the
+          capabilities or <code>etz</code> and allow running executions from a
+          file and later on, create complex scenarios or multiple execution in
+          one file. This is a short and simple example of running{" "}
+          <code>etz</code> with execution file:
         </p>
         <CodeBlock
           type="yaml"
@@ -458,13 +405,23 @@ const Yaml = () => {
           code={`etz api --exec=path/to/executions.yaml`}
         />
         <p>
-          When you feel like a pro, use our{" "}
-          <Link className={"docs-link"} to="/config/executions">
-            api advanced configuration
+          This is just a short introduction to execution files and it shows only
+          the simplest way of running <code>etz</code>. Going forward to{" "}
+          <Link className={"docs-link"} to="/docs/setup">
+            Setup test cases
           </Link>{" "}
-          documentation to create more load test scenarios. In the following
-          sections we will discover more ways to create your
-          <code>.yaml</code> file for test configurations.
+          , you'll be able to set multiple execution files for each sub-command
+          or create a general configuration file to run load tests in multiple
+          scenarios.
+          <br></br>
+          Afterwards, you can see also how to write advanced <code>
+            .yaml
+          </code>{" "}
+          files using conditional statements, golang template functions and many
+          more in{" "}
+          <Link className={"docs-link"} to="/docs/advanced">
+            advanced configuration
+          </Link>{" "}.
         </p>
         <GuideLinks
           intrestsLinks={interestLinks}
@@ -480,32 +437,42 @@ const Yaml = () => {
 
 const DownloadTable = () => {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>
-            <p className="column">Linux (amd64)</p>
-          </th>
-          <th>
-            <p className="column">Darwin (amd64)</p>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <a className="td-link" href={linuxBinaryFile} download="etz">
-              Download
-            </a>
-          </td>
-          <td>
-            <a className="td-link" href={darwinBinaryFile} download="etz">
-              Download
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="download">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <p className="download-head">Linux (amd64)</p>
+            </th>
+            <th>
+              <p className="download-head">Darwin (amd64)</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a
+                className="download-link"
+                href={linuxBinaryFile}
+                download="etz"
+              >
+                Download
+              </a>
+            </td>
+            <td>
+              <a
+                className="download-link"
+                href={darwinBinaryFile}
+                download="etz"
+              >
+                Download
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 

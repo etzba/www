@@ -3,6 +3,8 @@ import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 import CodeBlock from "../../components/CodeBlock";
 import { SmallLinkBox } from "../../components/LinkBox";
+import OptionsTable from "../../components/Table";
+import { APIParametersTableData } from "./setupData";
 
 const Setup = () => {
   const back = {
@@ -32,23 +34,22 @@ const Setup = () => {
         <p>
           Running load tests only using the command line interface is easy and
           fun, but sometimes simplicity is not enough for our needs. We touched
-          briefly execution with yaml files. In this chapter we will concentrate
-          in execution of a complex testing scenarios with multiple requests and
-          configurations. Instead of running it directly as a command, we can
-          extend and create load test cases by writing a yaml file.
+          briefly load testing executions with yaml files. In this chapter we
+          will concentrate in running complex testing scenarios with multiple
+          requests and configurations. Instead of running it directly as a
+          command, we can extend and create load test cases by writing a YAML
+          files.
         </p>
         <h3>Execution files vs General configuration file</h3>
         <p>
-          There are multiple ways to use additional yaml files for load testing
+          There are multiple ways to use additional YAML files for load testing
           - some dedicated to a type of execution (for example, to run api
-          request or postgres queries) and we can also extend our tests to
-          include a general configuration with multiple scenarios and settings.
+          request or postgres queries), while another form is using a general
+          config file that composed of multiple scenarios, types of executions
+          and settings.
           <br></br>
-          With <code>etz</code> we can write yaml execution files, that run with
-          a sub-commands <code>api</code>, <code>pg</code> or <code>file</code>{" "}
-          or adding a general configuration file that includes all type of
-          execution in a scenarios blocks. The type of tests that can be used
-          with <code>etz</code> are the following:
+          The type of tests that can be used with <code>etz</code> are the
+          following:
         </p>
         <ul>
           <li>
@@ -62,8 +63,11 @@ const Setup = () => {
           <li>Testing with a general config file and multiple scenarios</li>
         </ul>
         <p>
-          Use the following links to go staright to the type of load test you'd
-          like to run:
+          With <code>etz</code> we can write YAML execution files, that run with
+          a sub-commands <code>api</code>, <code>pg</code> or <code>file</code>{" "}
+          or adding a general configuration file that includes all type of
+          execution in a scenarios blocks. Use the following links to go
+          staright to the type of load test you'd like to run:
         </p>
         <div className="boxes">
           <SmallLinkBox
@@ -154,6 +158,12 @@ const ApiTestCases = () => {
           type="term"
           code={`etz api --exec=path/to/executions.yaml`}
         />
+        <h3>Parameters</h3>
+        <p>
+          The following is a list of all parameters that can be added to api
+          execution:
+        </p><br></br>
+        <OptionsTable data={APIParametersTableData} />
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
