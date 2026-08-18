@@ -135,7 +135,7 @@ const ApiTestCases = () => {
           API execution files used to run as a client that send http requests to
           a REST API service. An http request should have a method and a url to
           send the requests to. In the API execution file, <code>etz</code> can
-          set the servic url (required), the method (required), payload
+          set the servic url (required), the method (required), payload or data 
           (optional) and headers (optional). A typical api execution file
           exmaple:
         </p>
@@ -144,13 +144,13 @@ const ApiTestCases = () => {
           code={`api:
 - url: https://etzba.com
   method: POST
-  payload:
+  data:
     name: "etz"
     address: "etzba etz street 123"`}
         />
         <p>
           After you set the <code>url</code>, <code>method</code> and{" "}
-          <code>payload</code> use the sub-command <code>api</code> with the
+          <code>data</code> use the sub-command <code>api</code> with the
           argument <code>--exec</code> to the relative or absolute path of the
           execution file you've just created:
         </p>

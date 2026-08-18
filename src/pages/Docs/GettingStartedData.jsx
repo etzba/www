@@ -317,22 +317,29 @@ const Commands = () => {
         </h1>
         <p>
           To run load tests <code>etz</code> has several sub-commands and each
-          of these sub-commands require an argument.
+          of these sub-commands require several arguments unless using aditional
+          YAML file.
         </p>
         <h4>Sub-Commands</h4>
         <p>
-          When using <code>etz</code> sub-commands it is required to set the
-          argument <code>--exec</code> and provide an execution yaml file. In
-          the table below, you can find all the available sub-commands:
+          When using <code>etz</code> sub-commands it is required to set few
+          arguments to the command or the argument <code>--exec</code> and
+          provide an execution yaml file. In the table below, you can find all
+          the available sub-commands:
         </p>
         <br></br>
         <OptionsTable data={SubCommandsTableData} />
+        <p>
+          If none of the sub-command is used, <code>etz</code> will expect an
+          argument <code>--config</code> with a general configuration file.
+        </p>
         <h4>Arguments</h4>
         <p>
           <code>etz</code> arguments allow you to tune the load tests further.
-          Only the arguments <code>--exec</code> and <code>--config</code> (when
-          running <code>etz</code> without sub-command) are required. These are
-          all the available command arguments:
+          Only the arguments <code>--exec</code> and <code>--config</code>{" "}
+          required while using YAML file. If you would like to use{" "}
+          <code>etz</code> with a sub-command but without a YAML file, these are
+          all the available command arguments with the related sub-command:
         </p>
         <br></br>
         <OptionsTable data={ArgumentsTableData} />
@@ -421,7 +428,8 @@ const Yaml = () => {
           more in{" "}
           <Link className={"docs-link"} to="/docs/advanced">
             advanced configuration
-          </Link>{" "}.
+          </Link>{" "}
+          .
         </p>
         <GuideLinks
           intrestsLinks={interestLinks}

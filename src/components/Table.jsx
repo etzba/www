@@ -23,6 +23,7 @@ const OptionsTable = ({ data }) => {
               </td>
               <td className="options-description">{item.description}</td>
               {item.type && <td className="options-type">{item.type}</td>}
+              {item.command && <td className="options-type">{item.command}</td>}
             </tr>
           ))}
           </tbody>

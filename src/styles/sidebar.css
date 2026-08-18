@@ -1,7 +1,7 @@
 .sidebar {
   background-color: var(--surface1);
-  width: 25%;
-  padding: 60px 10px 10px 20px;
+  width: 30%;
+  padding: 60px 10px 10px 10px;
   height: 100%;
   position: sticky;
   background: var(--surface);
@@ -41,7 +41,7 @@
   width: 100%;
   padding: 8px 10px;
   border: none;
-  font-size: var(--charsize3);
+  font-size: var(--charsize4);
   text-align: left;
   white-space: nowrap;
   text-decoration: none;
