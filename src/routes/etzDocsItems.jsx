@@ -1,4 +1,4 @@
-import { AdvancedConfiguration, UseGoTemplates } from "../pages/Docs/AdvancedData";
+import { AdvancedConfiguration, AdvancedExamples, UseGoTemplates, YAMLSyntax } from "../pages/Docs/AdvancedData";
 import { CIIntegration, CreateArgoWorkflowTemplate, IntegrateInGitLabCI } from "../pages/Docs/CIData";
 import {
   Setup,
@@ -108,12 +108,26 @@ export const EtzDocsItems = [
     element: <AdvancedConfiguration />,
     children: [
       {
+        id: "syntax",
+        title: "YAML syntax and programming",
+        label: "Syntax",
+        path: "syntax",
+        element: <YAMLSyntax />,
+      },      
+      {
         id: "gotmpl",
         title: "Use built-in go template functions",
         label: "Gotmpl",
         path: "gotmpl",
         element: <UseGoTemplates />,
       },
+      {
+        id: "examples",
+        title: "Advanced test case setups",
+        label: "Examples",
+        path: "examples",
+        element: <AdvancedExamples />,
+      },  
     ],
   },
   {

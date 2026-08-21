@@ -170,13 +170,36 @@ const Install = () => {
           <CodeBlock
             type="term"
             code={
-              "wget https://raw.githubusercontent.com/etzba/etz/master/etzba_linux_amd64_v1/etz"
+              "wget https://raw.githubusercontent.com/etzba/etz/master/v0.0.4-rc4/etzba_linux_amd64_v1/etz"
             }
           />
           <p>Move to bin directory:</p>
-          <CodeBlock type="term" code={"sudo mv etz /usr/local/bin/"} />
+          <CodeBlock
+            type="term"
+            code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
+          />
           <p>Check from terminal that you can see the version:</p>
           <CodeBlock type="term" code={"etz version"} />
+          <h2>
+            Verify <code>etz</code> binary with gpg
+          </h2>
+          <p>
+            To validate the binary file integrity, use <code>gpg</code> and
+            download the public key and signature of <code>etz</code>:
+          </p>
+          <CodeBlock
+            type="term"
+            code={`curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4-rc4/etzba_linux_amd64_v1/etz
+curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4-rc4/etzba_linux_amd64_v1/etz.sig
+curl -LO https://raw.githubusercontent.com/etzba/etz/master/pubkey.asc
+
+gpg --import pubkey.asc
+gpg --verify etz.sig etz`}
+          />
+          <p>
+            The command above should change according to the binary you've
+            downloaded and should work for mac users
+          </p>
         </div>
         <GuideLinks
           intrestsLinks={interestLinks}

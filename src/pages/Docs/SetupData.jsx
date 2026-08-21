@@ -4,7 +4,11 @@ import "../../styles/layout.css";
 import CodeBlock from "../../components/CodeBlock";
 import { SmallLinkBox } from "../../components/LinkBox";
 import OptionsTable from "../../components/Table";
-import { APIParametersTableData } from "./setupData";
+import {
+  APIParametersTableData,
+  FileUploadParametersTableData,
+  SqlParametersTableData,
+} from "./setupData";
 
 const Setup = () => {
   const back = {
@@ -135,7 +139,7 @@ const ApiTestCases = () => {
           API execution files used to run as a client that send http requests to
           a REST API service. An http request should have a method and a url to
           send the requests to. In the API execution file, <code>etz</code> can
-          set the servic url (required), the method (required), payload or data 
+          set the servic url (required), the method (required), payload or data
           (optional) and headers (optional). A typical api execution file
           exmaple:
         </p>
@@ -162,7 +166,8 @@ const ApiTestCases = () => {
         <p>
           The following is a list of all parameters that can be added to api
           execution:
-        </p><br></br>
+        </p>
+        <br></br>
         <OptionsTable data={APIParametersTableData} />
         <GuideLinks
           intrestsLinks={interestLinks}
@@ -203,7 +208,39 @@ const PostgresTestCases = () => {
             Postgres
           </Link>
         </span>
-        <h1>Test postgres Statements Duration</h1>
+        <h1>Test postgres Service Speed</h1>
+        <p>
+          SQL statements and queries might be slow while running inside a
+          database. <code>etz</code> gives you the sub-command <code>pg</code>{" "}
+          that lets you run SQL queries inside a postgres database.
+          <br></br> A typical postgresql execution file will look like this:
+        </p>
+        <CodeBlock
+          type="yaml"
+          code={`sql:
+- command: SELECT
+  table: locations
+  constraint: "longtitude BETWEEN 13.0 AND 15.0"
+- command: UPDATE
+  table: locations
+  constraint: "longtitude BETWEEN 13.0 AND 15.0 AND latitude BETWEEN 13.0 AND 15.0"
+  values: 
+    latitude: 14.232134112
+- command: INSERT
+  table: locations
+  values: 
+    name: "someplace"
+    address: "better_street_32" 
+    longtitude: 89.123123123
+    latitude: -98.1234123123`}
+        />
+        <h3>Parameters</h3>
+        <p>
+          The following is a list of all parameters that can be added to pg
+          execution:
+        </p>
+        <br></br>
+        <OptionsTable data={SqlParametersTableData} />
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
@@ -247,6 +284,36 @@ const FileTestCases = () => {
           </Link>
         </span>
         <h1>Test http File Upload Processing</h1>
+        <p>
+          File upload execution files help testing how long did it take to an
+          http service, to respond to a file uploaded.
+          <br></br> A typical file upload execution file will look like this:
+        </p>
+        <CodeBlock
+          type="yaml"
+          code={`file:
+- url: https://etzba.com
+  method: PUT
+  path: /my/files/`}
+        />
+        <p>
+          After you set the <code>url</code>, <code>method</code> and{" "}
+          <code>path</code>, the workers that execute the tasks, will take a
+          random file from the directory that is mentioned in the{" "}
+          <code>path</code>, and send a multipart http request to a remote
+          service after running this command:
+        </p>
+        <CodeBlock
+          type="term"
+          code={`etz file --exec=path/to/executions.yaml`}
+        />
+        <h3>Parameters</h3>
+        <p>
+          The following is a list of all parameters that can be added to file
+          upload execution:
+        </p>
+        <br></br>
+        <OptionsTable data={FileUploadParametersTableData} />
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
@@ -338,7 +405,7 @@ const GeneralConfig = () => {
           test. It contains mainly command arguments as <code>-d=30s</code> to
           set the job duration to 30 seconds. The <code>config</code> section
           can have multiple arguments that explained in{" "}
-          <Link className={"docs-link"} to="/docs/started/commands">
+          <Link className={"docs-link"} to="/docs/start/commands">
             Commands and arguments
           </Link>
           .
