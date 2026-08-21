@@ -3,6 +3,12 @@ import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 import CodeBlock from "../../components/CodeBlock";
 import { SmallLinkBox } from "../../components/LinkBox";
+import OptionsTable from "../../components/Table";
+import {
+  APIParametersTableData,
+  FileUploadParametersTableData,
+  SqlParametersTableData,
+} from "./setupData";
 
 const Setup = () => {
   const back = {
@@ -32,23 +38,22 @@ const Setup = () => {
         <p>
           Running load tests only using the command line interface is easy and
           fun, but sometimes simplicity is not enough for our needs. We touched
-          briefly execution with yaml files. In this chapter we will concentrate
-          in execution of a complex testing scenarios with multiple requests and
-          configurations. Instead of running it directly as a command, we can
-          extend and create load test cases by writing a yaml file.
+          briefly load testing executions with yaml files. In this chapter we
+          will concentrate in running complex testing scenarios with multiple
+          requests and configurations. Instead of running it directly as a
+          command, we can extend and create load test cases by writing a YAML
+          files.
         </p>
         <h3>Execution files vs General configuration file</h3>
         <p>
-          There are multiple ways to use additional yaml files for load testing
+          There are multiple ways to use additional YAML files for load testing
           - some dedicated to a type of execution (for example, to run api
-          request or postgres queries) and we can also extend our tests to
-          include a general configuration with multiple scenarios and settings.
+          request or postgres queries), while another form is using a general
+          config file that composed of multiple scenarios, types of executions
+          and settings.
           <br></br>
-          With <code>etz</code> we can write yaml execution files, that run with
-          a sub-commands <code>api</code>, <code>pg</code> or <code>file</code>{" "}
-          or adding a general configuration file that includes all type of
-          execution in a scenarios blocks. The type of tests that can be used
-          with <code>etz</code> are the following:
+          The type of tests that can be used with <code>etz</code> are the
+          following:
         </p>
         <ul>
           <li>
@@ -62,8 +67,11 @@ const Setup = () => {
           <li>Testing with a general config file and multiple scenarios</li>
         </ul>
         <p>
-          Use the following links to go staright to the type of load test you'd
-          like to run:
+          With <code>etz</code> we can write YAML execution files, that run with
+          a sub-commands <code>api</code>, <code>pg</code> or <code>file</code>{" "}
+          or adding a general configuration file that includes all type of
+          execution in a scenarios blocks. Use the following links to go
+          staright to the type of load test you'd like to run:
         </p>
         <div className="boxes">
           <SmallLinkBox
@@ -131,7 +139,7 @@ const ApiTestCases = () => {
           API execution files used to run as a client that send http requests to
           a REST API service. An http request should have a method and a url to
           send the requests to. In the API execution file, <code>etz</code> can
-          set the servic url (required), the method (required), payload
+          set the servic url (required), the method (required), payload or data
           (optional) and headers (optional). A typical api execution file
           exmaple:
         </p>
@@ -140,13 +148,13 @@ const ApiTestCases = () => {
           code={`api:
 - url: https://etzba.com
   method: POST
-  payload:
+  data:
     name: "etz"
     address: "etzba etz street 123"`}
         />
         <p>
           After you set the <code>url</code>, <code>method</code> and{" "}
-          <code>payload</code> use the sub-command <code>api</code> with the
+          <code>data</code> use the sub-command <code>api</code> with the
           argument <code>--exec</code> to the relative or absolute path of the
           execution file you've just created:
         </p>
@@ -154,6 +162,13 @@ const ApiTestCases = () => {
           type="term"
           code={`etz api --exec=path/to/executions.yaml`}
         />
+        <h3>Parameters</h3>
+        <p>
+          The following is a list of all parameters that can be added to api
+          execution:
+        </p>
+        <br></br>
+        <OptionsTable data={APIParametersTableData} />
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
@@ -193,7 +208,39 @@ const PostgresTestCases = () => {
             Postgres
           </Link>
         </span>
-        <h1>Test postgres Statements Duration</h1>
+        <h1>Test postgres Service Speed</h1>
+        <p>
+          SQL statements and queries might be slow while running inside a
+          database. <code>etz</code> gives you the sub-command <code>pg</code>{" "}
+          that lets you run SQL queries inside a postgres database.
+          <br></br> A typical postgresql execution file will look like this:
+        </p>
+        <CodeBlock
+          type="yaml"
+          code={`sql:
+- command: SELECT
+  table: locations
+  constraint: "longtitude BETWEEN 13.0 AND 15.0"
+- command: UPDATE
+  table: locations
+  constraint: "longtitude BETWEEN 13.0 AND 15.0 AND latitude BETWEEN 13.0 AND 15.0"
+  values: 
+    latitude: 14.232134112
+- command: INSERT
+  table: locations
+  values: 
+    name: "someplace"
+    address: "better_street_32" 
+    longtitude: 89.123123123
+    latitude: -98.1234123123`}
+        />
+        <h3>Parameters</h3>
+        <p>
+          The following is a list of all parameters that can be added to pg
+          execution:
+        </p>
+        <br></br>
+        <OptionsTable data={SqlParametersTableData} />
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
@@ -237,6 +284,36 @@ const FileTestCases = () => {
           </Link>
         </span>
         <h1>Test http File Upload Processing</h1>
+        <p>
+          File upload execution files help testing how long did it take to an
+          http service, to respond to a file uploaded.
+          <br></br> A typical file upload execution file will look like this:
+        </p>
+        <CodeBlock
+          type="yaml"
+          code={`file:
+- url: https://etzba.com
+  method: PUT
+  path: /my/files/`}
+        />
+        <p>
+          After you set the <code>url</code>, <code>method</code> and{" "}
+          <code>path</code>, the workers that execute the tasks, will take a
+          random file from the directory that is mentioned in the{" "}
+          <code>path</code>, and send a multipart http request to a remote
+          service after running this command:
+        </p>
+        <CodeBlock
+          type="term"
+          code={`etz file --exec=path/to/executions.yaml`}
+        />
+        <h3>Parameters</h3>
+        <p>
+          The following is a list of all parameters that can be added to file
+          upload execution:
+        </p>
+        <br></br>
+        <OptionsTable data={FileUploadParametersTableData} />
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
@@ -328,7 +405,7 @@ const GeneralConfig = () => {
           test. It contains mainly command arguments as <code>-d=30s</code> to
           set the job duration to 30 seconds. The <code>config</code> section
           can have multiple arguments that explained in{" "}
-          <Link className={"docs-link"} to="/docs/started/commands">
+          <Link className={"docs-link"} to="/docs/start/commands">
             Commands and arguments
           </Link>
           .

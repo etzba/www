@@ -20,7 +20,7 @@ const HomePage = () => {
         </div>
         <div className="slide">
           <h3>
-            You are working on a new feature and can't test your product locally before commit?
+            Can't test your product locally before commit?
           </h3>
           <p>
             etz run from your terminal and can test on any given URL or by running your service locally

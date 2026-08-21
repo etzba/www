@@ -15,8 +15,8 @@
   --surface1: #fefeff;
   --surface2: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   --surface3: #92929880;
-  --surface4: rgb(7, 10, 36);
-  --surface5: #6c6e6e;
+  --surface4: rgb(114, 54, 5);
+  --surface5: #f27d09;
   --border1: #2a3050;
   --border2: #aeaed080;
   --border3: #aeaed080;
@@ -29,7 +29,7 @@
   --charsize1: clamp(1.5rem, 4vw, 3rem);
   --charsize2: clamp(1.2rem, 3vw, 2rem);
   --charsize3: clamp(1rem, 2vw, 1.5rem);
-  --charsize4: clamp(0.9rem, 2vw, 1.4rem);
+  --charsize4: clamp(0.9rem, 1.6vw, 1.4rem);
   --charsize5: clamp(0.8rem, 1.2vw, 1.2rem);
   --charsize6: clamp(0.7rem, 1vw, 1rem);
   --transition: 240ms cubic-bezier(0.4, 0, 0.2, 1);
