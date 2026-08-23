@@ -11,11 +11,11 @@ const AboutPage = () => {
           provided here.
         </p>
         <p>
-          All started with a load testing tool I started to create from
-          curiosity, as part of my devops and cloud engineering journey, aiming
-          to add it in part a product development cycle. I decided to call it
-          etzba and extend it to a collection of devops tools, open and closed
-          source.{" "}
+          It all started with a load testing tool I created from curiosity, as
+          part of my devops and cloud engineering journey, aiming to add it as
+          part of product development cycle. I decided to call it etzba and
+          extend it to a collection of devops tools, open and closed source
+          tools.{" "}
         </p>{" "}
         <InfoBlock
           preText={
@@ -24,17 +24,18 @@ const AboutPage = () => {
         />
         <p>
           {" "}
-          All of these tools aim to improve CI\CD (Continuous Integration and
-          Continuous Deployment) process and join in addition to the current
-          cicle of development and release, until it is shipped to production
-          and back to development.
+          All of the tools that provided here, aim to improve CI\CD (Continuous
+          Integration and Continuous Deployment) process and join in addition to
+          the current cicle of development and release, until it is shipped to
+          production and back to development.
         </p>
         <p>
           The first tool <code>etz</code> CLI meant to measure a service
           performance and point a finger on issues that might arise when you
           increase the load on the application. I wanted to use a simple command
-          line tool with option to add YAML file to any load test I'm running.
-          Every devops engineer, developer, QA or testing engineer can use it easily.
+          line tool with an option to add YAML files to any load test I'm running.
+          Every devops engineer, developer, QA or testing engineer can use it
+          easily.
         </p>
         <p>
           More devops tools created to deal with some missing parts that require
