@@ -29,10 +29,9 @@
   white-space: nowrap;
   text-decoration: none;
   display: inline-block;
-  color: var(--letters3);
   text-align: right;
   align-items: center;
-    color: black;
+  color: var(--letters4);
 }
 
 .header ul {

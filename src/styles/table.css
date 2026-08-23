@@ -51,7 +51,7 @@
   padding: 5px 5px 5px 5px;
 }
 
-.options-type {
+.options-col-xs {
   width: 4%;
   padding: 5px 5px 5px 5px;
 }
@@ -61,8 +61,52 @@
     font-size: x-small;
     margin: 10px 0px;
   }
+
   .td-link {
     font-size: x-small;
     padding: 2px 10px 2px 10px;
+  }
+
+  .download table {
+    width: 20%;
+    padding-bottom: 20px;
+  }
+
+  .download-head {
+    width: 65%;
+    margin: -1px 15px 10px 1px;
+  }
+
+  .download-link {
+    padding: 1px 5px 1px 5px;
+    text-decoration: none;
+    margin: 2px 1px 1px 1px;
+    font-size: var(--charsize4);
+  }
+
+  .options table {
+    width: 100%;
+    margin: -20px 20px 30px 2px;
+    font-size: var(--charsize6);
+  }
+
+  .options-head {
+    font-size: var(--charsize6);
+  }
+
+  .options-name {
+    width: 20%;
+    padding: 2px 2px 2px 2px;
+  }
+
+  .options-description {
+    width: 65%;
+    padding: 2px 2px 2px 2px;
+  }
+
+  .options-col-xs {
+    width: 4%;
+    font-size: var(--charsize6);
+    padding: 2px 2px 2px 2px;
   }
 }

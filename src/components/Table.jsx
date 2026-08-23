@@ -22,8 +22,8 @@ const OptionsTable = ({ data }) => {
                 <code>{item.name}</code>
               </td>
               <td className="options-description">{item.description}</td>
-              {item.type && <td className="options-type">{item.type}</td>}
-              {item.command && <td className="options-type">{item.command}</td>}
+              {item.type && <td className="options-col-xs">{item.type}</td>}
+              {item.command && <td className="options-col-xs">{item.command}</td>}
             </tr>
           ))}
           </tbody>
