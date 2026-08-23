@@ -82,6 +82,12 @@ const FileUploadParametersTableData = {
       description:
         "Server URL to send http requests to. Example: https://etzba.com or http://localhost:8080",
     },
+    {
+      name: "path",
+      type: "str",
+      description:
+        "Linux directory path that contains all files to upload. The files will be uploaded randomly from the directory. Examples: /home/files/ or ../files (relative path is accepted)",
+    },
   ],
 };
 

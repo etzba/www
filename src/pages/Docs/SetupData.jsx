@@ -232,7 +232,10 @@ const PostgresTestCases = () => {
     name: "someplace"
     address: "better_street_32" 
     longtitude: 89.123123123
-    latitude: -98.1234123123`}
+    latitude: -98.1234123123
+- query: "UPDATE locations SET longtitude = -89.2132341234 WHERE name = 'Etz';"
+- query: "UPDATE locations SET longtitude = 10.213431253421 WHERE name = 'Amma';"
+- query: "UPDATE locations SET longtitude = 52.123412532123 WHERE name = 'Kmiza';"`}
         />
         <h3>Parameters</h3>
         <p>
