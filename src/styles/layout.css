@@ -17,6 +17,7 @@
   --surface3: #92929880;
   --surface4: rgb(114, 54, 5);
   --surface5: #f27d09;
+  --surface6: rgb(191, 166, 136);
   --border1: #2a3050;
   --border2: #aeaed080;
   --border3: #aeaed080;
@@ -26,6 +27,7 @@
   --letters1: #02020a;
   --letters2: #303030;
   --letters3: white;
+  --letters4: rgb(214, 118, 28);
   --charsize1: clamp(1.5rem, 4vw, 3rem);
   --charsize2: clamp(1.2rem, 3vw, 2rem);
   --charsize3: clamp(1rem, 2vw, 1.5rem);

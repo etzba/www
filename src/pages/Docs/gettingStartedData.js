@@ -20,7 +20,7 @@ const SubCommandsTableData = {
 };
 
 const ArgumentsTableData = {
-  titles: ["Argument", "Description", "Type", "Commands"],
+  titles: ["Argument", "Description", "Type", "Cmd"],
   items: [
     {
       name: "--auth  -a",
