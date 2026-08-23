@@ -42,8 +42,8 @@ const HomePage = () => {
             your customer deployments before going to production?
           </h3>
           <p>
-            etz can strech your service to the maximum and help you set the required amount of replicas, cpu and memory
-            in production
+            etz can strech your service to the maximum and help you set the
+            required amount of replicas, cpu and memory in production
           </p>
         </div>
       </div>
