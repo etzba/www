@@ -116,14 +116,14 @@ export const EtzDocsItems = [
       },      
       {
         id: "gotmpl",
-        title: "Use built-in go template functions",
+        title: "Use etzba built-in go template functions",
         label: "Gotmpl",
         path: "gotmpl",
         element: <UseGoTemplates />,
       },
       {
         id: "examples",
-        title: "Advanced test case setups",
+        title: "Advanced test cases setup examples",
         label: "Examples",
         path: "examples",
         element: <AdvancedExamples />,
@@ -131,10 +131,10 @@ export const EtzDocsItems = [
     ],
   },
   {
-    id: "run",
+    id: "container",
     title: "Containerization",
-    path: "run",
-    label: "Run",
+    path: "container",
+    label: "Container",
     element: <RunLoadTests />,
     children: [
       {

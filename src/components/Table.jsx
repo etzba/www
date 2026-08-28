@@ -21,6 +21,7 @@ const OptionsTable = ({ data }) => {
               <td className="options-name">
                 <code>{item.name}</code>
               </td>
+              {item.syntax && <td className="options-col-syntax">{item.syntax}</td>}
               <td className="options-description">{item.description}</td>
               {item.type && <td className="options-col-xs">{item.type}</td>}
               {item.command && <td className="options-col-xs">{item.command}</td>}

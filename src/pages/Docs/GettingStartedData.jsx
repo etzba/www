@@ -133,12 +133,11 @@ const Install = () => {
         </p>
         <DownloadTable />
         <p>
-          Move the file to bin directory (If your download directory is
-          different than <code>/~Downloads</code>, edit the code accordingly)
+          Set executable mode and move the file to bin directory (if needed, go to download directory by running first <code>cd ~/Downloads</code>):
         </p>
         <CodeBlock
           type="term"
-          code={"sudo mv ~/Downloads/etz /usr/local/bin/"}
+          code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
         />
         <p>
           Check the version of <code>etz</code>
