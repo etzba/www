@@ -136,12 +136,12 @@ const ApiTestCases = () => {
         </span>
         <h1>Create API Test Cases</h1>
         <p>
-          API execution files used to run as a client that send http requests to
-          a REST API service. An http request should have a method and a url to
-          send the requests to. In the API execution file, <code>etz</code> can
-          set the servic url (required), the method (required), payload or data
-          (optional) and headers (optional). A typical api execution file
-          exmaple:
+          API execution files used to run as a client that sends http requests
+          to a REST API service. An http request should have a method and a url
+          to send the requests to. In the API execution file, <code>etz</code>{" "}
+          can set the service URL (required), the method (required), payload or
+          data (optional) and headers (optional). A typical api execution file
+          example:
         </p>
         <CodeBlock
           type="yaml"
@@ -286,10 +286,15 @@ const FileTestCases = () => {
             File Upload
           </Link>
         </span>
-        <h1>Test http File Upload Processing</h1>
+        <h1>Load test file Upload</h1>
         <p>
-          File upload execution files help testing how long did it take to an
-          http service, to respond to a file uploaded.
+          File upload execution files help testing how long it takes an http
+          service to respond to a file uploaded. Most of the time, you'd like to
+          see how your http service responds to multiple clients at the same
+          time. Setting the <code>--workers</code> can be useful here, but here
+          is a small disclaimer: <code>etz</code> cannot increase the bandwidth
+          of your network card, so it will be limited to the NIC bandwidth while
+          using multiple workers and large files.
           <br></br> A typical file upload execution file will look like this:
         </p>
         <CodeBlock
@@ -357,10 +362,10 @@ const GeneralConfig = () => {
           Run <code>etz</code> with general config file
         </h1>
         <p>
-          General cofiguration file extend the yaml configurations we saw so
+          General configuration files extend the yaml configurations we saw so
           far, and allow setting multiple scenarios which each of the scenarios
-          contains execution and able to tune the load of each scenario. This
-          will fine tune the type of tests: it could be a load test, a
+          contains execution and are able to tune the load of each scenario.
+          This will fine tune the type of tests: it could be a load test, a
           performance test, spike or stress test.
         </p>
         <p>
@@ -371,8 +376,8 @@ const GeneralConfig = () => {
         <p>
           You can define settings which will be applied for every scenario
           during the test, but if you decide to apply another settings for a
-          different scanrio block in the same file, the scenario setting section
-          will take precedence.
+          different scenario block in the same file, the scenario setting
+          section will take precedence.
           <br></br>
           So let's open our editors and create a new file{" "}
           <code>my_config.yaml</code>:
@@ -404,10 +409,10 @@ const GeneralConfig = () => {
           The <code>settings</code> block can have two sections:{" "}
           <code>config</code>
           and <code>auth</code>.<br></br>
-          <code>config</code> section is meant for tuning the load during the
-          test. It contains mainly command arguments as <code>-d=30s</code> to
-          set the job duration to 30 seconds. The <code>config</code> section
-          can have multiple arguments that explained in{" "}
+          The config section is meant for tuning the load during the test. It
+          contains mainly command arguments as <code>-d=30s</code> to set the
+          job duration to 30 seconds. The <code>config</code> section can have
+          multiple arguments that are explained in{" "}
           <Link className={"docs-link"} to="/docs/start/commands">
             Commands and arguments
           </Link>
@@ -485,9 +490,10 @@ const GeneralConfig = () => {
           high amount of requests for a given duration of time.
           <br></br>
           The settings for each scenario can be also programmed for faster and
-          easy creation of load, spike or stress tests{" "}
-          <Link className={"docs-link"} to="/docs/advanced/program">
-            Program inside yaml files
+          easy creation of load, spike or stress tests. Check out the next
+          sections{" "}
+          <Link className={"docs-link"} to="/docs/advanced/syntax">
+            Advanced syntax in YAML files
           </Link>
         </p>
         <GuideLinks

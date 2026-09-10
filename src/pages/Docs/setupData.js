@@ -28,7 +28,7 @@ const APIParametersTableData = {
       name: "payload",
       type: "str",
       description:
-        "JSON payload added as a string to each request. It is similar to data field, but instead of writing a map inside the YAML, you simply write JSON as a string.",
+        "JSON payload added as a string to each request. It is similar to a data field, but instead of writing a map inside the YAML, you simply write JSON as a string.",
     },
   ],
 };
@@ -62,7 +62,7 @@ const SqlParametersTableData = {
       name: "values",
       type: "map",
       description:
-        "These are the values used by INSERT and UPDATE queries. Note the example above. If you'd like to add multiple value update or insert, go to the advance section and use yaml functions. If it is required to update multiple values in the same query, you can use the query or file fields instead.",
+        "These are the values used by INSERT and UPDATE queries (Check the example above). If you'd like to add multiple values to UPDATE or INSERT, go to the advance section and use YAML functions. If it is required to update multiple values in the same query, you can use the query or file fields instead.",
     },
   ],
 };

@@ -183,7 +183,7 @@ const UseGoTemplates = () => {
         <br></br>
         <p>
           Go to the next page to view more advanced setup examples to see how to
-          use these functions and other advance configurations in{" "}
+          use these functions and other advanced configurations in{" "}
           <Link className={"docs-link"} to="/docs/advanced/examples">
             Advanced test cases examples
           </Link>
@@ -233,7 +233,9 @@ const AdvancedExamples = () => {
         <h3>File upload test case example</h3>
         <p>This example shows how to use simple variables inside a YAML:</p>
         <br></br>
-        <CodeBlock type="yaml" code={`{{ $baseUrl := printf "%s" "http://localhost:8080" }}
+        <CodeBlock
+          type="yaml"
+          code={`{{ $baseUrl := printf "%s" "http://localhost:8080" }}
 {{ $path := printf "%s" "assets/" }}
 
 file:
@@ -242,17 +244,19 @@ file:
   directory: {{ $path }}
 - url: {{ $baseUrl }}/docs
   method: PUT
-  directory: {{ $path }}`} />
+  directory: {{ $path }}`}
+        />
         <br></br>
         <h3>API execution advance YAML setup</h3>
         <p>
           This example shows how to use golang built in functions inside a
           simple API execution to a localhost service running in docker.
           <br></br>
-          It will set the <code>baseUrl</code> to local host and create a slice
-          by sum (slice of 10 integers), during the execution it will range over
-          the slice and generate random integers and float to set to a service
-          that calculate plus, minus, division and multiply numbers.
+          It will set the <code>baseUrl</code> to the local host and create a
+          slice by sum (slice of 10 integers), during the execution it will
+          range over the slice and generate random integers and floats, to run
+          api requests to a service that calculates plus, minus, division and
+          multiply numbers.
         </p>
         <br></br>
         <CodeBlock
@@ -280,10 +284,16 @@ api:
 {{ end }}`}
         />
         <br></br>
-        <h3></h3>
-        <p></p>
+        <h3>Complex SQL statement load test</h3>
+        <p>
+          This is an example of how to set a load test while connecting directly
+          to postgres service with authentication, then run sql queries with
+          different values.
+        </p>
         <br></br>
-        <CodeBlock type="yaml" code={`{{ $strings := makeStrSlice "Etz" "Ba" "Etzba" "Agudal" "Amma" "Kmiza" "Zeret" }}
+        <CodeBlock
+          type="yaml"
+          code={`{{ $strings := makeStrSlice "Etz" "Ba" "Etzba" "Agudal" "Amma" "Kmiza" "Zeret" }}
 settings:
   config:
     workers: 10                 # number of workers during execution
@@ -330,13 +340,14 @@ scenarios:
         longtitude: {{ .longtitude }}
         latitude: {{ .latitude }}
     {{ end }}
-  {{ end }}`} />
+  {{ end }}`}
+        />
         <br></br>
         <h3>Multiple scenarios with different load</h3>
         <p>
           In this example, you can see a setup of a load test that starts from
-          easy setup, with lower amount of workers and requests per second, to a
-          very high amount or rps.
+          an easy setup, with lower amount of workers and requests per second,
+          to a very high amount or rps.
         </p>
         <br></br>
         <CodeBlock

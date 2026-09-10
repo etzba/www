@@ -421,7 +421,7 @@ const Yaml = () => {
           code={`api:
 - url: https://etzba.com
   method: POST
-  payload:
+  data:
     name: "etz"
     address: "etzba etz street 123"`}
         />

@@ -8,12 +8,12 @@ const AboutPage = () => {
         <h1>About etzba</h1>
         <p>
           Hi! My name is Nadav and I made this website and the products that
-          provided here.
+          are provided here.
         </p>
         <p>
           It all started with a load testing tool I created from curiosity, as
           part of my devops and cloud engineering journey, aiming to add it as
-          part of product development cycle. I decided to call it etzba and
+          part of a product development cycle. I decided to call it etzba and
           extend it to a collection of devops tools, open and closed source
           tools.{" "}
         </p>{" "}
@@ -24,24 +24,24 @@ const AboutPage = () => {
         />
         <p>
           {" "}
-          All of the tools that provided here, aim to improve CI\CD (Continuous
+          All of the tools here aim to improve CI\CD (Continuous
           Integration and Continuous Deployment) process and join in addition to
-          the current cicle of development and release, until it is shipped to
+          the current cycle of development and release, until it is shipped to
           production and back to development.
         </p>
         <p>
-          The first tool <code>etz</code> CLI meant to measure a service
-          performance and point a finger on issues that might arise when you
+          The first tool <code>etz</code> CLI, was meant to measure a service's
+          performance and point a finger at issues that might arise when you
           increase the load on the application. I wanted to use a simple command
           line tool with an option to add YAML files to any load test I'm running.
           Every devops engineer, developer, QA or testing engineer can use it
           easily.
         </p>
         <p>
-          More devops tools created to deal with some missing parts that require
+          More devops tools were created to deal with some missing parts that require
           automation inside kubernetes clusters, but it is also dedicated for
-          deploying <code>etz</code> CLI easily and create a whole stack of
-          testing that fit right into CI. It was made to solve some issues I saw
+          deploying <code>etz</code> CLI easily and creating a whole stack of
+          testing that fits right into CI. It was made to solve some issues I saw
           while deploying to kubernetes in production or in testing
           environments.
         </p>
