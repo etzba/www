@@ -23,18 +23,22 @@ const Welcome = () => {
         <h1>Welcome to etz docs!</h1>
         <h3>The strongest load testing CLI tool in the forest</h3>
         <p>
-          Welcome to etz docs! <code>etz</code> is a load and performance tests
-          CLI tool that measure the performance of restful api services,
-          postgres databases and file uploads to an http server.
+          <code>etz</code> is a load testing CLI tool that measures the
+          performance of restful api services, postgres databases and file
+          uploads to an http server.
         </p>
         <p>
           With <code>etz</code> you can measure the duration of http requests or
-          sql queries to point the finger on potential issues and bottlenecks.
-          <br></br>It is named <code>etz</code> for faster executions in command
-          line: You can run it in your terminal, shell scripts, docker,
-          kubernetes or in CI pipelines.
+          sql queries and point a finger on potential issues and bottlenecks
+          between end-user and your service.
+          <br></br>
+          <code>etz</code> can run in your terminal, shell scripts, docker,
+          kubernetes or CI pipelines.
         </p>
-        <p>To learn more about it and install the latest version: </p>
+        <p>
+          To learn more about <code>etz</code> and install the latest
+          version:{" "}
+        </p>
         <div className="boxes">
           <SmallLinkBox
             title="Getting Started"
@@ -68,12 +72,14 @@ const Welcome = () => {
             "Production ready: Prepare your product for larger request volume",
           ]}
         />
+        <br></br>
         <p>
           <code>etz</code> is a versatile CLI tool that is capable of running
-          advanced load test scenarios by using additional <code>.yaml</code>{" "}
-          files for complex, long and thorough load testing scenarios. you can
-          create a complex test scenarios and automate test executions while
-          defining requests per second, test duration and many more options.
+          advanced load testing scenarios by using additional <code>.yaml</code>{" "}
+          files for complex, long and thorough load testing scenarios. You can
+          automate load test executions while defining requests per second, test
+          duration, workers, authentication and set many more options to
+          create stress, soak, spike or load tests scenarios.
         </p>
         <GuideLinks
           intrestsLinks={interestLinks}

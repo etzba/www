@@ -35,21 +35,25 @@ const GettingStarted = () => {
         </span>
         <h1>Getting started</h1>
         <p>
-          Let's start first with a short introduction of this docs website and
-          how to use it while reading the docs.
+          Before we start, let's have a short introduction of etzba
+          documentation and how to use it while reading the docs:
         </p>
         <ul>
           <li>
-            We use Linux terminal to run <code>etz</code>, so make sure that
-            your terminal is available to run <code>etz</code>
+            If you are using mobile phone, you are welcome to read the docs, but
+            it is dedicated to use on a Linux or OSX systems
           </li>
           <li>
-            In some of the pages you'll find a block of code, marked as "term" -
+            <code>etz</code> is a CLI tool so we use Linux \ Mac terminal to run
+            commands, so terminal is needed with a <code>sudo</code> permissions
+          </li>
+          <li>
+            In some of the pages you'll find a block of code, marked as "term",
             this code can be copied and run in terminal
           </li>
           <li>
             For more complex testing scenarios, <code>yaml</code> files can be
-            added to the command. Code block for <code>yaml</code> will be
+            added to the command. Code blocks for <code>yaml</code> will be
             marked as "yaml".
           </li>
         </ul>
@@ -128,12 +132,14 @@ const Install = () => {
         </h1>
         <p>
           Since <code>etz</code> is a binary file, no requirements needed other
-          than download it. Below you can find download links per operating
+          than download it. Below, you can find download links per operating
           system:
         </p>
         <DownloadTable />
         <p>
-          Set executable mode and move the file to bin directory (if needed, go to download directory by running first <code>cd ~/Downloads</code>):
+          Set the binary to executable mode and move the file to bin directory
+          (if it is needed, go to download directory by running first{" "}
+          <code>cd ~/Downloads</code>):
         </p>
         <CodeBlock
           type="term"
@@ -150,19 +156,10 @@ const Install = () => {
         <div>
           <h3>Requirements</h3>
           <p>
-            Before installing <code>etz</code> from terminal, check the
-            following prerequisities:
+            Before installing <code>etz</code> directly from the terminal, check
+            that you have <code>wget</code> and optionally <code>curl</code>{" "}
+            installed on your linux machine.
           </p>
-          <ul>
-            <li key={1}>Ubuntu 20.04+ or compatible distro</li>
-            <li key={2}>
-              <code>bash</code> or compatible shell
-            </li>
-            <li key={3}>
-              <code>wget</code> or <code>curl</code>
-            </li>
-          </ul>
-          <h3>Steps</h3>
           <p>
             Use <code>wget</code> to download from github:
           </p>
@@ -172,7 +169,7 @@ const Install = () => {
               "wget https://raw.githubusercontent.com/etzba/etz/master/v0.0.4-rc4/etzba_linux_amd64_v1/etz"
             }
           />
-          <p>Move to bin directory:</p>
+          <p>Move the binary to bin directory:</p>
           <CodeBlock
             type="term"
             code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
@@ -196,8 +193,12 @@ gpg --import pubkey.asc
 gpg --verify etz.sig etz`}
           />
           <p>
-            The command above should change according to the binary you've
-            downloaded and should work for mac users
+            The <code>curl</code> command above, install <code>etz</code> on
+            linux machine amd64 arch, but you find more . Take a look in{" "}
+            <Link className={"docs-link"} to="https://github.com/etzba/etz/">
+              etz github repository
+            </Link>{" "}
+            and
           </p>
         </div>
         <GuideLinks
@@ -282,7 +283,7 @@ const Run = () => {
         <p>
           Assuming you'd like to store the results in a json format, use{" "}
           <code>--output=directory/filename.json</code> argument and a results
-          file of your load test will be save locally on your machine:
+          file of your load test will be saved locally on your machine:
         </p>
         <CodeBlock
           type="term"
@@ -293,7 +294,7 @@ const Run = () => {
         <p>
           In the next section,{" "}
           <Link className={"docs-link"} to="/docs/start/yaml">
-            run <code>etz</code> with additional yaml files
+            run <code>etz</code> with additional YAML files
           </Link>
           , we will run more complex stuff with general configuration or
           execution file
@@ -312,7 +313,7 @@ const Run = () => {
 
 const Commands = () => {
   const back = { title: "Run from terminal", path: "/docs/start/run" };
-  const forward = { title: "Run with yaml file", path: "/docs/start/yaml" };
+  const forward = { title: "Run with YAML file", path: "/docs/start/yaml" };
   const interestLinks = [
     {
       title: "Setup test cases",
@@ -339,14 +340,14 @@ const Commands = () => {
         </h1>
         <p>
           To run load tests <code>etz</code> has several sub-commands and each
-          of these sub-commands require several arguments unless using aditional
-          YAML file.
+          of these sub-commands requires several arguments unless using an
+          additional YAML file.
         </p>
         <h4>Sub-Commands</h4>
         <p>
-          When using <code>etz</code> sub-commands it is required to set few
+          When using <code>etz</code> sub-commands it is required to set a few
           arguments to the command or the argument <code>--exec</code> and
-          provide an execution yaml file. In the table below, you can find all
+          provide an execution YAML file. In the table below, you can find all
           the available sub-commands:
         </p>
         <br></br>
@@ -359,7 +360,7 @@ const Commands = () => {
         <p>
           <code>etz</code> arguments allow you to tune the load tests further.
           Only the arguments <code>--exec</code> and <code>--config</code>{" "}
-          required while using YAML file. If you would like to use{" "}
+          required while using a YAML file. If you would like to use{" "}
           <code>etz</code> with a sub-command but without a YAML file, these are
           all the available command arguments with the related sub-command:
         </p>
@@ -402,25 +403,25 @@ const Yaml = () => {
           </Link>
         </span>
         <h1>
-          Run <code>etz</code> with exectuion file
+          Run <code>etz</code> with execution file
         </h1>
         <p>
-          So far we could run <code>etz</code> by one command from terminal.
-          Using only command line arguments is the simplest way to run{" "}
-          <code>etz</code>, but what if you want to create more complex testing
-          scenarios to your api and postgres service? <br></br>For this case,
-          adding additional execution file in <code>.yaml</code>, can extend the
-          capabilities or <code>etz</code> and allow running executions from a
-          file and later on, create complex scenarios or multiple execution in
-          one file. This is a short and simple example of running{" "}
-          <code>etz</code> with execution file:
+          So far, we could run <code>etz</code> by one command from the
+          terminal, using only command line arguments. This is the simplest way
+          to run <code>etz</code>, but what if we need to add more complexity
+          for our testing scenarios? <br></br>For this case, creating an
+          execution file in <code>.yaml</code>, can extend the capabilities of{" "}
+          <code>etz</code> and allow running load test executions from a file.
+          We can create complex load test scenarios with multiple executions
+          of sql statements or api calls in one file. This is a short and simple
+          example of running <code>etz</code> with an execution file:
         </p>
         <CodeBlock
           type="yaml"
           code={`api:
 - url: https://etzba.com
   method: POST
-  payload:
+  data:
     name: "etz"
     address: "etzba etz street 123"`}
         />
@@ -434,20 +435,19 @@ const Yaml = () => {
           code={`etz api --exec=path/to/executions.yaml`}
         />
         <p>
-          This is just a short introduction to execution files and it shows only
-          the simplest way of running <code>etz</code>. Going forward to{" "}
+          This is just a short introduction to execution files which shows only
+          the simplest way to run <code>etz</code>. Going forward to{" "}
           <Link className={"docs-link"} to="/docs/setup">
             Setup test cases
           </Link>{" "}
-          , you'll be able to set multiple execution files for each sub-command
-          or create a general configuration file to run load tests in multiple
-          scenarios.
+          , you'll be able to create sophisticated execution files for each
+          sub-command or compose a general configuration file to run load tests
+          in multiple scenarios, increasing the load or set a type of a load,
+          soak, stress or spike tests.
           <br></br>
-          Afterwards, you can see also how to write advanced <code>
-            .yaml
-          </code>{" "}
-          files using conditional statements, golang template functions and many
-          more in{" "}
+          You can also check out how to write advanced <code>.yaml</code> files
+          using conditional statements, golang template functions and many more
+          in{" "}
           <Link className={"docs-link"} to="/docs/advanced">
             advanced configuration
           </Link>{" "}
