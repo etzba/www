@@ -4,12 +4,12 @@ const SubCommandsTableData = {
     {
       name: "api",
       description:
-        "Run a load test against http REST API service. This command requires several arguments in addition and execute http requests to a certain url and method. Additionally, you can add headers and payload to the request",
+        "Run a load test against http REST API service. This command requires several arguments in addition to executing http requests to a certain url and method. Additionally, you can add headers and payload to the request",
     },
     {
       name: "pg",
       description:
-        "This command is dedicated for measuring sql queries duration to a postgres service. Additional arguments and execution file is required for this command to work.",
+        "This command is dedicated for measuring sql queries duration to a postgres service. Additional arguments and an execution file is required for this command to work.",
     },
     {
       name: "file",
@@ -24,50 +24,57 @@ const ArgumentsTableData = {
   items: [
     {
       name: "--auth  -a",
-      description: "Set authentication file to provide credentials for postgres or remote api server. The yaml file structure example could be found in advance topics.",
+      description:
+        "Set authentication file to provide credentials for postgres or remote api server. The yaml file structure example could be found in advanced topics.",
       type: "str",
       command: "all",
     },
     {
       name: "--config  -c",
-      description: "When using etz without subcommand, a general config file in yaml needs to be given while running the command. This argument is required if no sub command is used.",
+      description:
+        "When using etz without subcommand, a general config file in yaml needs to be given while running the command. This argument is required if no sub command is used.",
       type: "str",
       command: "none",
     },
     {
       name: "--duration  -d",
       description:
-        "Set the load test job duration. This argument will define for how long the load test should run.",
+        "Set the load test job duration. This argument will define how long the load test should run.",
       type: "time",
       command: "all",
     },
     {
       name: "--exec  -e",
-      description: "Execution file path is the location of the yaml file used for the execution. This argument is required with any sub-command.",
+      description:
+        "Execution file path is the location of the yaml file used for the execution. This argument is required with any sub-command.",
       type: "str",
       command: "all",
     },
     {
       name: "--payload  -j",
-      description: "Set json payload to api execution. This argument is available only for api (restAPI) executions.",
+      description:
+        "Set json payload to api execution. This argument is available only for api (restAPI) executions.",
       type: "str",
       command: "api",
     },
     {
       name: "--method  -m",
-      description: "Using api or file sub-commands, method is part of the http requests sent to the remote server. Available methods are GET, POST, PUT and other http methods. This argument is not case sensitive.",
+      description:
+        "Using api or file sub-commands, the method is part of the http requests sent to the remote server. Available methods are GET, POST, PUT and other http methods. This argument is not case sensitive.",
       type: "str",
       command: "api,file",
     },
     {
       name: "--output  -o",
-      description: "Create a results json file with all the load tests results. If absolute path is not provided, the file will be created relatively to where etz is executed.",
+      description:
+        "Create a results json file with all the load tests results. If the absolute path is not provided, the file will be created relative to where etz command is executed.",
       type: "str",
       command: "all",
     },
     {
       name: "--path  -p",
-      description: "Available only for file execution, path is the linux directory where all the files that will be sent to the remote server.",
+      description:
+        "Available only for file execution, path is the linux directory where all the files that will be sent to the remote server.",
       type: "str",
       command: "file",
     },
@@ -81,14 +88,14 @@ const ArgumentsTableData = {
     {
       name: "--url  -u",
       description:
-        "Available while using api or file sub-commands only, the url will be a part of the http request. You can specify url to run load tests against any specified url.",
+        "Available while using api or file sub-commands only, the url will be a part of the http request. You can specify a URL to run load tests on a given url.",
       type: "str",
       command: "api,file",
     },
     {
       name: "--verbose  -v",
       description:
-        "Verbose will increase the stdout from any worker executing a task and let you know which worker executed which task. Warning: This argument will increase the output in terminal according to the amount of tasks executed by the workers and rps arguments.",
+        "Verbose will increase the stdout from any worker executing a task and let you know which worker executed which task. Warning: This argument will increase the output in the terminal according to the amount of tasks executed by the workers and rps arguments.",
       type: "bool",
       command: "all",
     },
@@ -102,4 +109,4 @@ const ArgumentsTableData = {
   ],
 };
 
-export { SubCommandsTableData, ArgumentsTableData }
+export { SubCommandsTableData, ArgumentsTableData };
