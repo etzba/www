@@ -50,32 +50,26 @@
   .docs {
     padding: 60px 1px 0px 1px;
   }
-  
   .docs h1 {
     padding: 10px 0px 10px 0px;
     font-size: var(--charsize1);
   }
-
   .docs h2 {
     padding: 10px 0px 10px 0px;
     font-size: var(--charsize2);
   }
-
   .docs h3 {
     padding: 10px 0px 10px 0px;
     font-size: var(--charsize3);
   }
-
   .docs h4 {
     padding: 2px 0px 2px 0px;
   }
-
   .docs p {
     width: 100%;
     padding: 2px 0px 2px 0px;
     font-size: var(--charsize4);
   }
-
   .docs li {
     padding-top: 2px;
     font-size: var(--charsize5);
