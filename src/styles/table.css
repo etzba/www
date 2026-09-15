@@ -1,11 +1,11 @@
 .download table {
-  width: 30%;
+  width: 90%;
   text-decoration: none;
   padding-bottom: 20px;
 }
 
 .download-head {
-  width: 75%;
+  width: 90%;
   color: gray;
   display: inline-block;
   border-bottom: 1px solid var(--border2);
@@ -20,7 +20,7 @@
   transition: width var(--transition);
   background-color: var(--surface5);
   color: aliceblue;
-  margin: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 60px;
   font-size: var(--charsize5);
 }
 
@@ -90,15 +90,19 @@
   }
 
   .download-head {
-    width: 65%;
+    width: 20%;
     margin: -1px 15px 10px 1px;
+  }
+
+  .download table p {
+    font-size: var(--charsize6);
   }
 
   .download-link {
     padding: 1px 5px 1px 5px;
     text-decoration: none;
     margin: 2px 1px 1px 1px;
-    font-size: var(--charsize4);
+    font-size: var(--charsize6);
   }
 
   .options table {

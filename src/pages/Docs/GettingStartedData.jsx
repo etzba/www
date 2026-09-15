@@ -4,6 +4,8 @@ import CodeBlock from "../../components/CodeBlock";
 import { DownloadLink, SmallLinkBox } from "../../components/LinkBox";
 import linuxBinaryFile from "../../assets/etz_linux_amd64_v1?url";
 import darwinBinaryFile from "../../assets/etz_darwin_amd64_v1?url";
+import linuxArmBinaryFile from "../../assets/etz_linux_arm64_v8.0?url";
+import darwinArmBinaryFile from "../../assets/etz_darwin_arm64_v8.0?url";
 import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 import "../../styles/table.css";
@@ -166,7 +168,7 @@ const Install = () => {
           <CodeBlock
             type="term"
             code={
-              "wget https://raw.githubusercontent.com/etzba/etz/master/v0.0.4-rc4/etzba_linux_amd64_v1/etz"
+              "wget https://raw.githubusercontent.com/etzba/etz/master/v0.0.4/etzba_linux_amd64_v1/etz"
             }
           />
           <p>Move the binary to bin directory:</p>
@@ -185,8 +187,8 @@ const Install = () => {
           </p>
           <CodeBlock
             type="term"
-            code={`curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4-rc4/etzba_linux_amd64_v1/etz
-curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4-rc4/etzba_linux_amd64_v1/etz.sig
+            code={`curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4/etzba_linux_amd64_v1/etz
+curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4/etzba_linux_amd64_v1/etz.sig
 curl -LO https://raw.githubusercontent.com/etzba/etz/master/pubkey.asc
 
 gpg --import pubkey.asc
@@ -475,7 +477,13 @@ const DownloadTable = () => {
               <p className="download-head">Linux (amd64)</p>
             </th>
             <th>
+              <p className="download-head">Linux (arm64)</p>
+            </th>
+            <th>
               <p className="download-head">Darwin (amd64)</p>
+            </th>
+            <th>
+              <p className="download-head">Darwin (arm64)</p>
             </th>
           </tr>
         </thead>
@@ -493,7 +501,25 @@ const DownloadTable = () => {
             <td>
               <a
                 className="download-link"
+                href={linuxArmBinaryFile}
+                download="etz"
+              >
+                Download
+              </a>
+            </td>
+            <td>
+              <a
+                className="download-link"
                 href={darwinBinaryFile}
+                download="etz"
+              >
+                Download
+              </a>
+            </td>
+            <td>
+              <a
+                className="download-link"
+                href={darwinArmBinaryFile}
                 download="etz"
               >
                 Download
