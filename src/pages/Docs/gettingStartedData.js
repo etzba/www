@@ -109,4 +109,91 @@ const ArgumentsTableData = {
   ],
 };
 
-export { SubCommandsTableData, ArgumentsTableData };
+const LICENSE = `
+LIMITED TIME PROPRIETARY SOFTWARE LICENSE
+
+Software Name: etz
+Software Version: v0.0.4
+License Termination: 31/12/2027
+Copyright (c) 2023 Nadav Ben Mazia (etzba)
+
+1.0 License Grant
+
+    Subject to the terms of this agreement, Nadav Ben Mazia ("Licensor") grants to you ("Licensee")
+    a non-exclusive, non-transferable, revocable license to use etz ("Software") solely for your
+    own internal, personal or business purpose.
+
+1.1 Software purpose
+
+    This Software is provided as a load testing tool. It is intended for use in test, staging, or 
+    development environments and is expressly not designed or warranted for use in production 
+    environments. The Licensor assumes no responsibility for any issues, damages, or losses resulting  
+    from deployment of this Software in a production environment. Any use of the Software in production  
+    is done entirely at the user's own risk.
+
+1.2 Time Limitation (Trial)
+
+    This license is valid only for the License Termination defined above, starting from the date of 
+    installation (If before the License Termination). You are not allowed to use this program 
+    after the license has been terminated.
+    Upon expiration of this term, the software will automatically cease to function and your right 
+    to use it will terminate immediately.
+
+1.3 Restrictions
+
+    You agree that you will not copy, modify or create derivative works of the software. Reverse engineer, 
+    decompile, disassemble or attempt to derive the source of the code of the software.
+    Redistribute, sell, rent, lease, sublicense or otherwise transfer rights to the software to
+    any third party. Remove any proprietary notices, labels or copyright marks from the software.
+    This restriction does not affect mandatory statutory exceptions under applicable copyright law,
+    including the right of a lawful user to make a backup copy and the right to decompile the Software
+    to the limited extent necessary to achieve interoperability with independently created programs.
+
+1.4 Privacy
+
+    This Software does not collect, store, transmit, or otherwise process any personal data or usage 
+    information about its users. The Software contains no analytics, telemetry, tracking, or logging 
+    functionality that records or transmits information about users or their use of the Software. 
+    No user data is retained by the Licensor at any time in connection with the use of this Software.
+
+2.1 Warranty Disclaimer
+
+    the software is provided free of charge. the licensor gives no warranty of any kind, express or implied, 
+    in particular no warranty that the software will meet the user's requirements or operate uninterrupted, 
+    timely, secure or error-free. this disclaimer applies to the extent permitted under mandatory law. 
+    statutory rights that cannot be excluded by agreement, in particular claims for fraudulently concealed 
+    defects, remain unaffected.
+
+2.2 Limitation of Liability
+
+    as the software is provided free of charge, the principles governing gratuitous transactions under german 
+    law apply accordingly. the licensor is therefore liable only for damages caused by intent or gross 
+    negligence, for injury to life, body or health, and under the mandatory provisions of the product liability 
+    law applicable at the time the software is placed on the market.
+    should the gratuitous character of this license be denied in a specific case, the following applies instead. 
+    for damages caused by slight negligence, the licensor is liable only if an essential contractual obligation 
+    has been breached, being an obligation whose fulfilment is essential to the proper use of the software and 
+    on which the user may reasonably rely. liability under this paragraph is limited to the foreseeable damage 
+    typical for software of this kind.
+    any further liability of the licensor is excluded to the extent permitted by law.
+
+2.3 Consumers and Entrepreneurs
+
+    This license applies both to natural persons acting for purposes outside their trade, business or profession 
+    ("Consumers") and to persons acting in a commercial or professional capacity ("Entrepreneurs").
+    For Consumers, Sections 2.1 and 2.2 apply only to the extent permitted under mandatory consumer protection law. 
+    Statutory rights that cannot be excluded or limited remain unaffected.
+    For Entrepreneurs, the parties agree that the allocation of risk under Sections 2.1 and 2.2 is reasonable in 
+    view of the Software being provided free of charge.
+
+3.0 Ownership
+
+    The software is licensed, not sold. Licensor retains all right, title and interest in and to the software, 
+    including intellectual property rights.
+
+3.1 Governing Law
+
+    This agreement shall be governed by and construed in accordance with the laws of Germany.
+`
+
+export { SubCommandsTableData, ArgumentsTableData, LICENSE };

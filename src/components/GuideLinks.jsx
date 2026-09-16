@@ -12,6 +12,9 @@ const GuideLinks = ({
 }) => {
   return (
     <>
+      <br></br>
+      <br></br>
+      <br></br>
       <h3>What's next</h3>
       <p>
         Continue exploring <code>etz</code>:
@@ -25,6 +28,8 @@ const GuideLinks = ({
           </li>
         ))}
       </ul>
+      <br></br>
+      <br></br>
       <br></br>
       {!backTitle ? (
         <></>
@@ -42,6 +47,8 @@ const GuideLinks = ({
           <RightBottomArrow />
         </Link>
       )}
+      <br></br>
+      <br></br>
     </>
   );
 };

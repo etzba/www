@@ -10,7 +10,11 @@ import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 import "../../styles/table.css";
 import OptionsTable from "../../components/Table";
-import { ArgumentsTableData, SubCommandsTableData } from "./gettingStartedData";
+import {
+  ArgumentsTableData,
+  LICENSE,
+  SubCommandsTableData,
+} from "./gettingStartedData";
 
 const GettingStarted = () => {
   const forward = {
@@ -62,23 +66,10 @@ const GettingStarted = () => {
         <p>
           Let's setup <code>etz</code> in the{" "}
           <Link className={"docs-link"} to="/docs/start/install">
-            Install section{" "}
+            Install section
           </Link>
-          and run it for the first time, or if you know your way around - simply
-          use the download links:
+          , run it for the first time and see what it can do.
         </p>
-        <div className="boxes">
-          <DownloadLink
-            title="Download (Linux)"
-            file={linuxBinaryFile}
-            className="small-box-link"
-          />
-          <DownloadLink
-            title="Download (OSX)"
-            file={darwinBinaryFile}
-            className="small-box-link"
-          />
-        </div>
         <p>
           If you already downloaded <code>etz</code> you can go directly to the
           fun sections and start load testing your environment:
@@ -94,6 +85,16 @@ const GettingStarted = () => {
             path="/docs/start/commands"
             className="small-box-link"
           />
+          <SmallLinkBox
+            title="Created API Execution"
+            path="/docs/setup/api"
+            className="small-box-link"
+          />
+          <SmallLinkBox
+            title="Advanced Configuration"
+            path="/docs/advanced/examples"
+            className="small-box-link"
+          />
         </div>
         <GuideLinks
           intrestsLinks={interestLinks}
@@ -106,6 +107,7 @@ const GettingStarted = () => {
 };
 
 const Install = () => {
+  const [open, setOpen] = useState(false);
   const back = { title: "Getting started", path: "/docs/start/" };
   const forward = { title: "Run from terminal", path: "/docs/start/run/" };
   const interestLinks = [
@@ -132,77 +134,98 @@ const Install = () => {
         <h1>
           Install <code>etz</code>
         </h1>
-        <p>
-          Since <code>etz</code> is a binary file, no requirements needed other
-          than download it. Below, you can find download links per operating
-          system:
-        </p>
-        <DownloadTable />
-        <p>
-          Set the binary to executable mode and move the file to bin directory
-          (if it is needed, go to download directory by running first{" "}
-          <code>cd ~/Downloads</code>):
-        </p>
-        <CodeBlock
-          type="term"
-          code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
-        />
-        <p>
-          Check the version of <code>etz</code>
-        </p>
-        <CodeBlock type="term" code={"etz version"} />
-
-        <h2>
-          Install <code>etz</code> on a Linux machine from terminal
-        </h2>
-        <div>
-          <h3>Requirements</h3>
-          <p>
-            Before installing <code>etz</code> directly from the terminal, check
-            that you have <code>wget</code> and optionally <code>curl</code>{" "}
-            installed on your linux machine.
-          </p>
-          <p>
-            Use <code>wget</code> to download from github:
-          </p>
-          <CodeBlock
-            type="term"
-            code={
-              "wget https://raw.githubusercontent.com/etzba/etz/master/v0.0.4/etzba_linux_amd64_v1/etz"
-            }
-          />
-          <p>Move the binary to bin directory:</p>
-          <CodeBlock
-            type="term"
-            code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
-          />
-          <p>Check from terminal that you can see the version:</p>
-          <CodeBlock type="term" code={"etz version"} />
-          <h2>
-            Verify <code>etz</code> binary with gpg
-          </h2>
-          <p>
-            To validate the binary file integrity, use <code>gpg</code> and
-            download the public key and signature of <code>etz</code>:
-          </p>
-          <CodeBlock
-            type="term"
-            code={`curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4/etzba_linux_amd64_v1/etz
+        {open ? (
+          <section>
+            <br></br>
+            <div onClick={() => setOpen(false)}>
+              <div className="license-window">{LICENSE}</div>
+            </div>
+            <br></br>
+          </section>
+        ) : (
+          <>
+            <p>
+              Since <code>etz</code> is a binary file, no requirements needed
+              other than download it. Please read the{" "}
+              <button className={"license-link"} onClick={() => setOpen(true)}>
+                LICENSE
+              </button>{" "}
+              before downloading.<br></br>
+              Below, you can find download links per operating system:
+            </p>
+            <DownloadTable />
+            <p>
+              Set the binary to executable mode and move the file to bin
+              directory (if it is needed, go to download directory by running
+              first <code>cd ~/Downloads</code>):
+            </p>
+            <CodeBlock
+              type="term"
+              code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
+            />
+            <p>
+              Check the version of <code>etz</code>
+            </p>
+            <CodeBlock type="term" code={"etz version"} />
+            <p>And to read the license:</p>
+            <CodeBlock type="term" code={"etz license"} />
+            <h2>
+              Install <code>etz</code> on a Linux machine from terminal
+            </h2>
+            <div>
+              <h3>Requirements</h3>
+              <p>
+                Before installing <code>etz</code> directly from the terminal,
+                check that you have <code>wget</code> and optionally{" "}
+                <code>curl</code> installed on your linux machine.
+              </p>
+              <p>
+                Use <code>wget</code> to download from github:
+              </p>
+              <CodeBlock
+                type="term"
+                code={
+                  "wget https://raw.githubusercontent.com/etzba/etz/master/v0.0.4/etzba_linux_amd64_v1/etz"
+                }
+              />
+              <p>Move the binary to bin directory:</p>
+              <CodeBlock
+                type="term"
+                code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
+              />
+              <p>Check from terminal that you can see the version:</p>
+              <CodeBlock type="term" code={"etz version"} />
+              <h2>
+                Verify <code>etz</code> binary with gpg
+              </h2>
+              <p>
+                To validate the binary file integrity, use <code>gpg</code> and
+                download the public key and signature of <code>etz</code>:
+              </p>
+              <CodeBlock
+                type="term"
+                code={`curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4/etzba_linux_amd64_v1/etz
 curl -LO https://raw.githubusercontent.com/etzba/etz/master/v0.0.4/etzba_linux_amd64_v1/etz.sig
 curl -LO https://raw.githubusercontent.com/etzba/etz/master/pubkey.asc
 
 gpg --import pubkey.asc
 gpg --verify etz.sig etz`}
-          />
-          <p>
-            The <code>curl</code> command above, install <code>etz</code> on
-            linux machine amd64 arch, but you find more . Take a look in{" "}
-            <Link className={"docs-link"} to="https://github.com/etzba/etz/">
-              etz github repository
-            </Link>{" "}
-            and
-          </p>
-        </div>
+              />
+              <p>
+                The <code>curl</code> command above, install <code>etz</code> on
+                linux machine amd64 arch, but you can find more more versions to
+                download in the repository, just take a look in{" "}
+                <Link
+                  className={"docs-link"}
+                  to="https://github.com/etzba/etz/"
+                >
+                  etz github repository
+                </Link>{" "}
+                and follow for more updates.
+              </p>
+            </div>
+          </>
+        )}
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
@@ -414,8 +437,8 @@ const Yaml = () => {
           for our testing scenarios? <br></br>For this case, creating an
           execution file in <code>.yaml</code>, can extend the capabilities of{" "}
           <code>etz</code> and allow running load test executions from a file.
-          We can create complex load test scenarios with multiple executions
-          of sql statements or api calls in one file. This is a short and simple
+          We can create complex load test scenarios with multiple executions of
+          sql statements or api calls in one file. This is a short and simple
           example of running <code>etz</code> with an execution file:
         </p>
         <CodeBlock
