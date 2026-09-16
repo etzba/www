@@ -8,7 +8,7 @@ const ToolsPage = () => {
         <div className="hero">
           <h1>etz</h1>
           <br></br>
-          <p>Know how your service function under stress</p>
+          <p>Test your service under stress</p>
           <div className="hero-button">
             <SmallLinkBox
               title="Go to github repository"

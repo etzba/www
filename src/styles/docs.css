@@ -46,9 +46,41 @@
   padding: 20px 20px 20px 20px;
 }
 
+.license-link {
+  border: none;
+  padding: 1px 1px 1px 1px;
+  text-decoration: none;
+  font-size: var(--charsize4);
+  background-color: var(--surface2);
+  color: var(--surface2);
+  border: 2px solid var(--border2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.license-window {
+  border: 3px solid var(--border2);
+  transition: width var(--transition);
+  background-color: var(--surface5);
+  font-size: var(--charsize4);
+  background-color: var(--surface3);
+  white-space: pre-wrap;
+  overflow-y: auto;
+  min-height: 100dvh;
+  border-radius: 25px;
+  padding: 20px 20px 20px 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
 @media (max-width: 768px) {
   .docs {
-    padding: 60px 1px 0px 1px;
+    padding: 60px 0px 0px 0px;
+    margin: -10px -10px -10px -10px;
   }
   .docs h1 {
     padding: 10px 0px 10px 0px;

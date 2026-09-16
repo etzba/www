@@ -41,23 +41,23 @@ const Welcome = () => {
         </p>
         <div className="boxes">
           <SmallLinkBox
-            title="Getting Started"
-            path="/docs/start"
-            className="small-box-link"
-          />
-          <SmallLinkBox
-            title="How To Install etz"
+            title="Download and Install etz"
             path="/docs/start/install"
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Setup Config Files"
-            path="/docs/config/executions"
+            title="Execute with YAML file"
+            path="/docs/start/yaml"
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Continues Integration"
-            path="/docs/config/executions"
+            title="Created API Execution"
+            path="/docs/setup/api"
+            className="small-box-link"
+          />
+          <SmallLinkBox
+            title="Advanced Configuration"
+            path="/docs/advanced/examples"
             className="small-box-link"
           />
         </div>

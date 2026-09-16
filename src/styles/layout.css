@@ -15,7 +15,7 @@
   --surface1: #fefeff;
   --surface2: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   --surface3: #92929880;
-  --surface4: rgb(114, 54, 5);
+  --surface4: rgb(229, 216, 204);
   --surface5: #f27d09;
   --surface6: rgb(191, 166, 136);
   --border1: #2a3050;
@@ -83,16 +83,18 @@
 @media (max-width: 768px) {
   .left-bottom-arrow {
     padding-bottom: 12px;
-    font-size: var(--charsize3);
+    font-size: var(--charsize5);
   }
   .right-bottom-arrow {
     padding-bottom: 12px;
-    font-size: var(--charsize3);
+    font-size: var(--charsize5);
   }
   .left-bottom-link {
-    font-size: var(--charsize4);
+    font-size: var(--charsize5);
+    margin-left: -20px;
   }
   .right-bottom-link {
-    font-size: var(--charsize4);
+    font-size: var(--charsize5);
+    margin-right: -30px;
   }
 }

@@ -5,31 +5,36 @@
 }
 
 .download-head {
-  width: 90%;
   color: gray;
   display: inline-block;
   border-bottom: 1px solid var(--border2);
   font-size: var(--charsize6);
   margin-bottom: 30px;
+  width: 180px;
 }
 
 .download-link {
   padding: 10px 50px 10px 50px;
   text-decoration: none;
-  border: 3px solid var(--border4);
+  border: 3px solid var(--border2);
   transition: width var(--transition);
   background-color: var(--surface5);
   color: aliceblue;
-  margin: 10px 10px 10px 60px;
+  margin: 10px 10px 10px 40px;
   font-size: var(--charsize5);
+  border-radius: 25px;
+  width: 200px;
+  height: 150px;
 }
 
 .options table {
-  width: 90%;
+  width: 95%;
   text-decoration: none;
   margin: -20px 20px 30px 20px;
   border-collapse: collapse;
   font-size: var(--charsize5);
+  border-radius: 5px;
+  border: 3px solid var(--border2);
 }
 
 .options td {

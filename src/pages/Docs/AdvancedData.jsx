@@ -47,6 +47,8 @@ const AdvancedConfiguration = () => {
           </li>
           <li>Use additional values files together with test cases</li>
         </ul>
+        <br></br>
+        <br></br>
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}

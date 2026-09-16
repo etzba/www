@@ -1,10 +1,10 @@
 .code-container {
   width: 95%;
   margin: 0;
-  border-radius: 8px;
-  border: 1px solid var(--border);
+  border-radius: 6px;
+  border: 2px solid var(--border3);
   transition: width var(--transition);
-  background-color: var(--surface3);
+  background-color: var(--surface2);
   position: relative;
   margin-left: 20px;
 }
@@ -13,11 +13,10 @@
   background-color: var(--surface5);
   color: var(--letters3);
   padding: 2px 2px 2px 2px;
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
   font-family: var(--font);
   font-size: var(--charsize6);
   overflow-x: auto;
-  border-radius: 0%;
 }
 
 .code-title button {
@@ -25,8 +24,6 @@
   outline: none;
   cursor: pointer;
   background-color: var(--surface1);
-  border-radius: 0.5rem;
-  border: 2px solid var(--border5);
   color: var(--letters2);
   line-height: 14px;
   font-weight: 600;
@@ -54,15 +51,15 @@
   width: 6%;
   font-family: var(--font);
   height: auto;
+  border-radius: 5px;
 }
 
 .code-snippet {
   transition: width var(--transition);
   background-color: var(--surface4);
-  color: var(--letters3);
+  color: var(--letters1);
   padding: 15px 10px 15px 10px;
-  border-radius: 5px;
-  border: var(--border5);
+  border-radius: 0px 0px 5px 5px;
   font-family: var(--cli-font);
   font-size: var(--charsize5);
   overflow-x: auto;
@@ -76,5 +73,14 @@
     width: 100%;
     margin-left: 2px;
     font-size: var(--charsize5);
+  }
+
+  .code-copy {
+    float: right;
+    width: 12%;
+    font-family: var(--font);
+    font-size: var(--charsize6);
+    height: auto;
+    border-radius: 5px;
   }
 }
