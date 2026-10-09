@@ -34,6 +34,10 @@
   color: var(--letters4);
 }
 
+.header-link:hover {
+  color: var(--surface7);
+}
+
 .header ul {
   justify-content: right;
   width: 80%;

@@ -46,12 +46,13 @@ const GettingStarted = () => {
         </p>
         <ul>
           <li>
-            If you are using mobile phone, you are welcome to read the docs, but
-            it is dedicated to use on a Linux or OSX systems
+            If you are using mobile phone, you are welcome to stay and read the
+            docs, but this CLI tool works only on Linux and Mac operating
+            systems
           </li>
           <li>
-            <code>etz</code> is a CLI tool so we use Linux \ Mac terminal to run
-            commands, so terminal is needed with a <code>sudo</code> permissions
+            Since it is a CLI tool yout terminal needs to be available to run
+            commands. Make sure to have <code>sudo</code> permissions
           </li>
           <li>
             In some of the pages you'll find a block of code, marked as "term",
@@ -518,7 +519,7 @@ const DownloadTable = () => {
                 href={linuxBinaryFile}
                 download="etz"
               >
-                Download
+                <b>Download</b>
               </a>
             </td>
             <td>
@@ -527,7 +528,7 @@ const DownloadTable = () => {
                 href={linuxArmBinaryFile}
                 download="etz"
               >
-                Download
+                <b>Download</b>
               </a>
             </td>
             <td>
@@ -536,7 +537,7 @@ const DownloadTable = () => {
                 href={darwinBinaryFile}
                 download="etz"
               >
-                Download
+                <b>Download</b>
               </a>
             </td>
             <td>
@@ -545,7 +546,7 @@ const DownloadTable = () => {
                 href={darwinArmBinaryFile}
                 download="etz"
               >
-                Download
+                <b>Download</b>
               </a>
             </td>
           </tr>

@@ -1,5 +1,14 @@
-import { AdvancedConfiguration, AdvancedExamples, UseGoTemplates, YAMLSyntax } from "../pages/Docs/AdvancedData";
-import { CIIntegration, CreateArgoWorkflowTemplate, IntegrateInGitLabCI } from "../pages/Docs/CIData";
+import {
+  AdvancedConfiguration,
+  AdvancedExamples,
+  UseGoTemplates,
+  YAMLSyntax,
+} from "../pages/Docs/AdvancedData";
+import {
+  CIIntegration,
+  CreateArgoWorkflowTemplate,
+  IntegrateInGitLabCI,
+} from "../pages/Docs/CIData";
 import {
   Setup,
   ApiTestCases,
@@ -16,6 +25,11 @@ import {
 } from "../pages/Docs/GettingStartedData";
 import { RunLoadTests, RunWithDocker } from "../pages/Docs/RunData";
 import Welcome from "../pages/Docs/WelcomeData";
+import {
+  ImageUpdater,
+  Products,
+  SecretDistributor,
+} from "../pages/Docs/ProductsData";
 
 export const EtzDocsItems = [
   {
@@ -113,7 +127,7 @@ export const EtzDocsItems = [
         label: "Syntax",
         path: "syntax",
         element: <YAMLSyntax />,
-      },      
+      },
       {
         id: "gotmpl",
         title: "Use etzba built-in go template functions",
@@ -127,7 +141,7 @@ export const EtzDocsItems = [
         label: "Examples",
         path: "examples",
         element: <AdvancedExamples />,
-      },  
+      },
     ],
   },
   {
@@ -166,6 +180,29 @@ export const EtzDocsItems = [
         label: "Gitlab",
         path: "gitlab",
         element: <IntegrateInGitLabCI />,
+      },
+    ],
+  },
+  {
+    id: "products",
+    title: "Products",
+    path: "products",
+    label: "Products",
+    element: <Products />,
+    children: [
+      {
+        id: "image",
+        title: "Image updater",
+        path: "image",
+        label: "Image",
+        element: <ImageUpdater />,
+      },
+      {
+        id: "secret",
+        title: "Secret Distributor",
+        label: "Secret",
+        path: "secret",
+        element: <SecretDistributor />,
       },
     ],
   },

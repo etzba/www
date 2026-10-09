@@ -1,4 +1,4 @@
-.home {
+.tools {
   padding: 80px 20px 0px 10px;
   position: sticky;
   width: 100%;
@@ -7,19 +7,12 @@
   font-size: 20px;
 }
 
-.hero {
+.thero {
   padding: 30px 10px 10px 10px;
-  height: 550px;
+  height: 450px;
 }
 
-.home-logo {
-  display: block;
-  margin: auto;
-  width: 50%;
-  height: 3.8em;
-}
-
-.hero h1 {
+.thero h1 {
   display: flex;
   padding: 20px;
   justify-content: center;
@@ -28,7 +21,7 @@
   font-size: clamp(4rem, 8vw, 6rem);
 }
 
-.hero p {
+.thero p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,30 +30,26 @@
   font-size: var(--charsize1);
 }
 
-.hero-button {
+.thero-button {
   flex-flow: row wrap;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 25px 10px 25px;
-  align-content: center;
   padding: 50px 50px;
 }
 
-.video {
-  padding: 20px 20px;
-  display: flex;
-  margin: auto;
-  width: 70%;
+.small-box-link {
+  font-size: var(--charsize5);
 }
 
-.slide {
-  padding: 30px 30px 30px 30px;
-  height: 350px;
+.tslide {
+  padding: 80px 10px 10px 10px;
+  height: 450px;
   background-color: #dedee780;
 }
 
-.slide h1 {
+.tslide h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,63 +57,56 @@
   font-size: clamp(4rem, 8vw, 6rem);
 }
 
-.slide h3 {
-  padding: 30px 30px 5px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--surface2);
-  text-align: center;
-}
-
-.slide p {
+.tslide p {
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--letters4);
-  font-size: var(--charsize4);
+  font-size: var(--charsize1);
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  .hero {
+  .thero {
     width: 100%;
     height: 300px;
     padding: 10px 10px 10px 10px;
   }
 
-  .hero h1 {
+  .thero h1 {
     padding: 0px;
   }
 
-  .hero p {
+  .thero p {
     padding: 0px;
     font-size: var(--charsize3);
   }
 
-  .hero-button {
-    padding: 2px 2px;
+  .thero-button {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px;
   }
 
-  .slide {
-    height: 250px;
-    padding: 2px 4px 4px 4px;
+  .thero-button {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px;
   }
 
-  .slide h3 {
-    margin-top: 3px;
-    padding: 4px 0px 0px 0px;
-    font-size: var(--charsize5);
+  .small-box-link {
+    font-size: var(--charsize7);
   }
-
-  .slide p {
-    padding: 2px 0px 0px 3px;
-    font-size: var(--charsize6);
-  }
-
-  .video {
-    padding: 15px 5px;
+  .tslide {
     width: 100%;
-    margin-bottom: 10px;
+    height: 300px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .tslide h1 {
+    padding: 0px;
+  }
+
+  .tslide p {
+    padding: 0px;
+    font-size: var(--charsize3);
   }
 }

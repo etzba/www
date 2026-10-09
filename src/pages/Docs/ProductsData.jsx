@@ -1,23 +1,23 @@
 import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 
-const CIIntegration = () => {
-  const back = { title: "Run etz with docker", path: "/docs/container/docker" };
-  const forward = { title: "Setup tests in argo workflows", path: "/docs/ci/argo" };
+const Products = () => {
+  const back = { title: "Setup tests in gitlab ci", path: "/docs/ci/gitlab" };
+  const forward = { title: "Explore image updater", path: "/docs/products/image" };
   const interestLinks = [
     {
       title: "Run etz from terminal",
       path: "/docs/start/run",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz with api execution file",
+      path: "/docs/setup/api",
     },
   ];
   return (
     <div>
       <section className="section">
-        <h1>CIIntegration</h1>
+        <h1>Products</h1>
         <p>Content is in progress</p>
         <GuideLinks
           intrestsLinks={interestLinks}
@@ -31,23 +31,23 @@ const CIIntegration = () => {
   );
 };
 
-const CreateArgoWorkflowTemplate = () => {
-  const back = { title: "Integrate etz in pipelines", path: "/docs/ci" };
-  const forward = { title: "Setup etz load tests in gitlab ci", path: "/docs/ci/gitlab" };
+const ImageUpdater = () => {
+  const back = { title: "etzba products", path: "/docs/products" };
+  const forward = { title: "Explore secret distributor", path: "/docs/products/secret" };
   const interestLinks = [
     {
       title: "Run etz from terminal",
       path: "/docs/start/run",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz with api execution file",
+      path: "/docs/setup/api",
     },
   ];
   return (
     <div>
       <section className="section">
-        <h1>CreateArgoWorkflowTemplate</h1>
+        <h1>ImageUpdater</h1>
         <p>Content is in progress</p>
         <GuideLinks
           intrestsLinks={interestLinks}
@@ -61,23 +61,23 @@ const CreateArgoWorkflowTemplate = () => {
   );
 };
 
-const IntegrateInGitLabCI = () => {
-  const back = { title: "Setup tests in argo workflows", path: "/docs/ci/argo" };
-  const forward = { title: "etzba products", path: "/docs/products" };
+const SecretDistributor = () => {
+  const back = { title: "Explore image updater", path: "/docs/products/image" };
+  const forward = { title: "Getting started", path: "/docs/start" };
   const interestLinks = [
     {
-      title: "Run etz from terminal",
-      path: "/docs/start/run",
+      title: "Setup test cases",
+      path: "/docs/setup/",
     },
     {
-      title: "Run etz with execution file",
-      path: "/docs/config/executions",
+      title: "Run etz With General Config File",
+      path: "/docs/setup/general",
     },
   ];
   return (
     <div>
       <section className="section">
-        <h1>IntegrateInGitLabCI</h1>
+        <h1>SecretDistributor</h1>
         <p>Content is in progress</p>
         <GuideLinks
           intrestsLinks={interestLinks}
@@ -91,4 +91,4 @@ const IntegrateInGitLabCI = () => {
   );
 };
 
-export { CIIntegration, CreateArgoWorkflowTemplate, IntegrateInGitLabCI };
+export { Products, ImageUpdater, SecretDistributor };

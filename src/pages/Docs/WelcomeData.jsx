@@ -30,10 +30,8 @@ const Welcome = () => {
         <p>
           With <code>etz</code> you can measure the duration of http requests or
           sql queries and point a finger on potential issues and bottlenecks
-          between end-user and your service.
-          <br></br>
-          <code>etz</code> can run in your terminal, shell scripts, docker,
-          kubernetes or CI pipelines.
+          between end-user and your service. <code>etz</code> can run in your
+          terminal, shell scripts, docker, kubernetes or CI pipelines.
         </p>
         <p>
           To learn more about <code>etz</code> and install the latest
@@ -78,8 +76,8 @@ const Welcome = () => {
           advanced load testing scenarios by using additional <code>.yaml</code>{" "}
           files for complex, long and thorough load testing scenarios. You can
           automate load test executions while defining requests per second, test
-          duration, workers, authentication and set many more options to
-          create stress, soak, spike or load tests scenarios.
+          duration, workers, authentication and set many more options to create
+          stress, soak, spike or load tests scenarios.
         </p>
         <GuideLinks
           intrestsLinks={interestLinks}

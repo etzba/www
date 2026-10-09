@@ -54,13 +54,17 @@
   border-radius: 5px;
 }
 
+.code-copy:hover {
+  background-color: var(--surface3);
+  color: var(--letters3);
+}
+
 .code-snippet {
   transition: width var(--transition);
   background-color: var(--surface4);
-  color: var(--letters1);
+  color: #212529;
   padding: 15px 10px 15px 10px;
   border-radius: 0px 0px 5px 5px;
-  font-family: var(--cli-font);
   font-size: var(--charsize5);
   overflow-x: auto;
   white-space: pre-wrap;

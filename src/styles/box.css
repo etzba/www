@@ -12,14 +12,18 @@
   border-radius: 8px;
   border: 3px solid var(--border4);
   transition: width var(--transition);
-  background-color: var(--surface4);
-  color: var(--letters4);
+  background-color: var(--surface5);
+  color: var(--letters3);
   margin-left: 20px;
   padding: 10px 10px 10px 10px;
   font-family: var(--font);
   font-size: 24px;
   text-decoration: none;
   text-align: center;
+}
+
+.small-box-link:hover {
+  background-color: var(--surface7);
 }
 
 @media (max-width: 768px) {

@@ -6,7 +6,7 @@ const DownloadLink = ({ title, file }) => {
   return (
     <>
       <a className={"small-box-link"} href={file} download="etz">
-        {title}
+        <b>{title}</b>
       </a>
     </>
   );
@@ -16,7 +16,7 @@ const SmallLinkBox = ({ title, path }) => {
   return (
     <>
       <Link to={path} className={"small-box-link"}>
-        {title}
+        <b>{title}</b>
       </Link>
     </>
   );
@@ -26,7 +26,7 @@ const BigLinkBox = ({ title, path }) => {
   return (
     <>
       <Link to={path} className={"big-box-link"}>
-        {title}
+        <b>{title}</b>
       </Link>
     </>
   );
