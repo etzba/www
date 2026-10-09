@@ -49,6 +49,10 @@
   color: var(--letters2);
 }
 
+.nav-item:hover {
+  color: var(--surface7);
+}
+
 .arrow {
   position: relative;
   float: right;

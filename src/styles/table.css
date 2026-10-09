@@ -1,30 +1,37 @@
 .download table {
-  width: 90%;
+  width: 100%;
   text-decoration: none;
   padding-bottom: 20px;
 }
 
 .download-head {
   color: gray;
-  display: inline-block;
   border-bottom: 1px solid var(--border2);
+  transition: width var(--transition);
   font-size: var(--charsize6);
-  margin-bottom: 30px;
-  width: 180px;
+  padding: 10px 50px 10px 50px;
+  margin: 10px 10px 30px 30px;
+  width: 200px;
+  height: 60px;
 }
 
 .download-link {
-  padding: 10px 50px 10px 50px;
   text-decoration: none;
+  display: inline;
   border: 3px solid var(--border2);
   transition: width var(--transition);
   background-color: var(--surface5);
   color: aliceblue;
-  margin: 10px 10px 10px 40px;
+  padding: 10px 50px 10px 50px;
+  margin: 10px 10px 10px 30px;
   font-size: var(--charsize5);
   border-radius: 25px;
   width: 200px;
   height: 150px;
+}
+
+.download-link:hover {
+  background-color: var(--surface7);
 }
 
 .options table {
