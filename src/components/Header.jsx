@@ -7,7 +7,7 @@ const Header = ({ items }) => {
     <>
       <header className="header">
         <img
-          src={require("src/assets/etzba.png")}
+          src={require("src/assets/logo.png")}
           alt="Logo"
           className="logo"
         />
