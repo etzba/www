@@ -17,6 +17,11 @@
   display: inline-block;
   list-style-type: none;
   padding: 10px 10px 10px 10px;
+  color: var(--letters4);
+}
+
+.footer a:hover {
+  color: var(--surface7);
 }
 
 @media (max-width: 768px) {

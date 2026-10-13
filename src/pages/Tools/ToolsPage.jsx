@@ -38,7 +38,7 @@ const ToolsPage = () => {
           <div className="thero-button">
             <SmallLinkBox
               title="Read the docs"
-              path="https://github.com/etzba/etz"
+              path="/docs/products/image"
               className="small-box-link"
             />
           </div>

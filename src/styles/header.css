@@ -24,7 +24,7 @@
   width: 100%;
   padding: 4px 5px 4px 5px;
   border: none;
-  font-size: var(--charsize4);
+  font-size: var(--charsize5);
   font-family: var(--font);
   white-space: nowrap;
   text-decoration: none;
@@ -57,8 +57,6 @@
   align-items: center;
   padding-top: 5px;
   padding-left: 50px;
-  width: 8em;
-  height: 3.8em;
 }
 
 .logo h3 {
