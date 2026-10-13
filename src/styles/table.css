@@ -50,7 +50,7 @@
 }
 
 .options-head {
-  background-color: rgb(234, 199, 148);
+  background-color: var(--surface8);
 }
 
 .options-name {

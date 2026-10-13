@@ -162,7 +162,7 @@ export const EtzDocsItems = [
   },
   {
     id: "ci",
-    title: "Continues integration",
+    title: "Continues Integration",
     path: "ci",
     label: "CI",
     element: <CIIntegration />,
@@ -192,7 +192,7 @@ export const EtzDocsItems = [
     children: [
       {
         id: "image",
-        title: "Image updater",
+        title: "Image Updater",
         path: "image",
         label: "Image",
         element: <ImageUpdater />,
