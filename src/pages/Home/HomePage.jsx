@@ -8,7 +8,7 @@ const HomePage = () => {
       <div className="home">
         <div className="hero">
           <img
-            src={require("src/assets/etzba202608.svg")}
+            src={require("src/assets/opener.png")}
             alt="Logo"
             className="home-logo"
           />
@@ -17,7 +17,7 @@ const HomePage = () => {
           <p>Test your service performance under stress</p>
           <div className="hero-button">
             <SmallLinkBox
-              title="Learn"
+              title="Learn etz"
               path="/docs/"
               className="small-box-link"
             />

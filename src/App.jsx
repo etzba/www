@@ -13,8 +13,8 @@ const App = () => {
   const isMobile = UseMediaQuery("(max-width: 768px)");
   return (
     <>
+    <Header items={HeaderItems} isMobile={isMobile} />
       <div className="layout">
-        <Header items={HeaderItems} isMobile={isMobile} />
         <div className="content">
           <Routes>
             <Route path="/">
