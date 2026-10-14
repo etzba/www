@@ -3,11 +3,12 @@
   padding: 0px 8px 0px 5px;
   margin-left: 30px;
   position: sticky;
-  width: 85%;
+  width: 92%;
   text-align: left;
   font-size: 18px;
-  border: 2px solid var(--border);
-  border-left: 3px solid var(--border6);
+  border: 2px solid var(--border2);
+  border-left: 5px solid var(--border6);
+  border-radius: 8px;
   transition: width var(--transition);
 }
 

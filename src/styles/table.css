@@ -1,32 +1,31 @@
 .download table {
-  width: 100%;
+  width: 80%;
   text-decoration: none;
   padding-bottom: 20px;
 }
 
 .download-head {
   color: gray;
-  border-bottom: 1px solid var(--border2);
+  border-bottom: 2px solid var(--border2);
   transition: width var(--transition);
   font-size: var(--charsize6);
   padding: 10px 50px 10px 50px;
-  margin: 10px 10px 30px 30px;
-  width: 200px;
-  height: 60px;
+  margin: 0px 0px 25px 35px;
+  width: 160px;
+  height: 50px;
 }
 
 .download-link {
   text-decoration: none;
-  display: inline;
   border: 3px solid var(--border2);
   transition: width var(--transition);
   background-color: var(--surface5);
   color: aliceblue;
   padding: 10px 50px 10px 50px;
-  margin: 10px 10px 10px 30px;
-  font-size: var(--charsize5);
-  border-radius: 25px;
-  width: 200px;
+  margin: 0px 0px 0px 30px;
+  font-size: var(--charsize6);
+  border-radius: 15px;
+  width: 160px;
   height: 150px;
 }
 

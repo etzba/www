@@ -39,12 +39,12 @@ const Welcome = () => {
         </p>
         <div className="boxes">
           <SmallLinkBox
-            title="Download and Install etz"
+            title="Download and Install"
             path="/docs/start/install"
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Execute with YAML file"
+            title="Run etz with YAML"
             path="/docs/start/yaml"
             className="small-box-link"
           />

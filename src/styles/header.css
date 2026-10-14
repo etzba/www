@@ -42,7 +42,7 @@
   justify-content: right;
   width: 80%;
   display: flex;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-right: 100px;
 }
 
@@ -50,7 +50,7 @@
   display: inline-block;
   text-decoration: none;
   margin: 0 12px;
-  padding-bottom: 12px;
+  padding-bottom: 4px;
 }
 
 .logo {
@@ -68,15 +68,13 @@
 @media (max-width: 768px) {
   .header {
     background-size: 40px 70px;
-    padding-bottom: 8px;
+    padding-bottom: 2px;
   }
   .header ul {
     width: 10%;
     justify-content: right;
-    margin: 0 0 0 180px;
-    padding-bottom: 4px;
-    padding-top: 3px;
-    padding-right: 10px;
+    margin: 0 0 0 250px;
+    padding: 0 0 0 0;
     font-size: var(--charsize4);
   }
   .header li {
@@ -87,8 +85,9 @@
     font-size: var(--charsize4);
   }
   .logo {
-    width: 8em;
-    padding-left: 40px;
+    padding-left: 20px;
+    width: 4em;
+    height: 3em;
   }
 }
 

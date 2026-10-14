@@ -1,10 +1,11 @@
 .boxes {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    justify-content: left;
-    margin: 10px 25px 10px 25px;
-    align-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  justify-content: left;
+  margin: 15px 0px 15px 25px;
+  align-content: center;
+  width: 110%;
 }
 
 .small-box-link {
@@ -14,10 +15,9 @@
   transition: width var(--transition);
   background-color: var(--surface5);
   color: var(--letters3);
-  margin-left: 20px;
-  padding: 10px 10px 10px 10px;
+  margin-left: 10px;
+  padding: 5px 5px 5px 5px;
   font-family: var(--font);
-  font-size: 24px;
   text-decoration: none;
   text-align: center;
 }
@@ -27,9 +27,19 @@
 }
 
 @media (max-width: 768px) {
+  .boxes {
+      width: 100%;
+  }
   .small-box-link {
     width: 40%;
     margin-top: 10px;
     font-size: x-small;
+    padding: 2px 2px 2px 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-box-link {
+    width: 80%;
   }
 }
