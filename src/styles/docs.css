@@ -16,7 +16,10 @@
 }
 
 .docs h3 {
-  padding: 20px 5px 5px 20px;
+  padding: 20px 5px 15px 20px;
+  border-bottom-left-radius: 20px;
+  width: 90%;
+  border-bottom: 1px solid var(--border3);
 }
 
 .docs h4 {
@@ -24,7 +27,7 @@
 }
 
 .docs p {
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 10px 20px;
 }
 
 .docs ul {
@@ -34,13 +37,19 @@
 }
 
 .docs li {
-  padding-top: 10px;
+  padding-top: 7px;
 }
 
 .docs-link {
   padding-top: 10px;
   text-decoration: none;
+  color: var(--letters4);
 }
+
+.docs-link:hover {
+  color: var(--surface7);
+}
+
 
 .guide {
   padding: 20px 20px 20px 20px;
@@ -93,17 +102,19 @@
   .docs h3 {
     padding: 10px 0px 10px 0px;
     font-size: var(--charsize3);
+    border-bottom-left-radius: 1px;
   }
   .docs h4 {
     padding: 2px 0px 2px 0px;
+    font-size: var(--charsize4);
   }
   .docs p {
     width: 100%;
-    padding: 2px 0px 2px 0px;
-    font-size: var(--charsize4);
+    padding: 4px 0px 4px 0px;
+    font-size: var(--charsize5);
   }
-  .docs li {
-    padding-top: 2px;
+  .docs ul {
+    padding: 2px 0px 0px 20px;
     font-size: var(--charsize5);
   }
   .docs-link {

@@ -128,8 +128,7 @@ const ApiTestCases = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/setup">
-            Setup Test Cases {"  >  "}
-          </Link>
+            Setup Test Cases </Link>{"  >  "}
           <Link className={"docs-link"} to="/docs/setup/file">
             API
           </Link>
@@ -202,8 +201,7 @@ const PostgresTestCases = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/setup">
-            Setup Test Cases {"  >  "}
-          </Link>
+            Setup Test Cases </Link>{"  >  "}
           <Link className={"docs-link"} to="/docs/setup/file">
             Postgres
           </Link>
@@ -280,8 +278,7 @@ const FileTestCases = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/setup">
-            Setup Test Cases {"  >  "}
-          </Link>
+            Setup Test Cases </Link>{"  >  "}
           <Link className={"docs-link"} to="/docs/setup/file">
             File Upload
           </Link>
@@ -352,8 +349,7 @@ const GeneralConfig = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/setup">
-            Setup Test Cases {"  >  "}
-          </Link>
+            Setup Test Cases </Link>{"  >  "}
           <Link className={"docs-link"} to="/docs/setup/file">
             General Config
           </Link>

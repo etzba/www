@@ -1,9 +1,9 @@
 .info {
   background-color: #ced2d4;
   padding: 0px 8px 0px 5px;
-  margin-left: 30px;
+  margin-left: 20px;
   position: sticky;
-  width: 92%;
+  width: 90%;
   text-align: left;
   font-size: 18px;
   border: 2px solid var(--border2);
@@ -15,11 +15,11 @@
 .info ul {
   position: relative;
   margin: 0;
-  padding: 10px 10px 20px 40px;
+  padding: 0px 10px 20px 40px;
 }
 
 .info li {
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 @media (max-width: 768px) {

@@ -25,14 +25,22 @@ const Welcome = () => {
         <p>
           <code>etz</code> is a load testing CLI tool that measures the
           performance of restful api services, postgres databases and file
-          uploads to an http server.
+          uploads to an http server. With <code>etz</code> you can measure the
+          duration of http requests or sql queries and point a finger on
+          potential issues and bottlenecks between end-user and your service.{" "}
+          <code>etz</code> can run in your terminal, shell scripts, docker,
+          kubernetes or CI pipelines.
         </p>
-        <p>
-          With <code>etz</code> you can measure the duration of http requests or
-          sql queries and point a finger on potential issues and bottlenecks
-          between end-user and your service. <code>etz</code> can run in your
-          terminal, shell scripts, docker, kubernetes or CI pipelines.
-        </p>
+        <InfoBlock
+          title={"Key Features"}
+          bulletPoints={[
+            "Terminal-native: Run and analyze tests with simple CLI commands",
+            "Scriptable & automatable: Perfect for CI/CD pipelines and custom workflow",
+            "YAML configuration: Define your test cases with a yaml file and extend it with functions",
+            "Setup in CI: Add another step to your development cycle and test your app under stress",
+            "Production ready: Prepare your product for larger request volume",
+          ]}
+        />
         <p>
           To learn more about <code>etz</code> and install the latest
           version:{" "}
@@ -54,30 +62,44 @@ const Welcome = () => {
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Advanced Configuration"
+            title="Advanced Setup"
             path="/docs/advanced/examples"
             className="small-box-link"
           />
         </div>
-        <br></br>
-        <InfoBlock
-          title={"Key Features"}
-          bulletPoints={[
-            "Terminal-native: Run and analyze tests with simple CLI commands",
-            "Scriptable & automatable: Perfect for CI/CD pipelines and custom workflow",
-            "YAML configuration: Define your test cases with a yaml file and extend it with functions",
-            "Setup in CI: Add another step to your development cycle and test your app under stress",
-            "Production ready: Prepare your product for larger request volume",
-          ]}
-        />
-        <br></br>
+        <h3>Why you should use this CLI tool</h3>
+        <h4>Simplicity - Writing load tests can be super fast and simple</h4>
         <p>
-          <code>etz</code> is a versatile CLI tool that is capable of running
-          advanced load testing scenarios by using additional <code>.yaml</code>{" "}
-          files for complex, long and thorough load testing scenarios. You can
-          automate load test executions while defining requests per second, test
-          duration, workers, authentication and set many more options to create
-          stress, soak, spike or load tests scenarios.
+          With <code>etz</code> load tests can be executed directly from
+          terminal or with additional YAML file. Instead of writing long and
+          slow python or javascript code, YAML can cover most of the
+          requirements of testing SQL queries or HTTP request.
+        </p>
+        <h4>
+          Efficinency - This tool is fast and using low amount of resources
+        </h4>
+        <p>
+          Compiled and built with golang, <code>etz</code> is capable of running
+          very high amount of go routines while using low amount of reosurces.
+        </p>
+        <h4>
+          Versatility - It's capable of running complex and simple load tests
+          with multiple options for each scenario
+        </h4>
+        <p>
+          You can automate load test executions while defining scenarios,
+          executions, requests per second, test duration, workers,
+          authentication and many more options to create stress, soak, spike or
+          load tests scenarios. Yes, you can choose between simplicity running
+          with commands and arguments directly from terminal, or using
+          additional YAML files for complex and thorough load tests scenarios.
+        </p>
+        <h4>Compatibilty - Run it in every environment</h4>
+        <p>
+          Wether if you'd like to run in Docker locally on your machine, or
+          imitate a real production environment by running in Kubernetes -{" "}
+          <code>etz</code> can do both. Take it further and run it
+          in Argo workflows or Gitlab CI pipelines. This tool can be used in CI\CD.
         </p>
         <GuideLinks
           intrestsLinks={interestLinks}

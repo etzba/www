@@ -34,21 +34,22 @@ const HomePage = () => {
             in production?
           </h3>
           <p>
-            etz is a load testing CLI tool that can run in your CI
-            pipelines and find performance degradation of your app
+            etz is a load testing CLI tool that can run in CI pipelines and find
+            performance degradation of your app
           </p>
-          <h3>You need to write a very long script to run a load test?</h3>
+          <h3>Why to write a very long script to run a load test?</h3>
           <p>
-            With etz you can simplify your load tests by writing a YAML file or
-            run it directly from terminal
+            With etz you can simplify load tests by writing a YAML file or run
+            it directly from terminal
           </p>
           <h3>
-            You can't figure out how many Kubernetes resources you need to give to
-            your deployments before going to production?
+            Can't figure out how many Kubernetes resources you need to give to
+            deployments before going to production?
           </h3>
           <p>
             etz can stretch your service to the maximum and help you set the
-            required number of replicas, cpu and memory in production
+            required amount of replicas, cpu and memory before going to
+            production
           </p>
         </div>
         <div>
