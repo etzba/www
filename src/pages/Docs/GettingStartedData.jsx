@@ -42,11 +42,11 @@ const GettingStarted = () => {
         <h1>Getting started</h1>
         <h3>What are we doing here</h3>
         <p>
-          This docs website created to help you using <code>etz</code> CLI load
-          testing tool from a linux terminal and later present how to integrate
-          it in Docker, Kubernetes together with additional tools that can
-          improve your CI\CD processes.
-          <br></br>The documentation starts here and cover the following topics:
+          This docs website was created to help you using <code>etz</code> CLI
+          load testing tool from a linux terminal and later present how to
+          integrate it in Docker, Kubernetes together with additional tools that
+          can improve your CI\CD processes. The following topics will be
+          discussed:
         </p>
         <ul>
           <li>
@@ -226,7 +226,7 @@ const Install = () => {
               <CodeBlock type="term" code={"etz version && etz license"} />
               <br></br>
               <h3>
-                Install <code>etz</code> and veirfy binary with gpg
+                Install <code>etz</code> and verify binary with gpg
               </h3>
               <p>
                 To validate the binary file integrity, use <code>gpg</code> and
@@ -252,7 +252,7 @@ gpg --verify etz.sig etz`}
                 >
                   etz github repository
                 </Link>
-                . Follow etzba in github and star this repository if you like
+                . Follow etzba on github and add a star to this repository if you like
                 what's going on here. Thanks ;)
               </p>
             </div>
@@ -304,8 +304,8 @@ const Run = () => {
           <code>etz</code> uses several sub commands: <code>api</code>,{" "}
           <code>pg</code> and <code>file</code>. Each of these sub commands is
           dedicated to run a different type of load test. You'll find out soon
-          that each of these sub-commands, can also use a dedicated YAML
-          configurations to run different load tests.
+          that each of these sub-commands can also use a dedicated YAML
+          configuration to run different load tests.
           <br></br>
           While <code>api</code> and <code>file</code> sub-commands run http
           requests to a remote http service, <code>pg</code> sub-command is
@@ -313,8 +313,8 @@ const Run = () => {
           database.
           <br></br>
           In the examples below, you can see how to run each sub-command
-          directly from terminal and without any need for additional YAML
-          configuration files.
+          directly from a Linux terminal and without any need for additional
+          YAML configuration files.
         </p>
         <h3>Examples</h3>
         <p>
@@ -476,18 +476,24 @@ const Yaml = () => {
           </Link>
         </span>
         <h1>
-          Run <code>etz</code> with execution file
+          Run <code>etz</code> with additional YAML file
         </h1>
+        <h3>Why use YAML files?</h3>
         <p>
           So far, we could run <code>etz</code> by one command from the
           terminal, using only command line arguments. This is the simplest way
           to run <code>etz</code>, but what if we need to add more complexity
-          for our testing scenarios? <br></br>For this case, creating an
-          execution file in <code>.yaml</code>, can extend the capabilities of{" "}
-          <code>etz</code> and allow running load test executions from a file.
+          for our testing scenarios? For this case, creating an execution file
+          in YAML, can extend the capabilities of <code>etz</code> and allow
+          running load test executions from a file.
+        </p>
+        <h3>
+          How to use <code>etz</code> with YAML
+        </h3>
+        <p>
           We can create complex load test scenarios with multiple executions of
-          sql statements or api calls in one file. This is a short and simple
-          example of running <code>etz</code> with an execution file:
+          sql statements or REST api calls in one file. This is a short and
+          simple example of running <code>etz</code> with an execution file:
         </p>
         <CodeBlock
           type="yaml"
@@ -507,6 +513,19 @@ const Yaml = () => {
           type="term"
           code={`etz api --exec=path/to/executions.yaml`}
         />
+        <br></br>
+        <h3>Can I use command arguments together with YAML?</h3>
+        <p>Absolutely. Just play around with it:</p>
+                <CodeBlock
+          type="term"
+          code={`etz api --exec=path/to/executions.yaml \\
+      --duration=3s \\
+      --rps=100 \\
+      --workers=20 \\
+      --output=files/result.json`}
+        />
+        <br></br>
+        <h3>Is that it?</h3>
         <p>
           This is just a short introduction to execution files which shows only
           the simplest way to run <code>etz</code>. Going forward to{" "}
@@ -522,7 +541,7 @@ const Yaml = () => {
           using conditional statements, golang template functions and many more
           in{" "}
           <Link className={"docs-link"} to="/docs/advanced">
-            advanced configuration
+            Advanced configuration
           </Link>{" "}
           .
         </p>

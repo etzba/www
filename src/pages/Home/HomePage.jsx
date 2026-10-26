@@ -1,6 +1,7 @@
 import React from "react";
 import { SmallLinkBox } from "../../components/LinkBox";
 import "../../styles/home.css";
+import CodeBlock from "../../components/CodeBlock";
 
 const HomePage = () => {
   return (
@@ -29,28 +30,23 @@ const HomePage = () => {
           </div>
         </div>
         <div className="slide">
-          <h3>
-            Wonder why your app passes all tests in CI but struggles under load
-            in production?
-          </h3>
-          <p>
-            etz is a load testing CLI tool that can run in CI pipelines and find
-            performance degradation of your app
-          </p>
-          <h3>Why to write a very long script to run a load test?</h3>
-          <p>
-            With etz you can simplify load tests by writing a YAML file or run
-            it directly from terminal
-          </p>
-          <h3>
-            Can't figure out how many Kubernetes resources you need to give to
-            deployments before going to production?
-          </h3>
-          <p>
-            etz can stretch your service to the maximum and help you set the
-            required amount of replicas, cpu and memory before going to
-            production
-          </p>
+          <h3>Simple, fast and straight to the point</h3>
+          <br></br>
+          <br></br>
+          <div>
+            <div className="code-container-home">
+              <pre className="code-snippet">
+                <code style={{ padding: "0 0 0 4%" }}>
+                  etz api --url=https://etzba.com --method=GET --workers=30
+                  --rps=150 --duration=2m
+                </code>
+              </pre>
+            </div>
+          </div>
+          <br></br>
+          <br></br>
+          <p>Easy to create load tests, extendable with YAML for complex cases</p>
+          <br></br>
         </div>
         <div>
           <video autoPlay muted loop playsInline className="video">
@@ -60,6 +56,47 @@ const HomePage = () => {
             />
             Your browser does not support the video tag.
           </video>
+        </div>
+        <div className="slide">
+          <br></br>
+          <h3>Fits for devops processes · Excellent for CI\CD pipelines · Always works locally</h3>
+          <div className="hero-button">
+            <SmallLinkBox
+              title="Github"
+              path="https://github.com/etzba"
+              className="small-box-link"
+            />
+          </div>
+          <p>Check out for more tools to set in your environments</p>
+        </div>
+        <div className="hero">
+          <h3>Everything you need from a load test to find about service performance issues</h3>
+          <br></br>
+          <div>
+            <div className="code-container-home-yaml">
+              <pre className="code-snippet-home-yaml">
+                <code>
+                  {`api:
+{{ range $slice }}
+- url: {{ $baseUrl }}/locations
+  method: POST
+  data: 
+    name: {{ getRandStringInLength 5 }}
+    address: {{ getRandStringInLength 23 }}
+    longitude: {{ getFloatInRange 21 90 }}
+    latitude: {{ getFloatInRange -80 10 }}
+  tags: ["postloc"]
+{{ end }}`}
+                </code>
+              </pre>
+            </div>
+          </div>
+          <br></br>
+          <h4>
+            Did you ever wish for a tool that is easy to set and catch product
+            release issues?
+          </h4>
+          <br></br>
         </div>
       </div>
     </>

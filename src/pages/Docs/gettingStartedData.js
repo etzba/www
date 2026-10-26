@@ -102,7 +102,7 @@ const ArgumentsTableData = {
     {
       name: "--workers  -w",
       description:
-        "etz uses go routines to run tasks and the workers argument defines the amount of go routines used to run these tasks. Tasks could be http requests with api execution, postgres statements execution with pg command or any other task.",
+        "etz uses goroutines to run tasks and the workers argument defines the amount of goroutines used to run these tasks. Tasks could be http requests with api execution, postgres statements execution with pg command or any other task.",
       type: "int",
       command: "all",
     },

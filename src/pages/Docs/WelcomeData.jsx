@@ -35,9 +35,10 @@ const Welcome = () => {
           title={"Key Features"}
           bulletPoints={[
             "Terminal-native: Run and analyze tests with simple CLI commands",
-            "Scriptable & automatable: Perfect for CI/CD pipelines and custom workflow",
+            "Scriptable & automatable: Perfect for CI/CD pipelines and custom workflows",
             "YAML configuration: Define your test cases with a yaml file and extend it with functions",
             "Setup in CI: Add another step to your development cycle and test your app under stress",
+            "Docker and Kubernetes: It can do both",
             "Production ready: Prepare your product for larger request volume",
           ]}
         />
@@ -68,19 +69,21 @@ const Welcome = () => {
           />
         </div>
         <h3>Why you should use this CLI tool</h3>
-        <h4>Simplicity - Writing load tests can be super fast and simple</h4>
+        <h4>Simplicity - Writing load tests can be fast and simple</h4>
         <p>
-          With <code>etz</code> load tests can be executed directly from
-          terminal or with additional YAML file. Instead of writing long and
-          slow python or javascript code, YAML can cover most of the
-          requirements of testing SQL queries or HTTP request.
+          With <code>etz</code> load tests can be executed directly from the
+          command line interface. For sophisticated load testing scenarios,
+          additional YAML files can be added to the party. Instead of writing
+          long and slow python or javascript code, YAML can cover most of the
+          requirements of your load testing and let you create load tests in
+          several minutes.
         </p>
         <h4>
-          Efficinency - This tool is fast and using low amount of resources
+          Efficiency - This tool is fast and using low amount of resources
         </h4>
         <p>
-          Compiled and built with golang, <code>etz</code> is capable of running
-          very high amount of go routines while using low amount of reosurces.
+          Written in golang, <code>etz</code> is capable of running a super high
+          amount of goroutines while using a low amount of hardware resources.
         </p>
         <h4>
           Versatility - It's capable of running complex and simple load tests
@@ -94,12 +97,12 @@ const Welcome = () => {
           with commands and arguments directly from terminal, or using
           additional YAML files for complex and thorough load tests scenarios.
         </p>
-        <h4>Compatibilty - Run it in every environment</h4>
+        <h4>Compatibility - Run it in every environment</h4>
         <p>
-          Wether if you'd like to run in Docker locally on your machine, or
+          Whether you'd like to run in Docker locally on your machine, or
           imitate a real production environment by running in Kubernetes -{" "}
-          <code>etz</code> can do both. Take it further and run it
-          in Argo workflows or Gitlab CI pipelines. This tool can be used in CI\CD.
+          <code>etz</code> can do both. Take it further and run it in Argo
+          workflows or Gitlab CI pipelines. This tool can be used in CI\CD.
         </p>
         <GuideLinks
           intrestsLinks={interestLinks}

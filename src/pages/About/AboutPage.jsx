@@ -9,15 +9,15 @@ const AboutPage = () => {
       <div className="about">
         <h1>About etzba</h1>
         <p>
-          Hi! My name is Nadav and I made this website and the products that are
-          provided here.
+          Hi! My name is Nadav and I created etzba tools and website as an
+          alternative and as new solutions for issues I dealt with specifically
+          in load testing and cloud engineering.
         </p>
         <p>
-          It all started with a load testing tool I created from curiosity, as
-          part of my devops and cloud engineering journey, aiming to add it as
-          part of a product development cycle. I decided to call it etzba and
-          extend it to a collection of devops tools, open and closed source
-          tools.{" "}
+          It all started with a load testing tool I created from curiosity,
+          while aiming to add it as part of a product development cycle. I
+          decided to call it etzba and extend it to a collection of devops
+          tools, open and closed source tools.{" "}
         </p>{" "}
         <InfoBlock
           className="info"

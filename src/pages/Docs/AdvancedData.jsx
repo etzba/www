@@ -154,7 +154,7 @@ const YAMLSyntax = () => {
         />
         <h3>Conditional statements</h3>
         <p>
-          Sometimes we need to use few conditions to run our tasks. Use the{" "}
+          Sometimes we need to use a few conditions to run our tasks. Use the{" "}
           <code>if</code>, <code>else if</code> and <code>else</code> to create
           conditional statement inside execution file:
         </p>
@@ -374,7 +374,7 @@ scenarios:
       values: 
         name: {{ . }}
         address: {{ getRandStringInLength 21 }}
-        longtitude: {{ getFloatInRange 45 65 }}
+        longitude: {{ getFloatInRange 45 65 }}
         latitude: {{ getFloatInRange -100 -80 }}
     {{ end }}
     - command: INSERT
@@ -382,7 +382,7 @@ scenarios:
       values: 
         name: {{ getRandStringInLength 5 }}
         address: {{ getRandStringInLength 23 }}
-        longtitude: {{ getFloatInRange 21 35 }}
+        longitude: {{ getFloatInRange 21 35 }}
         latitude: {{ getFloatInRange -80 10 }}
   {{ if .locations }}  
   fromValues:
@@ -393,7 +393,7 @@ scenarios:
       values:
         name: {{ .name }}
         address: {{ .address }}
-        longtitude: {{ .longtitude }}
+        longitude: {{ .longitude }}
         latitude: {{ .latitude }}
     {{ end }}
   {{ end }}`}
@@ -439,7 +439,7 @@ scenarios:
       data: 
         name: {{ getRandStringInLength 5 }}
         address: {{ getRandStringInLength 23 }}
-        longtitude: {{ getFloatInRange 70 90 }}
+        longitude: {{ getFloatInRange 70 90 }}
         latitude: {{ getFloatInRange -80 -60 }}
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: GET
@@ -449,7 +449,7 @@ scenarios:
       method: DELETE
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: PUT
-      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longtitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
+      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
     {{ end }}
   medium:                       # scenario name
     config:
@@ -471,7 +471,7 @@ scenarios:
       data: 
         name: {{ getRandStringInLength 5 }}
         address: {{ getRandStringInLength 23 }}
-        longtitude: {{ getFloatInRange 70 90 }}
+        longitude: {{ getFloatInRange 70 90 }}
         latitude: {{ getFloatInRange -80 -60 }}
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: GET
@@ -481,7 +481,7 @@ scenarios:
       method: DELETE
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: PUT
-      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longtitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
+      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
     {{ end }}
   hard:
     config:
@@ -503,7 +503,7 @@ scenarios:
       data: 
         name: {{ getRandStringInLength 5 }}
         address: {{ getRandStringInLength 23 }}
-        longtitude: {{ getFloatInRange 70 90 }}
+        longitude: {{ getFloatInRange 70 90 }}
         latitude: {{ getFloatInRange -80 -60 }}
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: GET
@@ -513,7 +513,7 @@ scenarios:
       method: DELETE
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: PUT
-      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longtitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
+      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
     {{ end }}`}
         />
         <br></br>
