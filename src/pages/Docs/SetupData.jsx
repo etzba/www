@@ -35,6 +35,7 @@ const Setup = () => {
           </Link>
         </span>
         <h1>Setup test cases</h1>
+        <h3>Overview</h3>
         <p>
           Running load tests only using the command line interface is easy and
           fun, but sometimes simplicity is not enough for our needs. We briefly
@@ -128,13 +129,15 @@ const ApiTestCases = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/setup">
-            Setup Test Cases {"  >  "}
+            Setup Test Cases{" "}
           </Link>
+          {"  >  "}
           <Link className={"docs-link"} to="/docs/setup/file">
             API
           </Link>
         </span>
         <h1>Create API Test Cases</h1>
+        <h3>Overview</h3>
         <p>
           API execution files used to run as a client that sends http requests
           to a REST API service. An http request should have a method and a url
@@ -161,6 +164,30 @@ const ApiTestCases = () => {
         <CodeBlock
           type="term"
           code={`etz api --exec=path/to/executions.yaml`}
+        />
+        <h3>Let's see more examples</h3>
+        <p>Set config inside api execution file:</p>
+        <CodeBlock
+          type="yaml"
+          code={`config:
+  workers: 10
+  rps: 40
+  duration: 5s
+  output: /tmp/results.json"
+api:
+- url: https://etzba.com
+  method: POST
+  data:
+    name: "etz"
+    address: "etzba etz street 123"`}
+        />
+        <p>Instead of data, you can also use the payload as a string:</p>
+        <CodeBlock
+          type="yaml"
+          code={`api:
+- url: https://etzba.com
+  method: POST
+  payload: '{ "name": "Etz", "address": "Ba Etzba etz",  "longitude": 54.4334523123, "latitude": 54.321312234 }'`}
         />
         <h3>Parameters</h3>
         <p>
@@ -202,28 +229,30 @@ const PostgresTestCases = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/setup">
-            Setup Test Cases {"  >  "}
+            Setup Test Cases{" "}
           </Link>
+          {"  >  "}
           <Link className={"docs-link"} to="/docs/setup/file">
             Postgres
           </Link>
         </span>
-        <h1>Test postgres Service Speed</h1>
+        <h1>Test postgres service</h1>
+        <h3>Overview</h3>
         <p>
           SQL statements and queries might be slow while running inside a
           database. <code>etz</code> gives you the sub-command <code>pg</code>{" "}
           that lets you run SQL queries inside a postgres database.
-          <br></br> A typical postgresql execution file will look like this:
+          <br></br> A postgresql execution file will look like this:
         </p>
         <CodeBlock
           type="yaml"
           code={`sql:
 - command: SELECT
   table: locations
-  constraint: "longtitude BETWEEN 13.0 AND 15.0"
+  constraint: "longitude BETWEEN 13.0 AND 15.0"
 - command: UPDATE
   table: locations
-  constraint: "longtitude BETWEEN 13.0 AND 15.0 AND latitude BETWEEN 13.0 AND 15.0"
+  constraint: "longitude BETWEEN 13.0 AND 15.0 AND latitude BETWEEN 13.0 AND 15.0"
   values: 
     latitude: 14.232134112
 - command: INSERT
@@ -231,12 +260,16 @@ const PostgresTestCases = () => {
   values: 
     name: "someplace"
     address: "better_street_32" 
-    longtitude: 89.123123123
+    longitude: 89.123123123
     latitude: -98.1234123123
-- query: "UPDATE locations SET longtitude = -89.2132341234 WHERE name = 'Etz';"
-- query: "UPDATE locations SET longtitude = 10.213431253421 WHERE name = 'Amma';"
-- query: "UPDATE locations SET longtitude = 52.123412532123 WHERE name = 'Kmiza';"`}
+- query: "UPDATE locations SET longitude = -89.2132341234 WHERE name = 'Etz';"
+- query: "UPDATE locations SET longitude = 10.213431253421 WHERE name = 'Amma';"
+- query: "UPDATE locations SET longitude = 52.123412532123 WHERE name = 'Kmiza';"`}
         />
+        <p>
+          And to run it, use <code>pg</code> sub-command:
+        </p>
+        <CodeBlock type="term" code={`etz pg --exec=path/to/executions.yaml`} />
         <h3>Parameters</h3>
         <p>
           The following is a list of all parameters that can be added to pg
@@ -280,13 +313,15 @@ const FileTestCases = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/setup">
-            Setup Test Cases {"  >  "}
+            Setup Test Cases{" "}
           </Link>
+          {"  >  "}
           <Link className={"docs-link"} to="/docs/setup/file">
             File Upload
           </Link>
         </span>
-        <h1>Load test file Upload</h1>
+        <h1>File Upload load test</h1>
+        <h3>Overview</h3>
         <p>
           File upload execution files help testing how long it takes an http
           service to respond to a file uploaded. Most of the time, you'd like to
@@ -294,8 +329,8 @@ const FileTestCases = () => {
           time. Setting the <code>--workers</code> can be useful here, but here
           is a small disclaimer: <code>etz</code> cannot increase the bandwidth
           of your network card, so it will be limited to the NIC bandwidth while
-          using multiple workers and large files.
-          <br></br> A typical file upload execution file will look like this:
+          using multiple workers and large files. A file upload execution file
+          will look like this:
         </p>
         <CodeBlock
           type="yaml"
@@ -352,8 +387,9 @@ const GeneralConfig = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/setup">
-            Setup Test Cases {"  >  "}
+            Setup Test Cases{" "}
           </Link>
+          {"  >  "}
           <Link className={"docs-link"} to="/docs/setup/file">
             General Config
           </Link>
@@ -361,6 +397,7 @@ const GeneralConfig = () => {
         <h1>
           Run <code>etz</code> with general config file
         </h1>
+        <h3>Overview</h3>
         <p>
           General configuration files extend the yaml configurations we saw so
           far, and allow setting multiple scenarios which each of the scenarios
@@ -465,7 +502,7 @@ const GeneralConfig = () => {
       method: POST
       data: 
         fromPlace: "My home 123"
-        longtitude: -89.123126721
+        longitude: -89.123126721
         latitude: 12.23124123123
   medium:
     config:
@@ -478,7 +515,7 @@ const GeneralConfig = () => {
       method: POST
       data: 
         fromPlace: "Her house 321"
-        longtitude: -119.123126721
+        longitude: -119.123126721
         latitude: 56.23124123123
           `}
         />

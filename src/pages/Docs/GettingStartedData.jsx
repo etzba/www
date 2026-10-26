@@ -40,40 +40,34 @@ const GettingStarted = () => {
           </Link>
         </span>
         <h1>Getting started</h1>
+        <h3>What are we doing here</h3>
         <p>
-          Before we start, let's have a short introduction of etzba
-          documentation and how to use it while reading the docs:
+          This docs website was created to help you using <code>etz</code> CLI
+          load testing tool from a linux terminal and later present how to
+          integrate it in Docker, Kubernetes together with additional tools that
+          can improve your CI\CD processes. The following topics will be
+          discussed:
         </p>
         <ul>
           <li>
-            If you are using mobile phone, you are welcome to stay and read the
-            docs, but this CLI tool works only on Linux and Mac operating
-            systems
+            Install and run <code>etz</code> in a linux terminal
+          </li>
+          <li>Guide how to create testing scenarios with YAML files</li>
+          <li>Setup advance configuration for complex test scenarios</li>
+          <li>
+            Show how to integrate this tool in other environments like
+            Kubernetes or CI pipelines
           </li>
           <li>
-            Since it is a CLI tool yout terminal needs to be available to run
-            commands. Make sure to have <code>sudo</code> permissions
-          </li>
-          <li>
-            In some of the pages you'll find a block of code, marked as "term",
-            this code can be copied and run in terminal
-          </li>
-          <li>
-            For more complex testing scenarios, <code>yaml</code> files can be
-            added to the command. Code blocks for <code>yaml</code> will be
-            marked as "yaml".
+            Additional documentation for products that can run with or without{" "}
+            <code>etz</code> in a Kubernetes cluster to automate load tests as
+            part of CI\CD
           </li>
         </ul>
         <p>
-          Let's setup <code>etz</code> in the{" "}
-          <Link className={"docs-link"} to="/docs/start/install">
-            Install section
-          </Link>
-          , run it for the first time and see what it can do.
-        </p>
-        <p>
-          If you already downloaded <code>etz</code> you can go directly to the
-          fun sections and start load testing your environment:
+          If you are already familiar with <code>etz</code> docs, feel free to
+          go directly to the fun sections and start load testing your
+          environment:
         </p>
         <div className="boxes">
           <SmallLinkBox
@@ -92,11 +86,41 @@ const GettingStarted = () => {
             className="small-box-link"
           />
           <SmallLinkBox
-            title="Advanced Configuration"
+            title="Advanced Setup"
             path="/docs/advanced/examples"
             className="small-box-link"
           />
         </div>
+        <h3>Reading the docs</h3>
+        <p>Here are some tips that will help you use this website better:</p>
+        <ul>
+          <li>
+            If you are using mobile phone, you are welcome to stay and read the
+            docs, but it is important to know that this CLI tool works only on
+            Linux and Mac operating systems
+          </li>
+          <li>
+            Since it is a CLI tool, you need your terminal available to run{" "}
+            <code>etz</code> commands - running it from GUI simply won't work.
+            Make sure to have <code>sudo</code> permissions
+          </li>
+          <li>
+            In some of the pages you'll find a block of code, marked as "term",
+            this code can be copied and run in terminal
+          </li>
+          <li>
+            For more complex testing scenarios, <code>yaml</code> files can be
+            added to the command. Code blocks for <code>yaml</code> will be
+            marked as "yaml".
+          </li>
+        </ul>
+        <p>
+          Let's setup <code>etz</code> in the{" "}
+          <Link className={"docs-link"} to="/docs/start/install">
+            Install section
+          </Link>
+          , run it for the first time and see what it can do.
+        </p>
         <GuideLinks
           intrestsLinks={interestLinks}
           forwardTitle={forward.title}
@@ -126,8 +150,9 @@ const Install = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/start">
-            Getting started {"  >  "}
+            Getting started{" "}
           </Link>
+          {"  >  "}
           <Link className={"docs-link"} to="/docs/start/install">
             Installation
           </Link>
@@ -145,16 +170,18 @@ const Install = () => {
           </section>
         ) : (
           <>
+            <h3>Download links</h3>
             <p>
               Since <code>etz</code> is a binary file, no requirements needed
               other than download it. Please read the{" "}
               <button className={"license-link"} onClick={() => setOpen(true)}>
                 LICENSE
               </button>{" "}
-              before downloading.<br></br>
-              Below, you can find download links per operating system:
+              before downloading. Below, you can find download links per
+              operating system:
             </p>
             <DownloadTable />
+            <h3>Setup in shell</h3>
             <p>
               Set the binary to executable mode and move the file to bin
               directory (if it is needed, go to download directory by running
@@ -164,6 +191,7 @@ const Install = () => {
               type="term"
               code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
             />
+            <h3>Check installation</h3>
             <p>
               Check the version of <code>etz</code>
             </p>
@@ -171,17 +199,15 @@ const Install = () => {
             <p>And to read the license:</p>
             <CodeBlock type="term" code={"etz license"} />
             <h2>
-              Install <code>etz</code> on a Linux machine from terminal
+              Install <code>etz</code> from terminal
             </h2>
             <div>
-              <h3>Requirements</h3>
+              <h3>Linux installation</h3>
               <p>
                 Before installing <code>etz</code> directly from the terminal,
                 check that you have <code>wget</code> and optionally{" "}
-                <code>curl</code> installed on your linux machine.
-              </p>
-              <p>
-                Use <code>wget</code> to download from github:
+                <code>curl</code> installed on your linux machine. Use{" "}
+                <code>wget</code> to download from github:
               </p>
               <CodeBlock
                 type="term"
@@ -194,14 +220,19 @@ const Install = () => {
                 type="term"
                 code={"chmod +x etz && sudo mv etz /usr/local/bin/"}
               />
-              <p>Check from terminal that you can see the version:</p>
-              <CodeBlock type="term" code={"etz version"} />
-              <h2>
-                Verify <code>etz</code> binary with gpg
-              </h2>
+              <p>
+                Check from terminal that you can see the version and license:
+              </p>
+              <CodeBlock type="term" code={"etz version && etz license"} />
+              <br></br>
+              <h3>
+                Install <code>etz</code> and verify binary with gpg
+              </h3>
               <p>
                 To validate the binary file integrity, use <code>gpg</code> and
-                download the public key and signature of <code>etz</code>:
+                download the public key and signature of <code>etz</code> (Note
+                that in the step above you already used <code>wget</code> to get
+                the binary as in the first <code>curl</code> command):
               </p>
               <CodeBlock
                 type="term"
@@ -213,16 +244,16 @@ gpg --import pubkey.asc
 gpg --verify etz.sig etz`}
               />
               <p>
-                The <code>curl</code> command above, install <code>etz</code> on
-                linux machine amd64 arch, but you can find more more versions to
-                download in the repository, just take a look in{" "}
+                You can find more versions of <code>etz</code> (and their
+                signatures) to download in{" "}
                 <Link
                   className={"docs-link"}
                   to="https://github.com/etzba/etz/"
                 >
                   etz github repository
-                </Link>{" "}
-                and follow for more updates.
+                </Link>
+                . Follow etzba on github and add a star to this repository if you like
+                what's going on here. Thanks ;)
               </p>
             </div>
           </>
@@ -260,19 +291,33 @@ const Run = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/start">
-            Getting started {"  >  "}
+            Getting started{" "}
           </Link>
+          {"  >  "}
           <Link className={"docs-link"} to="/docs/start/run">
             Run etz from terminal
           </Link>
         </span>
-        <h1>
-          Run <code>etz</code> from terminal
-        </h1>
+        <h1>Run from terminal</h1>
+        <h3>Overview</h3>
         <p>
           <code>etz</code> uses several sub commands: <code>api</code>,{" "}
-          <code>pg</code> and <code>file</code> each of these sub commands, uses
-          different configurations to run different load tests. For example,{" "}
+          <code>pg</code> and <code>file</code>. Each of these sub commands is
+          dedicated to run a different type of load test. You'll find out soon
+          that each of these sub-commands can also use a dedicated YAML
+          configuration to run different load tests.
+          <br></br>
+          While <code>api</code> and <code>file</code> sub-commands run http
+          requests to a remote http service, <code>pg</code> sub-command is
+          dedicated for measuring postgres queries performance inside a
+          database.
+          <br></br>
+          In the examples below, you can see how to run each sub-command
+          directly from a Linux terminal and without any need for additional
+          YAML configuration files.
+        </p>
+        <h3>Examples</h3>
+        <p>
           <code>api</code> will use http protocol under the scene to run a load
           test on a remote server url:
         </p>
@@ -291,8 +336,8 @@ const Run = () => {
               -j '{"name":"Etz Ba","address":"Etzba etz 32"}'`}
         />
         <p>
-          <code>file</code> sub command will help you upload a file and measure
-          how long did it take:
+          Running <code>file</code> sub-command will help measure how long did
+          it take to upload a file to a remote http service:
         </p>
         <CodeBlock
           type="term"
@@ -355,8 +400,9 @@ const Commands = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/start">
-            Getting Started {"  >  "}
+            Getting Started{" "}
           </Link>
+          {"  >  "}
           <Link className={"docs-link"} to="/docs/start/commands">
             Commands and Arguments
           </Link>
@@ -369,7 +415,7 @@ const Commands = () => {
           of these sub-commands requires several arguments unless using an
           additional YAML file.
         </p>
-        <h4>Sub-Commands</h4>
+        <h3>Sub-Commands</h3>
         <p>
           When using <code>etz</code> sub-commands it is required to set a few
           arguments to the command or the argument <code>--exec</code> and
@@ -382,7 +428,7 @@ const Commands = () => {
           If none of the sub-command is used, <code>etz</code> will expect an
           argument <code>--config</code> with a general configuration file.
         </p>
-        <h4>Arguments</h4>
+        <h3>Arguments</h3>
         <p>
           <code>etz</code> arguments allow you to tune the load tests further.
           Only the arguments <code>--exec</code> and <code>--config</code>{" "}
@@ -422,25 +468,32 @@ const Yaml = () => {
       <section className="section">
         <span className="guide">
           <Link className={"docs-link"} to="/docs/start">
-            Getting started {"  >  "}
+            Getting started{" "}
           </Link>
+          {"  >  "}
           <Link className={"docs-link"} to="/docs/start/excution">
             Run with execution file
           </Link>
         </span>
         <h1>
-          Run <code>etz</code> with execution file
+          Run <code>etz</code> with additional YAML file
         </h1>
+        <h3>Why use YAML files?</h3>
         <p>
           So far, we could run <code>etz</code> by one command from the
           terminal, using only command line arguments. This is the simplest way
           to run <code>etz</code>, but what if we need to add more complexity
-          for our testing scenarios? <br></br>For this case, creating an
-          execution file in <code>.yaml</code>, can extend the capabilities of{" "}
-          <code>etz</code> and allow running load test executions from a file.
+          for our testing scenarios? For this case, creating an execution file
+          in YAML, can extend the capabilities of <code>etz</code> and allow
+          running load test executions from a file.
+        </p>
+        <h3>
+          How to use <code>etz</code> with YAML
+        </h3>
+        <p>
           We can create complex load test scenarios with multiple executions of
-          sql statements or api calls in one file. This is a short and simple
-          example of running <code>etz</code> with an execution file:
+          sql statements or REST api calls in one file. This is a short and
+          simple example of running <code>etz</code> with an execution file:
         </p>
         <CodeBlock
           type="yaml"
@@ -460,6 +513,19 @@ const Yaml = () => {
           type="term"
           code={`etz api --exec=path/to/executions.yaml`}
         />
+        <br></br>
+        <h3>Can I use command arguments together with YAML?</h3>
+        <p>Absolutely. Just play around with it:</p>
+                <CodeBlock
+          type="term"
+          code={`etz api --exec=path/to/executions.yaml \\
+      --duration=3s \\
+      --rps=100 \\
+      --workers=20 \\
+      --output=files/result.json`}
+        />
+        <br></br>
+        <h3>Is that it?</h3>
         <p>
           This is just a short introduction to execution files which shows only
           the simplest way to run <code>etz</code>. Going forward to{" "}
@@ -475,7 +541,7 @@ const Yaml = () => {
           using conditional statements, golang template functions and many more
           in{" "}
           <Link className={"docs-link"} to="/docs/advanced">
-            advanced configuration
+            Advanced configuration
           </Link>{" "}
           .
         </p>

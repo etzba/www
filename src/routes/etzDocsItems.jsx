@@ -1,11 +1,12 @@
 import {
   AdvancedConfiguration,
   AdvancedExamples,
+  EtzEnvironmentVariables,
   UseGoTemplates,
   YAMLSyntax,
 } from "../pages/Docs/AdvancedData";
 import {
-  CIIntegration,
+  ContinuesIntegration,
   CreateArgoWorkflowTemplate,
   IntegrateInGitLabCI,
 } from "../pages/Docs/CIData";
@@ -23,7 +24,7 @@ import {
   Commands,
   Yaml,
 } from "../pages/Docs/GettingStartedData";
-import { RunLoadTests, RunWithDocker } from "../pages/Docs/RunData";
+import { ContainerizedEnvironment, InstallWithHelm, RunInKubernetes, RunOnDocker } from "../pages/Docs/ContainerizationData";
 import Welcome from "../pages/Docs/WelcomeData";
 import {
   ImageUpdater,
@@ -122,22 +123,29 @@ export const EtzDocsItems = [
     element: <AdvancedConfiguration />,
     children: [
       {
+        id: "env",
+        title: "Environment variables",
+        label: "Env",
+        path: "env",
+        element: <EtzEnvironmentVariables />,
+      },
+      {
         id: "syntax",
-        title: "YAML syntax and programming",
+        title: "More YAML syntax",
         label: "Syntax",
         path: "syntax",
         element: <YAMLSyntax />,
       },
       {
         id: "gotmpl",
-        title: "Use etzba built-in go template functions",
+        title: "Built-in golang templates functions",
         label: "Gotmpl",
         path: "gotmpl",
         element: <UseGoTemplates />,
       },
       {
         id: "examples",
-        title: "Advanced test cases setup examples",
+        title: "Advanced test cases examples",
         label: "Examples",
         path: "examples",
         element: <AdvancedExamples />,
@@ -149,14 +157,28 @@ export const EtzDocsItems = [
     title: "Containerization",
     path: "container",
     label: "Container",
-    element: <RunLoadTests />,
+    element: <ContainerizedEnvironment />,
     children: [
       {
         id: "docker",
-        title: "Run etz tests with docker",
+        title: "Run on docker",
         label: "Docker",
         path: "docker",
-        element: <RunWithDocker />,
+        element: <RunOnDocker />,
+      },
+      {
+        id: "kubernetes",
+        title: "Run in Kubernetes",
+        label: "kubernetes",
+        path: "kubernetes",
+        element: <RunInKubernetes />,
+      },
+      {
+        id: "helm",
+        title: "Install with helm",
+        label: "helm",
+        path: "helm",
+        element: <InstallWithHelm />,
       },
     ],
   },
@@ -165,11 +187,11 @@ export const EtzDocsItems = [
     title: "Continues Integration",
     path: "ci",
     label: "CI",
-    element: <CIIntegration />,
+    element: <ContinuesIntegration />,
     children: [
       {
         id: "argo",
-        title: "Run etz as argo workflow",
+        title: "Run etz in argo workflow",
         label: "Argo",
         path: "argo",
         element: <CreateArgoWorkflowTemplate />,

@@ -77,11 +77,21 @@
 .left-bottom-link {
   float: left;
   text-decoration: none;
+  color: var(--letters4);
+}
+
+.left-bottom-link:hover {
+  color: var(--surface7);
 }
 
 .right-bottom-link {
   float: right;
   text-decoration: none;
+  color: var(--letters4);
+}
+
+.right-bottom-link:hover {
+  color: var(--surface7);
 }
 
 @media (max-width: 768px) {

@@ -1,7 +1,15 @@
 import React from "react";
 import "../styles/info.css";
+import { Link } from "react-router-dom";
 
-const InfoBlock = ({ title, preText, bulletPoints, postText }) => {
+const InfoBlock = ({
+  title,
+  preText,
+  bulletPoints,
+  linkText,
+  linkPath,
+  postText,
+}) => {
   return (
     <div className="info">
       {title && (
@@ -24,6 +32,19 @@ const InfoBlock = ({ title, preText, bulletPoints, postText }) => {
           }}
         >
           {preText}
+          {linkText && (
+            <span
+              style={{
+                whiteSpace: "pre-line",
+                wordBreak: "break-word",
+                overflowWrap: "break-word",
+              }}
+            >
+              {" "}<Link className={"docs-link"} to={linkPath}>
+                {linkText}
+              </Link>
+            </span>
+          )}
         </p>
       )}
       {bulletPoints && (

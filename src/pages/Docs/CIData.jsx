@@ -1,7 +1,7 @@
 import GuideLinks from "../../components/GuideLinks";
 import "../../styles/layout.css";
 
-const CIIntegration = () => {
+const ContinuesIntegration = () => {
   const back = { title: "Run etz with docker", path: "/docs/container/docker" };
   const forward = { title: "Setup tests in argo workflows", path: "/docs/ci/argo" };
   const interestLinks = [
@@ -17,7 +17,7 @@ const CIIntegration = () => {
   return (
     <div>
       <section className="section">
-        <h1>CIIntegration</h1>
+        <h1>ContinuesIntegration</h1>
         <p>Content is in progress</p>
         <GuideLinks
           intrestsLinks={interestLinks}
@@ -91,4 +91,4 @@ const IntegrateInGitLabCI = () => {
   );
 };
 
-export { CIIntegration, CreateArgoWorkflowTemplate, IntegrateInGitLabCI };
+export { ContinuesIntegration, CreateArgoWorkflowTemplate, IntegrateInGitLabCI };

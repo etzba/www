@@ -3,9 +3,9 @@
   flex-flow: row wrap;
   justify-content: space-evenly;
   justify-content: left;
-  margin: 15px 0px 15px 25px;
+  margin: 15px 0px 15px 15px;
   align-content: center;
-  width: 110%;
+  width: 100%;
 }
 
 .small-box-link {
@@ -15,8 +15,8 @@
   transition: width var(--transition);
   background-color: var(--surface5);
   color: var(--letters3);
-  margin-left: 10px;
-  padding: 5px 5px 5px 5px;
+  margin-left: 15px;
+  padding: 5px 2px 5px 2px;
   font-family: var(--font);
   text-decoration: none;
   text-align: center;

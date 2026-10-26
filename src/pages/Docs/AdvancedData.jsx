@@ -3,7 +3,10 @@ import CodeBlock from "../../components/CodeBlock";
 import GuideLinks from "../../components/GuideLinks";
 import OptionsTable from "../../components/Table";
 import "../../styles/layout.css";
-import { BuiltInGolangTemplatesFunctions } from "./advancedData";
+import {
+  BuiltInEnvironmentVariables,
+  BuiltInGolangTemplatesFunctions,
+} from "./advancedData";
 
 const AdvancedConfiguration = () => {
   const back = {
@@ -33,6 +36,7 @@ const AdvancedConfiguration = () => {
           with <code>etz</code> YAML execution and general config files.
         </p>
         <ul>
+          <li>Using built-in environment variables for authentication</li>
           <li>
             Extend YAML syntax and include identifiers and statements inside
             your YAML file
@@ -49,6 +53,56 @@ const AdvancedConfiguration = () => {
         </ul>
         <br></br>
         <br></br>
+        <GuideLinks
+          intrestsLinks={interestLinks}
+          backTitle={back.title}
+          backLink={back.path}
+          forwardTitle={forward.title}
+          forwardLink={forward.path}
+        />
+      </section>
+    </div>
+  );
+};
+
+const EtzEnvironmentVariables = () => {
+  const back = { title: "Advanced Configuration", path: "/docs/advanced" };
+  const forward = {
+    title: "Extended YAML syntax",
+    path: "/docs/advanced/syntax",
+  };
+  const interestLinks = [
+    {
+      title: "Run etz from terminal",
+      path: "/docs/start/run",
+    },
+    {
+      title: "Run etz with execution file",
+      path: "/docs/config/executions",
+    },
+  ];
+  return (
+    <div>
+      <section className="section">
+        <h1>Built-in etzba environment variables</h1>
+        <p>
+          Load tests sometimes require configurations that allow authentication
+          or other data that is needed in order for an http request to succeed
+          or to connect to a database.
+        </p>
+        <h3>Environment Variables</h3>
+        <p>The table below, presents etzba built-in environment variables:</p>
+        <br></br>
+        <OptionsTable data={BuiltInEnvironmentVariables} />
+        <p>
+          These environment variables could be added to your terminal session
+          with <code>export</code> linux command or as a container environments
+          with{" "}
+          <Link className={"docs-link"} to="/docs/container">
+            Docker or Kubernetes
+          </Link>
+          .
+        </p>
         <GuideLinks
           intrestsLinks={interestLinks}
           backTitle={back.title}
@@ -100,7 +154,7 @@ const YAMLSyntax = () => {
         />
         <h3>Conditional statements</h3>
         <p>
-          Sometimes we need to use few conditions to run our tasks. Use the{" "}
+          Sometimes we need to use a few conditions to run our tasks. Use the{" "}
           <code>if</code>, <code>else if</code> and <code>else</code> to create
           conditional statement inside execution file:
         </p>
@@ -320,7 +374,7 @@ scenarios:
       values: 
         name: {{ . }}
         address: {{ getRandStringInLength 21 }}
-        longtitude: {{ getFloatInRange 45 65 }}
+        longitude: {{ getFloatInRange 45 65 }}
         latitude: {{ getFloatInRange -100 -80 }}
     {{ end }}
     - command: INSERT
@@ -328,7 +382,7 @@ scenarios:
       values: 
         name: {{ getRandStringInLength 5 }}
         address: {{ getRandStringInLength 23 }}
-        longtitude: {{ getFloatInRange 21 35 }}
+        longitude: {{ getFloatInRange 21 35 }}
         latitude: {{ getFloatInRange -80 10 }}
   {{ if .locations }}  
   fromValues:
@@ -339,7 +393,7 @@ scenarios:
       values:
         name: {{ .name }}
         address: {{ .address }}
-        longtitude: {{ .longtitude }}
+        longitude: {{ .longitude }}
         latitude: {{ .latitude }}
     {{ end }}
   {{ end }}`}
@@ -385,7 +439,7 @@ scenarios:
       data: 
         name: {{ getRandStringInLength 5 }}
         address: {{ getRandStringInLength 23 }}
-        longtitude: {{ getFloatInRange 70 90 }}
+        longitude: {{ getFloatInRange 70 90 }}
         latitude: {{ getFloatInRange -80 -60 }}
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: GET
@@ -395,7 +449,7 @@ scenarios:
       method: DELETE
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: PUT
-      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longtitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
+      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
     {{ end }}
   medium:                       # scenario name
     config:
@@ -417,7 +471,7 @@ scenarios:
       data: 
         name: {{ getRandStringInLength 5 }}
         address: {{ getRandStringInLength 23 }}
-        longtitude: {{ getFloatInRange 70 90 }}
+        longitude: {{ getFloatInRange 70 90 }}
         latitude: {{ getFloatInRange -80 -60 }}
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: GET
@@ -427,7 +481,7 @@ scenarios:
       method: DELETE
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: PUT
-      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longtitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
+      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
     {{ end }}
   hard:
     config:
@@ -449,7 +503,7 @@ scenarios:
       data: 
         name: {{ getRandStringInLength 5 }}
         address: {{ getRandStringInLength 23 }}
-        longtitude: {{ getFloatInRange 70 90 }}
+        longitude: {{ getFloatInRange 70 90 }}
         latitude: {{ getFloatInRange -80 -60 }}
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: GET
@@ -459,7 +513,7 @@ scenarios:
       method: DELETE
     - url: {{ $baseUrl }}/locations/{{ . }}
       method: PUT
-      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longtitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
+      payload: '{ "name": "Etz {{ getRandStringInLength 4 }}", "address": "Etzba {{ getRandStringInLength 8 }} str. 123 12345",  "longitude": {{ getFloatInRange 70 90 }}, "latitude": {{ getFloatInRange -80 -60 }} }'
     {{ end }}`}
         />
         <br></br>
@@ -475,4 +529,10 @@ scenarios:
   );
 };
 
-export { AdvancedConfiguration, YAMLSyntax, UseGoTemplates, AdvancedExamples };
+export {
+  AdvancedConfiguration,
+  EtzEnvironmentVariables,
+  YAMLSyntax,
+  UseGoTemplates,
+  AdvancedExamples,
+};
